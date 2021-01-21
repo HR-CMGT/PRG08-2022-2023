@@ -6,7 +6,6 @@ In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties e
 
 <br>
 <br>
-<br>
 
 ## Inleveren opdrachten
 
@@ -16,7 +15,6 @@ In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties e
 - In *deze PRG08 repository* vind je lesopdrachten en voorbeeldcode. Je kan deze ook clonen of via de browser bekijken.
 - In de cursushandleiding vind je de beoordeling voor dit vak.
 
-<br>
 <br>
 <br>
 
