@@ -4,7 +4,7 @@ We gaan het K-Nearest-Neighbour algoritme gebruiken met input van een webcam.
 
 Je gaat werken met een array van *landmarks* (punten met x, y, z coördinaten) die gevonden worden in een gezicht of in een hand. Deze array wordt de input van je KNN algoritme. 
 
-⚠️ Het algoritme heeft voor elk label meerdere voorbeelden nodig, om preciezer te kunnen voorspellen!
+> ⚠️ Het algoritme heeft voor elk label meerdere voorbeelden nodig, om preciezer te kunnen voorspellen!
 
 ### Voorbeeld KNN
 
@@ -19,7 +19,7 @@ let prediction = n.classify(landmarkarray)
 ## Inleveropdracht
 
 - Bedenk een eenvoudige toepassing waarbij je de landmarks van FACE API of HANDPOSE API kan gebruiken.
-- **Training** : sla de data (*landmark arrays*) op die bij verschillende uitdrukkingen of houdingen horen. Per pose heb je ongeveer 10 voorbeelden nodig. Let op dat de voorbeelden allemaal een beetje anders zijn. Dit is je training data. 
+- **Training** : sla de data (*landmark arrays*) op die bij verschillende uitdrukkingen of houdingen horen. Per pose heb je ongeveer 5~10 voorbeelden nodig. Let op dat de voorbeelden allemaal een beetje anders zijn. Dit is je training data. 
   - Voorbeeld: sla handposes op voor rock, paper, scissors.
 - Roep het KNN algoritme aan met je training data en labels.
 - **Predicting**: na training kan je nieuwe houdingen die de webcam ziet herkennen!
@@ -78,10 +78,11 @@ if (predictions.length > 0) {
 
 ## Links
 
-- [KNN](./README.md)
-- [handpose](https://github.com/tensorflow/tfjs-models/tree/master/handpose)  
-- [handpose tutorial](https://handsondeeplearning.com/a-quick-example-using-tensorflow-js-handpose-model/)
-- [face-api](https://github.com/justadudewhohacks/face-api.js/) 
-- [face-api Models](https://github.com/justadudewhohacks/face-api.js/tree/master/weights)
+- [KNN week 3](./README.md)
+- [Handpose API](https://github.com/tensorflow/tfjs-models/tree/master/handpose) en [tutorial](https://handsondeeplearning.com/a-quick-example-using-tensorflow-js-handpose-model/)
+- [Face-api](https://github.com/justadudewhohacks/face-api.js/) 
+- [Codepen KNN Demo](https://codepen.io/Qbrid/pen/OwpjLX)
+- [KNear Github](https://github.com/NathanEpstein/KNear)
+- [Uitleg K-Nearest-Neighbour](https://burakkanber.com/blog/machine-learning-in-js-k-nearest-neighbor-part-1/)
 
 <br>

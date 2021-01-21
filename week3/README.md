@@ -88,7 +88,8 @@ Bij de inleveropdracht van week 3 ga je KNN gebruiken om de input van een webcam
 <br>
 <br>
 
-## Links
+## Externe links
 
-- [Codepen](https://codepen.io/Qbrid/pen/OwpjLX)
+- [Codepen Demo](https://codepen.io/Qbrid/pen/OwpjLX)
 - [KNear Github](https://github.com/NathanEpstein/KNear)
+- [Uitleg K-Nearest-Neighbour](https://burakkanber.com/blog/machine-learning-in-js-k-nearest-neighbor-part-1/)

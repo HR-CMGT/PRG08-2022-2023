@@ -2,14 +2,14 @@
 
 Cursus PRG08-2020-2021 - Jaar 2 - Periode 3
 
-In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties en cursushandleiding vind je in Cum Laude. De lessen worden gegeven in TEAMS studiejaar 2
+In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties en cursushandleiding vind je in Cum Laude en onder FILES in TEAMS. De lessen worden gegeven in TEAMS studiejaar 2
 
 <br>
 <br>
 
 ## Inleveren opdrachten
 
-- Meld je aan bij Github Classroom.
+- Meld je aan bij Github Classroom. De link krijg je van je docent.
 - Je krijgt dan een lege **classroom repository**. Clone deze naar je eigen laptop.
 - In je **classroom repository** ga je wekelijks je eigen werk plaatsen en weer terug pushen naar Github Classroom.
 - In *deze PRG08 repository* vind je lesopdrachten en voorbeeldcode. Je kan deze ook clonen of via de browser bekijken.
