@@ -35,3 +35,11 @@ In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties e
 <br>
 <br>
 <br>
+
+## Docenten
+
+Ga naar https://classroom.github.com/classrooms en dan naar de assignment van dit vak: **PRG08 2021 Inleveropdracht**.
+
+Hier vind je de studenten repositories en de link om studenten uit te nodigen.
+
+Studenten ontvangen bij aanmelding [deze startrepository](https://github.com/HR-CMGT-Classroom/PRG08-2021-Inleveropdracht) 
