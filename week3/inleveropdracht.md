@@ -1,36 +1,49 @@
 # Inleveropdracht Week 3
 
-We gaan het K-Nearest-Neighbour algoritme gebruiken met input van een webcam. 
+We gaan het K-Nearest-Neighbour algoritme gebruiken met de webcam. De webcam geeft je ***Training data*** in de vorm van pixeldata of landmarkdata.
 
-Je gaat werken met een array van *landmarks* (punten met x, y, z coördinaten) die gevonden worden in een gezicht of in een hand. Deze array wordt de input van je KNN algoritme. 
-
-> ⚠️ Het algoritme heeft voor elk label meerdere voorbeelden nodig, om preciezer te kunnen voorspellen!
-
-### Voorbeeld KNN
+### Code voorbeeld
 
 ```javascript
 let n = new KNN(3)
-n.learn(landmarkarray, label)
-n.learn(landmarkarray, label)
-n.learn(landmarkarray, label)
-let prediction = n.classify(landmarkarray)
+n.learn(webcamdata, label)
+n.learn(webcamdata, label)
+n.learn(webcamdata, label)
+let prediction = n.classify(webcamdata)
 ```
+Het is de bedoeling dat je het KNN algoritme traint door telkens een ***snapshot*** van de webcam (een array van data uit een enkel webcam beeld) te associeren met een ***label***.
+
+Dit kan je doen door een **input veld** en een **button** aan je html toe te voegen. Zodra je op de button klikt, pak je de data van het huidige webcam beeld. Hiermee train je het KNN algoritme. 
+
+> ⚠️ Het KNN algoritme heeft voor elk label minimaal 10, maar liever meer voorbeelden nodig, om te kunnen voorspellen! Experimenteer zelf met het aantal voorbeelden.
+
 
 ## Inleveropdracht
 
-- Bedenk een eenvoudige toepassing waarbij je de landmarks van FACE API of HANDPOSE API kan gebruiken.
-- **Training** : sla de data (*landmark arrays*) op die bij verschillende uitdrukkingen of houdingen horen. Per pose heb je ongeveer 5~10 voorbeelden nodig. Let op dat de voorbeelden allemaal een beetje anders zijn. Dit is je training data. 
-  - Voorbeeld: sla handposes op voor rock, paper, scissors.
-- Roep het KNN algoritme aan met je training data en labels.
-- **Predicting**: na training kan je nieuwe houdingen die de webcam ziet herkennen!
-  - Voorbeeld: toon Emoji 👊, 🤚, 🖖 als een handpose herkend wordt op de webcam.
+- Kies een van de drie voorbeeldprojecten om webcam data uit te lezen:
+   - [Pixel data uit de webcam](#pixel) (meest eenvoudig)
+   - [Face expression data uit de webcam](#face)
+   - [Handpose data uit de webcam](#hand)
+- Bedenk een eenvoudige toepassing waarbij je deze input kan gebruiken. Bv, het herkennen van 👊, 🤚, 🖖.
+- **Training** : Train het KNN algoritme met de verschillende labels. Let op dat de voorbeelden allemaal een beetje anders zijn. Dit is je training data. 
+- **Predicting**: na training kan je nieuwe beelden die de webcam ziet herkennen! Gebruik dit om feedback terug te geven. Bv: toon de emoji 👊, 🤚, 🖖 voor de huidige handpose.
 
-
-
+---
 <br>
 <br>
+<br>
 
-## Face API
+## <a name="pixel"></a> Pixel data uit de webcam
+
+Gebruik de [webcam startcode](./webcam/) om pixel data uit de webcam te lezen. Deze pixel data wordt getoond als een array van getallen. Dit kan je rechtstreeks gebruiken om je KNN algoritme te trainen!
+
+![pixeldata](../images/pixeldata.png)
+---
+<br>
+<br>
+<br>
+
+## <a name="face"></a> Face API
 
 De FACE API geeft een array van "landmark points" voor de belangrijkste features van je gezicht.
 
@@ -51,10 +64,12 @@ const rightEye = detections[0].landmarks.getRightEye()
 ```
 [Het voorbeeldproject vind je in de face-api map](./face-api).
 
+---
+<br>
 <br>
 <br>
 
-## Handpose API
+## <a name="hand"></a> Handpose API
 
 De HANDPOSE API geeft een array van "landmark points" voor de vingers van je hand in 3D.
 
@@ -73,6 +88,9 @@ if (predictions.length > 0) {
 
 [Het voorbeeldproject vind je in de handpose map](./handpose).
 
+---
+
+<br>
 <br>
 <br>
 
