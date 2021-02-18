@@ -21,6 +21,7 @@ Teachable Machine toepassen
     - Gebruik [web speech](#speech) om iets te zeggen na een herkende gesture.
     - Bestuur een [game uit PRG4](https://github.com/HR-CMGT/Typescript) met gestures of spraak.
 - 👉 Let op, de webcam output hoeft niet zichtbaar te zijn in de uiteindelijke HTML pagina!
+- ⚠️ De html embed code werkt niet helemaal goed op iOS, je moet de video tag aanpassen. [Zie deze issue](https://github.com/googlecreativelab/teachablemachine-community/issues/73).
 
 ![tmexport](../images/tm-download.png)
 *export window teachable machine*
