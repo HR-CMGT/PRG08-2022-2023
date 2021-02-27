@@ -41,6 +41,7 @@ In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties e
 Hieronder vind je handige html,css en javascript code snippets die je in je projecten kan gebruiken!
 
 - [Laat de browser praten met web speech](./snippets/speech.md)
+- [Normaliseer data om beter te trainen](./snippets/normalise.md)
 
 <br>
 <br>
