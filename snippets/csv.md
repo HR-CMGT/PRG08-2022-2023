@@ -46,7 +46,11 @@ In dit voorbeeld laden we `carsData.json` van google. We halen daar de *miles pe
 async function getData() {
     const response = await fetch('https://storage.googleapis.com/tfjs-tutorials/carsData.json')
     const json = await response.json()
-    return json
+    checkData(json)
+}
+
+function checkData(data) {
+    console.log(data)
 }
 ```
 
@@ -66,6 +70,6 @@ function checkData(data) {
     }))
         .filter(car => (car.mpg != null && car.horsepower != null))
 
-    return cleaned
+    console.log(cleaned)
 }
 ```
