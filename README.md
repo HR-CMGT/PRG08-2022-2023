@@ -42,6 +42,7 @@ Hieronder vind je handige html,css en javascript code snippets die je in je proj
 
 - [Laat de browser praten met web speech](./snippets/speech.md)
 - [Normaliseer data om beter te trainen](./snippets/normalise.md)
+- [CSV en JSON files inlezen](./snippets/csv.md)
 
 <br>
 <br>
