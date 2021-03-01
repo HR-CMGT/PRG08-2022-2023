@@ -94,6 +94,29 @@ if (predictions.length > 0) {
 <br>
 <br>
 
+## Extra uitdaging
+
+Kan je je model opslaan, zodat je niet telkens opnieuw hoeft te trainen met de webcam?
+
+
+---
+
+<br>
+<br>
+<br>
+
+## Voorbeeld
+
+In dit voorbeeld is een label gemaakt met een train button. Elke keer dat je op de train button klikt wordt het algoritme getraind met de waarden. Als je op classify klikt wordt een voorspelling gedaan.
+
+![example](../images/trainingexample.png)
+
+---
+
+<br>
+<br>
+<br>
+
 ## Links
 
 - [KNN week 3](./README.md)

@@ -24,8 +24,8 @@ In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties e
 |------|-----------|-----------------|
 | 1 | International Week | - |
 | 2 | [Introductie](./week2) | Intl. week + Teachable Machine |
-| 3 | [Algoritmes: KNN met webcam](./week3) | KNN opdracht |
-| 4 | [Algoritmes: Decision tree met Kaggle](./week4) | Kaggle opdracht |
+| 3 | [Algoritmes: KNN met webcam data](./week3) | KNN opdracht |
+| 4 | [Algoritmes: Decision tree met CSV data](./week4) | Kaggle opdracht |
 | 5 | [Algoritmes: Neural Networks](./week5) | NN opdracht 1 |
 | 6 | [Algoritmes: Neural Networks](./week6) | NN opdracht 2 |
 | 7 | [Start eindopdracht CASE](./week7) | - |

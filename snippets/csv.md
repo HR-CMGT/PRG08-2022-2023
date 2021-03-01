@@ -10,17 +10,24 @@
 
 ## CSV files
 
-Download een CSV file, bijvoorbeeld de [overlevenden van de Titanic](https://www.kaggle.com/c/titanic/data?select=train.csv). Voeg de Papa Parse library toe aan je HTML
+Voeg de Papa Parse library toe aan je HTML
 
 ```HTML
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 ```
+of als je met modules werkt:
+```bash
+npm install papaparse
+import Papa from './PapaParse/papaparse';
+```
 
 ## Javascript
 
+Download eerst een CSV file, bijvoorbeeld de [overlevenden van de Titanic](https://www.kaggle.com/c/titanic/data?select=train.csv). 
+
 ```javascript
 function loadData(){
-    Papa.parse("./titanic_survivors.csv", {
+    Papa.parse("./data/titanic_survivors.csv", {
         download:true,
         header:true, 
         dynamicTyping:true,
@@ -32,7 +39,7 @@ function checkData(data) {
     console.log(data)
 }
 ```
-[Documentatie](https://www.papaparse.com)
+[Papa Parse Documentatie](https://www.papaparse.com)
 
 <br>
 <br>
@@ -40,7 +47,7 @@ function checkData(data) {
 
 ## JSON files
 
-In dit voorbeeld laden we `carsData.json` van google. We halen daar de *miles per gallon* en *horsepower* uit om mee te trainen. We gebruiken `filter` om corrupte data uit de tabel te verwijderen.
+Data in JSON formaat kan je ophalen met `fetch`. Hier gebruiken we `carsData.json` van google. 
 
 ```javascript
 async function getData() {
@@ -60,7 +67,7 @@ function checkData(data) {
 
 ## Data filteren
 
-Met `map` en `filter` kunnen we specifieke kolommen uit de dataset halen, en checken of er geen ongeldige waarden in staan. 
+Met `map` en `filter` kunnen we specifieke kolommen uit de dataset halen, en checken of er geen ongeldige waarden in staan. In dit voorbeeld gebruiken we `Miles_per_Gallon` en `Horsepower` uit de dataset, en we kijken of de waarden niet ongeldig zijn.
 
 ```javascript
 function checkData(data) {
@@ -72,4 +79,12 @@ function checkData(data) {
 
     console.log(cleaned)
 }
+```
+### Training en test data
+
+Met `slice` kunnen we data opsplitsen in trainingdata en testdata. In dit geval is 80% van de data trainingdata en 20% is testdata.
+
+```javascript
+let trainData = data.slice(0, Math.floor(data.length * 0.8))
+let testData = data.slice(Math.floor(data.length * 0.8) + 1)
 ```
