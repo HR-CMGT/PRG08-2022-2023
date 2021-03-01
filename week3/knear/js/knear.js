@@ -63,7 +63,7 @@ class kNear {
                     while (bool) {
                         if (Number(voteBloc[count].d) === maxD) {
                             voteBloc.splice(count, 1, o)
-                            maxD = updateMax(maxD, voteBloc)
+                            maxD = this.updateMax(maxD, voteBloc)
                             bool = false
                         } else {
                             if (count < voteBloc.length - 1) {
