@@ -2,6 +2,7 @@ class kNear {
     constructor(k) {
         this.k = k
         this.training = []
+        this.array_size = -1
     }
 
     //compute the euclidean distance between two vectors
@@ -36,18 +37,54 @@ class kNear {
         return result
     }
 
+    checkInput(v) {
+        if (Array.isArray(v)) {
+            // array is correct
+            if (v.length > 0) {
+                // array contains values
+                if (typeof v[0] == 'number') {
+                    // first value is a number
+                    if (this.array_size > -1) {
+                        // training has data to comapre the size to
+                        if (v.length == this.array_size) {
+                            // size of the array is correct
+                            return true;
+                        } else {
+                            console.log(`ERROR: learn en classify verwachten een array met numbers van dezelfde lengte, je stuurt nu een array met lengte ${v.length}, terwijl je eerder lengte ${this.array_size} gebruikt hebt.`); 
+                        }
+                    } else {
+                        // first value set training size
+                        this.array_size = v.length;
+                        return true;
+                    }
+                } else {
+                    console.log(`ERROR: learn en classify verwachten een array met numbers, je stuurt nu array met ${typeof v[0]}.`);    
+                }
+            } else {
+                console.log("ERROR: learn en classify verwachten een array met numbers, je stuurt nu lege array.");    
+            }
+        } else {
+            console.log(`ERROR: learn en classify verwachten een array met numbers, je stuurt nu geen array, maar ${typeof v}.`);
+        }
+
+        // something was wrong for this vector
+        return false
+    }
+
     //
     // PUBLIC : learn, classify
     //
 
     //add a point to the training set
     learn(vector, label) {
+        this.checkInput(vector)
         let obj = { v: vector, lab: label }
         this.training.push(obj)
     }
 
     // classify a new unknown point
     classify(v) {
+        this.checkInput(v)
         let voteBloc = []
         let maxD = 0
 
