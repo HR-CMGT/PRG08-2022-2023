@@ -63,7 +63,8 @@ let decisionTree = new DecisionTree({
     categoryAttr: "survived"          
 })
 // teken de tree met D3
-let tree = new D3TreeView(decisionTree.toJSON())
+let json = decisionTree.toJSON()
+let visual = new VegaTree('#view', 2300, 1000, json)
 ```
 
 <br>
