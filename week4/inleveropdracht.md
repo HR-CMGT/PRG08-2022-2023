@@ -66,6 +66,11 @@ let decisionTree = new DecisionTree({
 let json = decisionTree.toJSON()
 let visual = new VegaTree('#view', 2300, 1000, json)
 ```
+> Let op, als je CSV file toevallig is gesorteerd op label, dan heeft je traindata alle positieve labels, en je testdata alle negatieve labels. Dat is natuurlijk niet handig. Om dit te voorkomen kan je je array shufflen **voordat** je splitst op traindata en testdata.
+
+```javascript
+arr.sort(() => (Math.random() - 0.5)
+```
 
 <br>
 <br>
