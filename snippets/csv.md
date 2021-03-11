@@ -81,6 +81,11 @@ function checkData(data) {
     console.log(cleaned)
 }
 ```
+
+<br>
+<br>
+<br>
+
 ## Training en test data
 
 Met `slice` kunnen we data opsplitsen in trainingdata en testdata. In dit geval is 80% van de data trainingdata en 20% is testdata.
