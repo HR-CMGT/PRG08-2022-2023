@@ -3,6 +3,7 @@
 - CSV files
 - JSON files
 - Data filteren
+- Training data en test data
 
 <br>
 <br>
@@ -80,11 +81,19 @@ function checkData(data) {
     console.log(cleaned)
 }
 ```
-### Training en test data
+## Training en test data
 
 Met `slice` kunnen we data opsplitsen in trainingdata en testdata. In dit geval is 80% van de data trainingdata en 20% is testdata.
 
 ```javascript
 let trainData = data.slice(0, Math.floor(data.length * 0.8))
 let testData = data.slice(Math.floor(data.length * 0.8) + 1)
+```
+
+> Let op, als je CSV file toevallig is gesorteerd op label, dan heeft je traindata alle positieve labels, en je testdata alle negatieve labels. Dat is natuurlijk niet handig. Om dit te voorkomen kan je je array shufflen **voordat** je splitst op traindata en testdata.
+
+```javascript
+function shuffleArray(arr) {
+	arr.sort(() => (Math.random() - 0.5)
+}
 ```
