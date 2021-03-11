@@ -62,7 +62,7 @@ let decisionTree = new DecisionTree({
     // dit is het label dat je wil gaan voorspellen
     categoryAttr: "survived"          
 })
-// teken de tree met D3
+// teken de tree
 let json = decisionTree.toJSON()
 let visual = new VegaTree('#view', 2300, 1000, json)
 ```
