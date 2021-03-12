@@ -99,6 +99,6 @@ let testData = data.slice(Math.floor(data.length * 0.8) + 1)
 
 ```javascript
 function shuffleArray(arr) {
-	arr.sort(() => (Math.random() - 0.5)
+    arr.sort(() => (Math.random() - 0.5))
 }
 ```
