@@ -81,6 +81,7 @@ function checkData(data) {
     console.log(cleaned)
 }
 ```
+Je kan [`isNan()`](https://flaviocopes.com/how-to-check-value-is-number-javascript/) gebruiken als je zeker wil weten dat een waarde een nummer is.
 
 <br>
 <br>
