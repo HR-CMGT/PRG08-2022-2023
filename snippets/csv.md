@@ -80,8 +80,10 @@ const selectedColumns = data.map(car => ({
 Met [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) kan je checken of er geen ongeldige waarden in de data staan. Hier staan twee voorbeelden van filteren op `null` of op waarden die geen `number` zijn.
 
 ```javascript   
+// check of waarden niet leeg zijn
 let cleanedData = data.filter(car => (car.mpg != null && car.horsepower != null))
 
+// check of waarden wel een nummer zijn
 let cleanedData = data.filter(!isNaN(car.mpg) && !isNaN(car.horsepower)))
 ```
 
