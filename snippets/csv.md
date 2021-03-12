@@ -68,7 +68,7 @@ function checkData(data) {
 
 ## Data filteren
 
-Met `map` en `filter` kunnen we specifieke kolommen uit de dataset halen, en checken of er geen ongeldige waarden in staan. In dit voorbeeld gebruiken we `Miles_per_Gallon` en `Horsepower` uit de dataset, en we kijken of de waarden niet ongeldig zijn.
+Met [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) en [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) kunnen we specifieke kolommen uit de dataset halen, en checken of er geen ongeldige waarden in staan. In dit voorbeeld gebruiken we `Miles_per_Gallon` en `Horsepower` uit de dataset, en we kijken of de waarden niet ongeldig zijn.
 
 ```javascript
 function checkData(data) {
@@ -81,7 +81,11 @@ function checkData(data) {
     console.log(cleaned)
 }
 ```
-Je kan [`isNan()`](https://flaviocopes.com/how-to-check-value-is-number-javascript/) gebruiken als je zeker wil weten dat een waarde een nummer is.
+Je kan [isNan()](https://flaviocopes.com/how-to-check-value-is-number-javascript/) gebruiken als je zeker wil weten dat een waarde een nummer is.
+
+```javascript
+let cleanedData = data.filter(car => (car.mpg != null && car.horsepower != null && !isNaN(car.mpg) && !isNaN(car.horsepower)))
+```
 
 <br>
 <br>
@@ -103,3 +107,12 @@ function shuffleArray(arr) {
     arr.sort(() => (Math.random() - 0.5))
 }
 ```
+
+<br>
+<br>
+<br>
+
+## Links
+
+- [Array map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 
+- [Array filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
