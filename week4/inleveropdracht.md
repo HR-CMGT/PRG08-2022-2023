@@ -62,8 +62,14 @@ let decisionTree = new DecisionTree({
     // dit is het label dat je wil gaan voorspellen
     categoryAttr: "survived"          
 })
-// teken de tree met D3
-let tree = new D3TreeView(decisionTree.toJSON())
+// teken de tree
+let json = decisionTree.toJSON()
+let visual = new VegaTree('#view', 2300, 1000, json)
+```
+> ⚠️ Als je CSV file toevallig is gesorteerd op label, dan heeft je traindata alle positieve labels, en je testdata alle negatieve labels. Dat is natuurlijk niet handig. Om dit te voorkomen kan je je array shufflen **voordat** je splitst op traindata en testdata.
+
+```javascript
+data.sort(() => (Math.random() - 0.5)
 ```
 
 <br>
@@ -92,7 +98,7 @@ Als we weten dat 70 van de 100 voorspellingen goed gedaan zijn, dan zeggen we da
 
 <br>
 
-> ⚠️ Let op! Bij een prediction moet je nooit het correcte label meegeven. Die moet je dus eerst verwijderen uit je test sample. In dit voorbeeld maken we eerst een kopie van de titanic testdata en daaruit verwijderen we het "survived" label.
+> ⚠️ Bij een prediction moet je nooit het correcte label meegeven. Die moet je dus eerst verwijderen uit je test sample. In dit voorbeeld maken we eerst een kopie van de titanic testdata en daaruit verwijderen we het "survived" label.
 
 ```javascript
 function testPassenger(passenger) {

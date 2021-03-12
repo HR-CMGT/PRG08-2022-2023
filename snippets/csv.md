@@ -3,6 +3,7 @@
 - CSV files
 - JSON files
 - Data filteren
+- Training data en test data
 
 <br>
 <br>
@@ -67,20 +68,37 @@ function checkData(data) {
 
 ## Data filteren
 
-Met `map` en `filter` kunnen we specifieke kolommen uit de dataset halen, en checken of er geen ongeldige waarden in staan. In dit voorbeeld gebruiken we `Miles_per_Gallon` en `Horsepower` uit de dataset, en we kijken of de waarden niet ongeldig zijn.
+Met [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) kan je specifieke kolommen uit een dataset halen.
 
 ```javascript
-function checkData(data) {
-    const cleaned = data.map(car => ({
-        mpg: car.Miles_per_Gallon,
-        horsepower: car.Horsepower,
-    }))
-        .filter(car => (car.mpg != null && car.horsepower != null))
-
-    console.log(cleaned)
-}
+const selectedColumns = data.map(car => ({
+   mpg: car.mpg,
+   horsepower: car.horsepower,
+}))
 ```
-### Training en test data
+
+Met [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) kan je checken of er geen ongeldige waarden in de data staan. Hier staan twee voorbeelden van filteren op `null` of op waarden die geen `number` zijn.
+
+```javascript   
+// check of waarden niet leeg zijn
+let cleanedData = data.filter(car => (car.mpg != null && car.horsepower != null))
+
+// check of waarden wel een nummer zijn
+let cleanedData = data.filter(!isNaN(car.mpg) && !isNaN(car.horsepower)))
+```
+Je kan deze functies aan elkaar vast plakken, dat ziet er zo uit:
+
+```javascript
+let cleanedData = data.map(...)
+                      .filter(...)
+                      .filter(...)
+```
+
+<br>
+<br>
+<br>
+
+## Training en test data
 
 Met `slice` kunnen we data opsplitsen in trainingdata en testdata. In dit geval is 80% van de data trainingdata en 20% is testdata.
 
@@ -88,3 +106,20 @@ Met `slice` kunnen we data opsplitsen in trainingdata en testdata. In dit geval 
 let trainData = data.slice(0, Math.floor(data.length * 0.8))
 let testData = data.slice(Math.floor(data.length * 0.8) + 1)
 ```
+
+> ⚠️ Om te voorkomen dat je data *gesorteerd* is op bv. het label moet je je array shufflen **voordat** je splitst op traindata en testdata.
+
+```javascript
+function shuffleArray(arr) {
+    arr.sort(() => (Math.random() - 0.5))
+}
+```
+
+<br>
+<br>
+<br>
+
+## Links
+
+- [Array map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 
+- [Array filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
