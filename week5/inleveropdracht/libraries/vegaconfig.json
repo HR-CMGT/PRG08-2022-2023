@@ -1,0 +1,133 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "scatter plot",
+    "padding": 5,
+    "data": [
+        {
+            "name": "trainingdata",
+            "values": []
+        },{
+            "name": "predictiondata",
+            "values": []
+        }
+    ],
+    "scales": [
+        {
+            "name": "x",
+            "type": "linear",
+            "round": true,
+            "nice": true,
+            "zero": true,
+            "domain": {
+                "data": "trainingdata",
+                "field": ""
+            },
+            "range": "width"
+        },
+        {
+            "name": "y",
+            "type": "linear",
+            "round": true,
+            "nice": true,
+            "zero": true,
+            "domain": {
+                "data": "trainingdata",
+                "field": ""
+            },
+            "range": "height"
+        }
+    ],
+    "axes": [
+        {
+            "scale": "x",
+            "grid": true,
+            "domain": false,
+            "orient": "bottom",
+            "tickCount": 5,
+            "title": ""
+        },
+        {
+            "scale": "y",
+            "grid": true,
+            "domain": false,
+            "orient": "left",
+            "titlePadding": 5,
+            "title": ""
+        }
+    ],
+    "marks": [
+        {
+            "name": "marks",
+            "type": "symbol",
+            "from": {
+                "data": "trainingdata"
+            },
+            "encode": {
+                "update": {
+                    "x": {
+                        "scale": "x",
+                        "field": "Horsepower"
+                    },
+                    "y": {
+                        "scale": "y",
+                        "field": "Miles_per_Gallon"
+                    },
+                    "size": {
+                        "value": 50
+                    },
+                    "shape": {
+                        "value": "circle"
+                    },
+                    "strokeWidth": {
+                        "value": 2
+                    },
+                    "opacity": {
+                        "value": 0.5
+                    },
+                    "stroke": {
+                        "value": "#4682b4"
+                    },
+                    "fill": {
+                        "value": "#4682b4"
+                    }
+                }
+            }
+        },{
+            "name": "markstwo",
+            "type": "symbol",
+            "from": {
+                "data": "predictiondata"
+            },
+            "encode": {
+                "update": {
+                    "x": {
+                        "scale": "x",
+                        "field": "Horsepower"
+                    },
+                    "y": {
+                        "scale": "y",
+                        "field": "Miles_per_Gallon"
+                    },
+                    "size": {
+                        "value": 50
+                    },
+                    "shape": {
+                        "value": "circle"
+                    },
+                    "strokeWidth": {
+                        "value": 2
+                    },
+                    "opacity": {
+                        "value": 0.5
+                    },
+                    "stroke": {
+                        "value": "#FF0000"
+                    },
+                    "fill": {
+                        "value": "#FF0000"
+                    }
+                }
+            }
+        }
+    ]
+}
