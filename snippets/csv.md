@@ -86,6 +86,13 @@ let cleanedData = data.filter(car => (car.mpg != null && car.horsepower != null)
 // check of waarden wel een nummer zijn
 let cleanedData = data.filter(!isNaN(car.mpg) && !isNaN(car.horsepower)))
 ```
+Je kan deze functies aan elkaar vast plakken, dat ziet er zo uit:
+
+```javascript
+let cleanedData = data.map(...)
+                      .filter(...)
+                      .filter(...)
+```
 
 <br>
 <br>
@@ -100,7 +107,7 @@ let trainData = data.slice(0, Math.floor(data.length * 0.8))
 let testData = data.slice(Math.floor(data.length * 0.8) + 1)
 ```
 
-> Let op, als je CSV file toevallig is gesorteerd op label, dan heeft je traindata alle positieve labels, en je testdata alle negatieve labels. Dat is natuurlijk niet handig. Om dit te voorkomen kan je je array shufflen **voordat** je splitst op traindata en testdata.
+> ⚠️ Om te voorkomen dat je data *gesorteerd* is op bv. het label moet je je array shufflen **voordat** je splitst op traindata en testdata.
 
 ```javascript
 function shuffleArray(arr) {
