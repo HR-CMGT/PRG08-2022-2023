@@ -68,23 +68,21 @@ function checkData(data) {
 
 ## Data filteren
 
-Met [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) en [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) kunnen we specifieke kolommen uit de dataset halen, en checken of er geen ongeldige waarden in staan. In dit voorbeeld gebruiken we `Miles_per_Gallon` en `Horsepower` uit de dataset, en we kijken of de waarden niet ongeldig zijn.
+Met [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) kan je specifieke kolommen uit een dataset halen.
 
 ```javascript
-function checkData(data) {
-    const cleaned = data.map(car => ({
-        mpg: car.Miles_per_Gallon,
-        horsepower: car.Horsepower,
-    }))
-        .filter(car => (car.mpg != null && car.horsepower != null))
-
-    console.log(cleaned)
-}
+const selectedColumns = data.map(car => ({
+   mpg: car.mpg,
+   horsepower: car.horsepower,
+}))
 ```
-Je kan [isNan()](https://flaviocopes.com/how-to-check-value-is-number-javascript/) gebruiken als je zeker wil weten dat een waarde een nummer is.
 
-```javascript
-let cleanedData = data.filter(car => (car.mpg != null && car.horsepower != null && !isNaN(car.mpg) && !isNaN(car.horsepower)))
+Met [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) kan je checken of er geen ongeldige waarden in de data staan. Hier staan twee voorbeelden van filteren op `null` of op waarden die geen `number` zijn.
+
+```javascript   
+let cleanedData = data.filter(car => (car.mpg != null && car.horsepower != null))
+
+let cleanedData = data.filter(!isNaN(car.mpg) && !isNaN(car.horsepower)))
 ```
 
 <br>
