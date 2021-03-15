@@ -146,19 +146,17 @@ async function drawPredictions() {
     let predictions = []
 
     // horsepower gaat van 0 tot 400
-    for(let i=0; i<400; i++) {
+    for(let hp=0; hp<400; hp++) {
 
-        // prediction !
-        const results = await nn.predict({ horsepower: i })
+        // prediction voor waarde hp
+        const results = ...
 
-        // opslaan in formaat voor vega { horsepower: 3, mpg: 10 }
-        predictions.push({ horsepower: i, mpg: results[0].value })
+        // object opslaan voor scatterplot: { horsepower: 3, mpg: 10 }
+        predictions.push(...)
     }
 
     // teken predictions in scatterplot
     await plot.addPoints(predictions)
-    
-    console.log(`Finished ${predictions.length} predictions...`)
 }
 ```
 <br>
