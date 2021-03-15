@@ -51,5 +51,5 @@ async function trainingFinished() {
     // ...
 }
 
-
-setup()
+// start de applicatie
+// drawScatterPlot()
