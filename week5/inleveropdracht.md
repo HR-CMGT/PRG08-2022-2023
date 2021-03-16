@@ -112,7 +112,6 @@ Net zoals bij de decision tree kan je de CSV data [opsplitsen](https://github.co
 - [Beijing Pollution, Salary Prediction](https://www.kaggle.com/ahmettezcantekin/beginner-dataset-v2)
 - [Boston House Prices](https://www.kaggle.com/vikrishnan/boston-house-prices)
 - [Cars miles per gallon](https://www.kaggle.com/uciml/autompg-dataset)
-- [Weather prediction](https://www.kaggle.com/zaraavagyan/weathercsv)
 - [Kaggle regression dataset search](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets)
 
 ## Documentation
