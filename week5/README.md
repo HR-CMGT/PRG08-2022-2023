@@ -195,7 +195,6 @@ Bij de inleveropdracht van week 5 ga je deze oefening af maken, en dan een echte
 - [Beijing Pollution, Salary Prediction](https://www.kaggle.com/ahmettezcantekin/beginner-dataset-v2)
 - [Boston House Prices](https://www.kaggle.com/vikrishnan/boston-house-prices)
 - [Cars miles per gallon](https://www.kaggle.com/uciml/autompg-dataset)
-- [Weather prediction](https://www.kaggle.com/zaraavagyan/weathercsv)
 - [Kaggle regression dataset search](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets)
 
 ## Documentation
