@@ -81,9 +81,9 @@ Na het trainen teken je in je scatterplot de predictions voor alle waarden. Bv, 
 
 ## Model opslaan en inladen
 
-Voeg een knop toe aan je "training" webpagina waarmee je je getrainde model kan opslaan. [Documentatie: ML5 saveData()](https://learn.ml5js.org/#/reference/neural-network?id=savedata).
+Voeg een knop toe aan je "training" webpagina waarmee je je getrainde model kan opslaan. [Documentatie: ML5 save()](https://learn.ml5js.org/#/reference/neural-network?id=save).
 
-Maak een aparte webpagina waarin je het getrainde model kan inladen. *Op deze pagina hoef je het neural network dus niet te trainen*. [Documentatie: ML5 loadData()](https://learn.ml5js.org/#/reference/neural-network?id=loaddata)
+Maak een aparte webpagina waarin je het getrainde model kan inladen. *Op deze pagina hoef je het neural network dus niet te trainen*. [Documentatie: ML5 load()](https://learn.ml5js.org/#/reference/neural-network?id=load)
 
 Je pagina bevat een gebruiksvriendelijke UI waarin je bv. de *horsepower* van je auto kan invoeren, en dan de *miles per gallon* te zien krijgt.
 
