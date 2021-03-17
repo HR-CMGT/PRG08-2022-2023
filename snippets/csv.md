@@ -84,7 +84,7 @@ Met [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/G
 let cleanedData = data.filter(car => (car.mpg != null && car.horsepower != null))
 
 // check of waarden wel een nummer zijn
-let cleanedData = data.filter(!isNaN(car.mpg) && !isNaN(car.horsepower)))
+let cleanedData = data.filter(car => (!isNaN(car.mpg) && !isNaN(car.horsepower)))
 ```
 Je kan deze functies aan elkaar vast plakken, dat ziet er zo uit:
 
