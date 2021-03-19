@@ -15,6 +15,7 @@ Op mobiel kan je de camera als input gebruiken!
 ```html
 <input type="file" accept="image/*;capture=camera" id="file">
 ```
+> ⚠️ Tip! Je kan meteen testen op je mobiel door je lokale IP adres te typen in plaats van localhost. Bv: `http://192.168.2.4/prg8/test/`. Je hoeft je project dan niet telkens te uploaden naar een live server.
 
 Gebruik de file als `src` voor een `img`.
 
