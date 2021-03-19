@@ -55,5 +55,6 @@ Test of het werkt met de camera op je mobiel! Nu kan je de speler op pad sturen 
 
 - [ML5 Image Classifier](https://learn.ml5js.org/#/reference/image-classifier)
 - [Upload image UI](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
-- [Simple webspeech example](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) en [Documentation](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
+- [Simple webspeech example](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md)
+- [Improving the pre-trained model with ML5](https://learn.ml5js.org/#/reference/feature-extractor)
 - [Webcam Image Capture](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture), [Demo](https://simpl.info/imagecapture/) en [broncode](https://github.com/samdutton/simpl/tree/gh-pages/imagecapture)
