@@ -1,28 +1,36 @@
 ## Browser spraak
 
-Laat de browser een reactie uitspreken:
+Laat de browser een reactie uitspreken!
+
+```html
+<input type="text" id="inputfield">
+<button id="playbutton">Play</button>
+```
 
 ```javascript
-function speak(message) {
-    let msg = new SpeechSynthesisUtterance()
+let synth = window.speechSynthesis
+let inputField = document.querySelector("#inputfield")
+let playButton = document.querySelector("#playbutton")
 
-    msg.text = message
+playButton.addEventListener("click", () => speak())
 
-    let selectedVoice = ""
-    if (selectedVoice != "") {
-        msg.voice = speechSynthesis.getVoices().filter(function (voice) { return voice.name == selectedVoice; })[0];
+function speak() {
+    if (synth.speaking) {
+        console.log('still speaking...')
+        return
     }
-
-    window.speechSynthesis.speak(msg)
+    if (inputField.value !== '') {
+        let utterThis = new SpeechSynthesisUtterance(inputField.value)
+        synth.speak(utterThis)
+    }
 }
 
-speak("I think this photo shows a falafel stand!")
 ```
 ⚠️ In nieuwe browsers mag je geen geluid laten horen zonder dat er een gebruikers interactie is geweest. Dit kan je bijvoorbeeld oplossen door een "start" knop in je applicatie te bouwen.
 
 ## Links
 
-- [Speak](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak)
-- [Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
+- [Complete Browser speech example with voices and pitch](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis)
+- [Human Speech recognition](https://github.com/mdn/web-speech-api)
 - [Synthesizer API](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode)
 - [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)	
