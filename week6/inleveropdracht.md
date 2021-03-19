@@ -38,18 +38,11 @@ Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/sn
 
 Vraag aan de gebruiker om een bepaalde afbeelding te uploaden en controleer of het hem/haar gelukt is! Gebruik [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md) om de gebruiker een afbeelding te laten uploaden.
 
-Werkt het ook op mobiel als je de camera als input gebruikt?
+Test of het werkt op je mobiel!
 
-```html
-<input type="file" accept="image/*;capture=camera" id="file">
-```
+> 🤯 tip: gebruik je IP adres van je localhost om je site meteen op je mobiel te testen, bv. `http://192.168.2.4/hamsterdetector`. Dit werkt alleen als je mobiel en desktop op dezelfde wifi zitten.
 
-## Niet verplicht - wel leuk:
-
-- Kan je de webcam gebruiken om *live* beelden te herkennen?
-- Kan je `doodlenet` gebruiken om handgetekende schetsen te herkennen?
-
-
+<br>
 <br>
 <br>
 
