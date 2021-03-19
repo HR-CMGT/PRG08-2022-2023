@@ -12,21 +12,29 @@ let synth = window.speechSynthesis
 let inputField = document.querySelector("#inputfield")
 let playButton = document.querySelector("#playbutton")
 
-playButton.addEventListener("click", () => speak())
+playButton.addEventListener("click", () => {
+    let text = inputField.value
+    speak(text)
+})
 
-function speak() {
+function speak(text) {
     if (synth.speaking) {
         console.log('still speaking...')
         return
     }
-    if (inputField.value !== '') {
-        let utterThis = new SpeechSynthesisUtterance(inputField.value)
+    if (text !== '') {
+        let utterThis = new SpeechSynthesisUtterance(text)
         synth.speak(utterThis)
     }
 }
 
 ```
+Je kan het inputField en de button ook weglaten en rechtstreeks `speak("hello there!")` aanroepen.
+
 ⚠️ In nieuwe browsers mag je geen geluid laten horen zonder dat er een gebruikers interactie is geweest. Dit kan je bijvoorbeeld oplossen door een "start" knop in je applicatie te bouwen.
+
+<br>
+<br>
 
 ## Links
 
