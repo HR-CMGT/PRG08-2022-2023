@@ -1,4 +1,4 @@
-# Toon lokale afbeelding in DOM
+# Upload een afbeelding en toon deze in de DOM
 
 Maak een file input field
 
