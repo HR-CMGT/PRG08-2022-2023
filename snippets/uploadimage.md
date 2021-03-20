@@ -1,4 +1,4 @@
-# Toon lokale afbeelding in DOM
+# Upload een afbeelding en toon deze in de DOM
 
 Maak een image input field. Op mobiel kan je de camera als input gebruiken!
 
@@ -35,3 +35,4 @@ function userImageUploaded(){
 
 
 
+> 🤯  Tip! Je kan meteen testen op je mobiel door je lokale IP adres te typen in plaats van localhost. Bv: `http://192.168.2.4/prg8/test/`. Je hoeft je project dan niet telkens te uploaden naar een live server.

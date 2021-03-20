@@ -43,9 +43,11 @@ Geef via spraak feedback of de speler een goede foto heeft gemaakt. Kan je hier 
 
 - [📺  Bekijk de demo op YouTube](https://www.youtube.com/watch?v=tqyG6YZLI0Y)
 
+<br>
 
+> 🤯 tip: gebruik je IP adres van je localhost om je site meteen op je mobiel te testen, bv. `http://192.168.2.4/hamsterdetective`. Dit werkt alleen als je mobiel en desktop op dezelfde wifi zitten.
 
-
+<br>
 <br>
 <br>
 
