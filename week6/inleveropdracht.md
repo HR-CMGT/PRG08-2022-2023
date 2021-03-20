@@ -1,7 +1,7 @@
 
 # Inleveropdracht week 6
 
-<img src="./inleveropdracht/images/hamster.jpg" width="400">
+<a href="https://www.youtube.com/watch?v=tqyG6YZLI0Y)" target="_blank"><img src="./inleveropdracht/images/hamsterdetective.png" width="400"></a>
 
 ### Lezen:
 
@@ -34,20 +34,16 @@ Voorspel wat er op de afbeelding in de `<img>` tag staat. Probeer dit met meerde
 
 Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) om te zeggen wat de afbeelding is. Kan je er ook bij zeggen hoe accuraat de voorspelling is? Of wat de tweede keus is?
 
-## Game UI
+## Afbeelding uploaden
 
-Vraag aan de gebruiker om een bepaalde afbeelding te uploaden en controleer of het hem/haar gelukt is! Gebruik [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md) om de gebruiker een afbeelding te laten uploaden.
+Vraag aan de gebruiker om een bepaalde afbeelding te uploaden. Gebruik daarvoor [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md).
+Test het op mobiel, zodat de speler live een foto kan maken!
 
-Werkt het ook op mobiel als je de camera als input gebruikt?
+Geef via spraak feedback of de speler een goede foto heeft gemaakt. Kan je hier een game omheen bouwen? Maak de UI gebruiksvriendelijk. Kan je een random vraag stellen? Kan je een score bijhouden?
 
-```html
-<input type="file" accept="image/*;capture=camera" id="file">
-```
+- [📺  Bekijk de demo op YouTube](https://www.youtube.com/watch?v=tqyG6YZLI0Y)
 
-## Niet verplicht - wel leuk:
 
-- Kan je de webcam gebruiken om *live* beelden te herkennen?
-- Kan je `doodlenet` gebruiken om handgetekende schetsen te herkennen?
 
 
 <br>
@@ -63,4 +59,5 @@ Werkt het ook op mobiel als je de camera als input gebruikt?
 - [ML5 Image Classifier](https://learn.ml5js.org/#/reference/image-classifier)
 - [Upload image UI](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
 - [Simple webspeech example](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) en [Documentation](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
-- [Webcam Image Capture](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture), [Demo](https://simpl.info/imagecapture/) en [broncode](https://github.com/samdutton/simpl/tree/gh-pages/imagecapture)
+- [Hoe kan je het pre-loaded model verbeteren?](https://learn.ml5js.org/#/reference/feature-extractor)
+- [Foto's maken met de Webcam](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture) met [Demo](https://simpl.info/imagecapture/)
