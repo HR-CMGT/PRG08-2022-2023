@@ -61,5 +61,5 @@ Geef via spraak feedback of de speler een goede foto heeft gemaakt. Kan je hier 
 - [ML5 Image Classifier](https://learn.ml5js.org/#/reference/image-classifier)
 - [Upload image UI](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
 - [Simple webspeech example](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) en [Documentation](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
-- [Hoe kan je het pre-loaded model verbeteren?](https://learn.ml5js.org/#/reference/feature-extractor)
+- [Hoe kan je het pre-loaded model verbeteren?](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures) en [documentatie](https://learn.ml5js.org/#/reference/feature-extractor)
 - [Foto's maken met de Webcam](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture) met [Demo](https://simpl.info/imagecapture/)
