@@ -11,7 +11,8 @@
 
 - De uitgewerkte ImageClassifier opdracht
 - Ingevuld inleverdocument
-   - Wat kan de classifier wel en niet herkennen?
+   - Wat kan de classifier wel en niet herkennen? Hoe komt dit?
+   - Wat is het verschil tussen de pre-trained modellen?
    - Is het gelukt om er een game UI omheen te bouwen?
 
 
@@ -24,7 +25,9 @@
 
 ## ImageClassifier
 
-Maak een ImageClassifier aan met hulp van de [documentatie]((https://learn.ml5js.org/#/reference/image-classifier)). Let hierbij op de volgorde van je functies! Je kan pas voorspellen als het model helemaal is ingeladen!
+Maak een ImageClassifier aan met hulp van de [documentatie](https://learn.ml5js.org/#/reference/image-classifier). Let hierbij op de volgorde van je functies! Je kan pas voorspellen als het model helemaal is ingeladen!
+
+Kies een van de beschikbare pre-trained models om in te laden: *mobilenet, darknet, doodlenet*
 
 ## Image voorspellen
 
@@ -36,16 +39,17 @@ Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/sn
 
 ## Afbeelding uploaden
 
-Vraag aan de gebruiker om een bepaalde afbeelding te uploaden. Gebruik daarvoor [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md).
-Test het op mobiel, zodat de speler live een foto kan maken!
+Vraag aan de gebruiker om een bepaalde afbeelding te uploaden. Gebruik daarvoor [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md). Test het op mobiel, zodat de speler live een foto kan maken! Geef via spraak feedback of de speler een goede foto heeft gemaakt. 
 
-Geef via spraak feedback of de speler een goede foto heeft gemaakt. Kan je hier een game omheen bouwen? Maak de UI gebruiksvriendelijk. Kan je een random vraag stellen? Kan je een score bijhouden?
+## Game UI
 
-- [📺  Bekijk de demo op YouTube](https://www.youtube.com/watch?v=tqyG6YZLI0Y)
+ Kan je hier een game omheen bouwen? Maak de UI gebruiksvriendelijk. Kan je een random vraag stellen? Kan je een score bijhouden?
+
+- [📺  Eenvoudig voorbeeld op YouTube](https://www.youtube.com/watch?v=tqyG6YZLI0Y)
 
 <br>
 
-> 🤯 tip: gebruik je IP adres van je localhost om je site meteen op je mobiel te testen, bv. `http://192.168.2.4/hamsterdetective`. Dit werkt alleen als je mobiel en desktop op dezelfde wifi zitten.
+> 🤯 tip: gebruik je IP adres van je localhost om je site meteen op je mobiel te testen, bv. `http://192.168.2.4/hamsterdetective`. Dit werkt als je mobiel en desktop op dezelfde wifi zitten.
 
 <br>
 <br>
