@@ -5,8 +5,10 @@
 
 ## Project
 
-- Plaats je project in de eindproject folder.
-- Vul de onderstaande **verantwoording** in (typ in het readme.md bestand). Vul bij elk punt in of en hoe je project hieraan voldoet. Verwijs naar relevante code, en vul dit eventueel aan met eigen opmerkingen, links, etc.
+- Push je project vóór de deadline naar github. Het project sluit na de deadline! De deadline is zondag 18 April 23:00 uur.
+- Wacht niet tot 22:55 uur met pushen! Als er dan iets mis gaat heb je een probleem. Push regelmatig je updates tijdens de drie weken.
+- Vul de **verantwoording** in (typ in het readme.md bestand). Vul bij elk punt in of en hoe je project hieraan voldoet. Verwijs naar relevante code, en vul dit aan met eigen opmerkingen, links, filmpjes, foto's, etc.
+- Lees de cursushandleiding om te kijken hoe je complete eindcijfer tot stand komt.
 
 ## Ontvankelijkheidseis
 
