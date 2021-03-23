@@ -28,9 +28,9 @@ In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties e
 | 4 | [Algoritmes: Decision tree met CSV data](./week4) | Kaggle opdracht |
 | 5 | [Algoritmes: Neural Networks](./week5) | NN opdracht 1 |
 | 6 | [Algoritmes: Neural Networks](./week6) | NN opdracht 2 |
-| 7 | [Start eindopdracht CASE](./week7) | - |
+| 7 | [Eindopdracht CASE](./week7) | - |
 | 8 | Begeleid zelfstudie | - |
-| 9 | Onbegeleid zelfstudie | CASE inleveren |
+| 9 | Begeleid/onbegeleid zelfstudie - Showcase op donderdag | CASE inleveren |
 
 <br>
 <br>
