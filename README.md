@@ -38,12 +38,13 @@ In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties e
 
 ## Code snippets
 
-Hieronder vind je handige html,css en javascript code snippets die je in je projecten kan gebruiken!
+🤯 Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
 
 - [Laat de browser praten met web speech](./snippets/speech.md)
 - [Normaliseer data om beter te trainen](./snippets/normalise.md)
 - [CSV en JSON data laden en filteren](./snippets/csv.md)
 - [Werken met hidden layers in ML5](./snippets/layers.md)
+- [3D plot tekenen met Plotly.js](./snippets/plot3d)
 
 <br>
 <br>
@@ -51,8 +52,8 @@ Hieronder vind je handige html,css en javascript code snippets die je in je proj
 
 ## Docenten
 
-Ga naar https://classroom.github.com/classrooms en dan naar de assignment van dit vak: **PRG08 2021 Inleveropdracht**. Hier vind je het overzicht van studenten, en de link om studenten uit te nodigen.
+Ga naar https://classroom.github.com/classrooms. Daar vind je het overzicht van studenten, de inleveropdrachten, en de uitnodiginglinks per opdracht.
 
-De startcode voor inleveropdrachten plaats je in https://github.com/HR-CMGT-Classroom organisation. Let op dat je het vinkje ☑️ **template repository** aanzet. Dit zorgt ervoor dat de forks van studenten niet gelinkt blijven aan de startcode.
+De startcode voor inleveropdrachten plaats je in https://github.com/HR-CMGT-Classroom. Let op dat je het vinkje ☑️ **template repository** aanzet. Dit zorgt ervoor dat de forks van studenten niet gelinkt blijven aan de startcode.
 
-Het ingeleverde werk van studenten komt ook in de HR-CMGT-Classroom organisation te staan.
+Het ingeleverde werk van studenten komt in de HR-CMGT-Classroom organisation te staan.

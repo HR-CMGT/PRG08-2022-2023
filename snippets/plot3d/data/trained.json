@@ -1,0 +1,3152 @@
+[
+    {
+        "horsepower": 40,
+        "weight": 2000,
+        "mpg": 32.069027566909796
+    },
+    {
+        "horsepower": 40,
+        "weight": 2100,
+        "mpg": 32.226648807525635
+    },
+    {
+        "horsepower": 40,
+        "weight": 2200,
+        "mpg": 32.33461098670959
+    },
+    {
+        "horsepower": 40,
+        "weight": 2300,
+        "mpg": 31.708814477920534
+    },
+    {
+        "horsepower": 40,
+        "weight": 2400,
+        "mpg": 30.97306790351868
+    },
+    {
+        "horsepower": 40,
+        "weight": 2500,
+        "mpg": 30.22717571258545
+    },
+    {
+        "horsepower": 40,
+        "weight": 2600,
+        "mpg": 29.47343282699585
+    },
+    {
+        "horsepower": 40,
+        "weight": 2700,
+        "mpg": 28.714226055145264
+    },
+    {
+        "horsepower": 40,
+        "weight": 2800,
+        "mpg": 27.9520206451416
+    },
+    {
+        "horsepower": 40,
+        "weight": 2900,
+        "mpg": 27.189314341545106
+    },
+    {
+        "horsepower": 40,
+        "weight": 3000,
+        "mpg": 26.428616094589234
+    },
+    {
+        "horsepower": 40,
+        "weight": 3100,
+        "mpg": 25.67240571975708
+    },
+    {
+        "horsepower": 40,
+        "weight": 3200,
+        "mpg": 24.923104763031006
+    },
+    {
+        "horsepower": 40,
+        "weight": 3300,
+        "mpg": 24.183047366142276
+    },
+    {
+        "horsepower": 40,
+        "weight": 3400,
+        "mpg": 23.454448890686038
+    },
+    {
+        "horsepower": 40,
+        "weight": 3500,
+        "mpg": 22.739385747909544
+    },
+    {
+        "horsepower": 40,
+        "weight": 3600,
+        "mpg": 22.039768505096436
+    },
+    {
+        "horsepower": 40,
+        "weight": 3700,
+        "mpg": 21.357326197624207
+    },
+    {
+        "horsepower": 40,
+        "weight": 3800,
+        "mpg": 20.693592882156373
+    },
+    {
+        "horsepower": 40,
+        "weight": 3900,
+        "mpg": 20.049905395507814
+    },
+    {
+        "horsepower": 40,
+        "weight": 4000,
+        "mpg": 19.452166771888734
+    },
+    {
+        "horsepower": 40,
+        "weight": 4100,
+        "mpg": 18.99060845375061
+    },
+    {
+        "horsepower": 40,
+        "weight": 4200,
+        "mpg": 18.542268347740176
+    },
+    {
+        "horsepower": 40,
+        "weight": 4300,
+        "mpg": 18.10741146802902
+    },
+    {
+        "horsepower": 40,
+        "weight": 4400,
+        "mpg": 17.68623559474945
+    },
+    {
+        "horsepower": 40,
+        "weight": 4500,
+        "mpg": 17.278877437114716
+    },
+    {
+        "horsepower": 40,
+        "weight": 4600,
+        "mpg": 16.885413193702696
+    },
+    {
+        "horsepower": 40,
+        "weight": 4700,
+        "mpg": 16.509486389160156
+    },
+    {
+        "horsepower": 40,
+        "weight": 4800,
+        "mpg": 16.148509633541106
+    },
+    {
+        "horsepower": 40,
+        "weight": 4900,
+        "mpg": 15.800965678691863
+    },
+    {
+        "horsepower": 50,
+        "weight": 2000,
+        "mpg": 32.11003360748291
+    },
+    {
+        "horsepower": 50,
+        "weight": 2100,
+        "mpg": 31.772399950027467
+    },
+    {
+        "horsepower": 50,
+        "weight": 2200,
+        "mpg": 31.03763723373413
+    },
+    {
+        "horsepower": 50,
+        "weight": 2300,
+        "mpg": 30.292542886734008
+    },
+    {
+        "horsepower": 50,
+        "weight": 2400,
+        "mpg": 29.539389419555665
+    },
+    {
+        "horsepower": 50,
+        "weight": 2500,
+        "mpg": 28.780563640594483
+    },
+    {
+        "horsepower": 50,
+        "weight": 2600,
+        "mpg": 28.018519592285156
+    },
+    {
+        "horsepower": 50,
+        "weight": 2700,
+        "mpg": 27.25575726032257
+    },
+    {
+        "horsepower": 50,
+        "weight": 2800,
+        "mpg": 26.49478335380554
+    },
+    {
+        "horsepower": 50,
+        "weight": 2900,
+        "mpg": 25.738084411621095
+    },
+    {
+        "horsepower": 50,
+        "weight": 3000,
+        "mpg": 24.988085341453555
+    },
+    {
+        "horsepower": 50,
+        "weight": 3100,
+        "mpg": 24.24713373184204
+    },
+    {
+        "horsepower": 50,
+        "weight": 3200,
+        "mpg": 23.517450547218324
+    },
+    {
+        "horsepower": 50,
+        "weight": 3300,
+        "mpg": 22.80113124847412
+    },
+    {
+        "horsepower": 50,
+        "weight": 3400,
+        "mpg": 22.100095367431642
+    },
+    {
+        "horsepower": 50,
+        "weight": 3500,
+        "mpg": 21.416090989112853
+    },
+    {
+        "horsepower": 50,
+        "weight": 3600,
+        "mpg": 20.75067009925842
+    },
+    {
+        "horsepower": 50,
+        "weight": 3700,
+        "mpg": 20.1051885843277
+    },
+    {
+        "horsepower": 50,
+        "weight": 3800,
+        "mpg": 19.574138283729553
+    },
+    {
+        "horsepower": 50,
+        "weight": 3900,
+        "mpg": 19.10919921398163
+    },
+    {
+        "horsepower": 50,
+        "weight": 4000,
+        "mpg": 18.657398796081544
+    },
+    {
+        "horsepower": 50,
+        "weight": 4100,
+        "mpg": 18.219018852710725
+    },
+    {
+        "horsepower": 50,
+        "weight": 4200,
+        "mpg": 17.794273412227632
+    },
+    {
+        "horsepower": 50,
+        "weight": 4300,
+        "mpg": 17.383319354057313
+    },
+    {
+        "horsepower": 50,
+        "weight": 4400,
+        "mpg": 16.986244082450867
+    },
+    {
+        "horsepower": 50,
+        "weight": 4500,
+        "mpg": 16.60414239168167
+    },
+    {
+        "horsepower": 50,
+        "weight": 4600,
+        "mpg": 16.239711487293242
+    },
+    {
+        "horsepower": 50,
+        "weight": 4700,
+        "mpg": 15.888735795021057
+    },
+    {
+        "horsepower": 50,
+        "weight": 4800,
+        "mpg": 15.551102697849274
+    },
+    {
+        "horsepower": 50,
+        "weight": 4900,
+        "mpg": 15.226663160324097
+    },
+    {
+        "horsepower": 60,
+        "weight": 2000,
+        "mpg": 31.10213260650635
+    },
+    {
+        "horsepower": 60,
+        "weight": 2100,
+        "mpg": 30.35784730911255
+    },
+    {
+        "horsepower": 60,
+        "weight": 2200,
+        "mpg": 29.605303430557253
+    },
+    {
+        "horsepower": 60,
+        "weight": 2300,
+        "mpg": 28.84687433242798
+    },
+    {
+        "horsepower": 60,
+        "weight": 2400,
+        "mpg": 28.08501181602478
+    },
+    {
+        "horsepower": 60,
+        "weight": 2500,
+        "mpg": 27.322211384773254
+    },
+    {
+        "horsepower": 60,
+        "weight": 2600,
+        "mpg": 26.560985350608828
+    },
+    {
+        "horsepower": 60,
+        "weight": 2700,
+        "mpg": 25.803812408447268
+    },
+    {
+        "horsepower": 60,
+        "weight": 2800,
+        "mpg": 25.053137636184694
+    },
+    {
+        "horsepower": 60,
+        "weight": 2900,
+        "mpg": 24.311305260658266
+    },
+    {
+        "horsepower": 60,
+        "weight": 3000,
+        "mpg": 23.580556416511534
+    },
+    {
+        "horsepower": 60,
+        "weight": 3100,
+        "mpg": 22.86299104690552
+    },
+    {
+        "horsepower": 60,
+        "weight": 3200,
+        "mpg": 22.16055109500885
+    },
+    {
+        "horsepower": 60,
+        "weight": 3300,
+        "mpg": 21.47499809265137
+    },
+    {
+        "horsepower": 60,
+        "weight": 3400,
+        "mpg": 20.807900834083558
+    },
+    {
+        "horsepower": 60,
+        "weight": 3500,
+        "mpg": 20.17795262336731
+    },
+    {
+        "horsepower": 60,
+        "weight": 3600,
+        "mpg": 19.69697263240814
+    },
+    {
+        "horsepower": 60,
+        "weight": 3700,
+        "mpg": 19.228678584098816
+    },
+    {
+        "horsepower": 60,
+        "weight": 3800,
+        "mpg": 18.773434662818907
+    },
+    {
+        "horsepower": 60,
+        "weight": 3900,
+        "mpg": 18.331546783447266
+    },
+    {
+        "horsepower": 60,
+        "weight": 4000,
+        "mpg": 17.90324410200119
+    },
+    {
+        "horsepower": 60,
+        "weight": 4100,
+        "mpg": 17.488698065280914
+    },
+    {
+        "horsepower": 60,
+        "weight": 4200,
+        "mpg": 17.088012886047366
+    },
+    {
+        "horsepower": 60,
+        "weight": 4300,
+        "mpg": 16.701238429546358
+    },
+    {
+        "horsepower": 60,
+        "weight": 4400,
+        "mpg": 16.33179634809494
+    },
+    {
+        "horsepower": 60,
+        "weight": 4500,
+        "mpg": 15.977383315563202
+    },
+    {
+        "horsepower": 60,
+        "weight": 4600,
+        "mpg": 15.636344254016876
+    },
+    {
+        "horsepower": 60,
+        "weight": 4700,
+        "mpg": 15.308541333675386
+    },
+    {
+        "horsepower": 60,
+        "weight": 4800,
+        "mpg": 14.993795263767243
+    },
+    {
+        "horsepower": 60,
+        "weight": 4900,
+        "mpg": 14.691896498203278
+    },
+    {
+        "horsepower": 70,
+        "weight": 2000,
+        "mpg": 29.671172618865967
+    },
+    {
+        "horsepower": 70,
+        "weight": 2100,
+        "mpg": 28.913160371780396
+    },
+    {
+        "horsepower": 70,
+        "weight": 2200,
+        "mpg": 28.151497316360473
+    },
+    {
+        "horsepower": 70,
+        "weight": 2300,
+        "mpg": 27.388677835464478
+    },
+    {
+        "horsepower": 70,
+        "weight": 2400,
+        "mpg": 26.627215361595155
+    },
+    {
+        "horsepower": 70,
+        "weight": 2500,
+        "mpg": 25.86959307193756
+    },
+    {
+        "horsepower": 70,
+        "weight": 2600,
+        "mpg": 25.118253803253175
+    },
+    {
+        "horsepower": 70,
+        "weight": 2700,
+        "mpg": 24.375560832023623
+    },
+    {
+        "horsepower": 70,
+        "weight": 2800,
+        "mpg": 23.643759775161744
+    },
+    {
+        "horsepower": 70,
+        "weight": 2900,
+        "mpg": 22.92496738433838
+    },
+    {
+        "horsepower": 70,
+        "weight": 3000,
+        "mpg": 22.221135687828067
+    },
+    {
+        "horsepower": 70,
+        "weight": 3100,
+        "mpg": 21.53404414653778
+    },
+    {
+        "horsepower": 70,
+        "weight": 3200,
+        "mpg": 20.86528060436249
+    },
+    {
+        "horsepower": 70,
+        "weight": 3300,
+        "mpg": 20.304869198799132
+    },
+    {
+        "horsepower": 70,
+        "weight": 3400,
+        "mpg": 19.82066421508789
+    },
+    {
+        "horsepower": 70,
+        "weight": 3500,
+        "mpg": 19.349036478996275
+    },
+    {
+        "horsepower": 70,
+        "weight": 3600,
+        "mpg": 18.890372586250308
+    },
+    {
+        "horsepower": 70,
+        "weight": 3700,
+        "mpg": 18.44499077796936
+    },
+    {
+        "horsepower": 70,
+        "weight": 3800,
+        "mpg": 18.013142061233523
+    },
+    {
+        "horsepower": 70,
+        "weight": 3900,
+        "mpg": 17.59501076936722
+    },
+    {
+        "horsepower": 70,
+        "weight": 4000,
+        "mpg": 17.19071848392487
+    },
+    {
+        "horsepower": 70,
+        "weight": 4100,
+        "mpg": 16.800330197811128
+    },
+    {
+        "horsepower": 70,
+        "weight": 4200,
+        "mpg": 16.424766457080842
+    },
+    {
+        "horsepower": 70,
+        "weight": 4300,
+        "mpg": 16.066908800601958
+    },
+    {
+        "horsepower": 70,
+        "weight": 4400,
+        "mpg": 15.722454249858856
+    },
+    {
+        "horsepower": 70,
+        "weight": 4500,
+        "mpg": 15.391275620460512
+    },
+    {
+        "horsepower": 70,
+        "weight": 4600,
+        "mpg": 15.073203146457672
+    },
+    {
+        "horsepower": 70,
+        "weight": 4700,
+        "mpg": 14.768034565448762
+    },
+    {
+        "horsepower": 70,
+        "weight": 4800,
+        "mpg": 14.475537359714508
+    },
+    {
+        "horsepower": 70,
+        "weight": 4900,
+        "mpg": 14.195450997352602
+    },
+    {
+        "horsepower": 80,
+        "weight": 2000,
+        "mpg": 28.217973852157595
+    },
+    {
+        "horsepower": 80,
+        "weight": 2100,
+        "mpg": 27.455157732963563
+    },
+    {
+        "horsepower": 80,
+        "weight": 2200,
+        "mpg": 26.69347450733185
+    },
+    {
+        "horsepower": 80,
+        "weight": 2300,
+        "mpg": 25.935418558120727
+    },
+    {
+        "horsepower": 80,
+        "weight": 2400,
+        "mpg": 25.183438324928286
+    },
+    {
+        "horsepower": 80,
+        "weight": 2500,
+        "mpg": 24.43990044593811
+    },
+    {
+        "horsepower": 80,
+        "weight": 2600,
+        "mpg": 23.707063984870913
+    },
+    {
+        "horsepower": 80,
+        "weight": 2700,
+        "mpg": 22.98705689907074
+    },
+    {
+        "horsepower": 80,
+        "weight": 2800,
+        "mpg": 22.281846904754637
+    },
+    {
+        "horsepower": 80,
+        "weight": 2900,
+        "mpg": 21.593230271339415
+    },
+    {
+        "horsepower": 80,
+        "weight": 3000,
+        "mpg": 20.931986856460572
+    },
+    {
+        "horsepower": 80,
+        "weight": 3100,
+        "mpg": 20.432599306106567
+    },
+    {
+        "horsepower": 80,
+        "weight": 3200,
+        "mpg": 19.945201826095584
+    },
+    {
+        "horsepower": 80,
+        "weight": 3300,
+        "mpg": 19.470268416404725
+    },
+    {
+        "horsepower": 80,
+        "weight": 3400,
+        "mpg": 19.00820472240448
+    },
+    {
+        "horsepower": 80,
+        "weight": 3500,
+        "mpg": 18.559349155426027
+    },
+    {
+        "horsepower": 80,
+        "weight": 3600,
+        "mpg": 18.12396560907364
+    },
+    {
+        "horsepower": 80,
+        "weight": 3700,
+        "mpg": 17.702258026599885
+    },
+    {
+        "horsepower": 80,
+        "weight": 3800,
+        "mpg": 17.294364798069
+    },
+    {
+        "horsepower": 80,
+        "weight": 3900,
+        "mpg": 16.90036212205887
+    },
+    {
+        "horsepower": 80,
+        "weight": 4000,
+        "mpg": 16.52027577161789
+    },
+    {
+        "horsepower": 80,
+        "weight": 4100,
+        "mpg": 16.15731337070465
+    },
+    {
+        "horsepower": 80,
+        "weight": 4200,
+        "mpg": 15.80943604707718
+    },
+    {
+        "horsepower": 80,
+        "weight": 4300,
+        "mpg": 15.474871623516083
+    },
+    {
+        "horsepower": 80,
+        "weight": 4400,
+        "mpg": 15.153457617759706
+    },
+    {
+        "horsepower": 80,
+        "weight": 4500,
+        "mpg": 14.845004653930665
+    },
+    {
+        "horsepower": 80,
+        "weight": 4600,
+        "mpg": 14.54928469657898
+    },
+    {
+        "horsepower": 80,
+        "weight": 4700,
+        "mpg": 14.26604505777359
+    },
+    {
+        "horsepower": 80,
+        "weight": 4800,
+        "mpg": 13.995008957386016
+    },
+    {
+        "horsepower": 80,
+        "weight": 4900,
+        "mpg": 13.73587944507599
+    },
+    {
+        "horsepower": 90,
+        "weight": 2000,
+        "mpg": 26.75976166725159
+    },
+    {
+        "horsepower": 90,
+        "weight": 2100,
+        "mpg": 26.001293349266053
+    },
+    {
+        "horsepower": 90,
+        "weight": 2200,
+        "mpg": 25.24868447780609
+    },
+    {
+        "horsepower": 90,
+        "weight": 2300,
+        "mpg": 24.50432186126709
+    },
+    {
+        "horsepower": 90,
+        "weight": 2400,
+        "mpg": 23.77046344280243
+    },
+    {
+        "horsepower": 90,
+        "weight": 2500,
+        "mpg": 23.04925734996796
+    },
+    {
+        "horsepower": 90,
+        "weight": 2600,
+        "mpg": 22.342683625221255
+    },
+    {
+        "horsepower": 90,
+        "weight": 2700,
+        "mpg": 21.652555346488953
+    },
+    {
+        "horsepower": 90,
+        "weight": 2800,
+        "mpg": 21.06355266571045
+    },
+    {
+        "horsepower": 90,
+        "weight": 2900,
+        "mpg": 20.56114070415497
+    },
+    {
+        "horsepower": 90,
+        "weight": 3000,
+        "mpg": 20.070579862594606
+    },
+    {
+        "horsepower": 90,
+        "weight": 3100,
+        "mpg": 19.592367672920226
+    },
+    {
+        "horsepower": 90,
+        "weight": 3200,
+        "mpg": 19.126928830146788
+    },
+    {
+        "horsepower": 90,
+        "weight": 3300,
+        "mpg": 18.67461519241333
+    },
+    {
+        "horsepower": 90,
+        "weight": 3400,
+        "mpg": 18.23571026325226
+    },
+    {
+        "horsepower": 90,
+        "weight": 3500,
+        "mpg": 17.810436475276948
+    },
+    {
+        "horsepower": 90,
+        "weight": 3600,
+        "mpg": 17.3989456653595
+    },
+    {
+        "horsepower": 90,
+        "weight": 3700,
+        "mpg": 17.001333081722258
+    },
+    {
+        "horsepower": 90,
+        "weight": 3800,
+        "mpg": 16.61763290166855
+    },
+    {
+        "horsepower": 90,
+        "weight": 3900,
+        "mpg": 16.24859982728958
+    },
+    {
+        "horsepower": 90,
+        "weight": 4000,
+        "mpg": 15.897291326522828
+    },
+    {
+        "horsepower": 90,
+        "weight": 4100,
+        "mpg": 15.559329342842101
+    },
+    {
+        "horsepower": 90,
+        "weight": 4200,
+        "mpg": 15.234563720226287
+    },
+    {
+        "horsepower": 90,
+        "weight": 4300,
+        "mpg": 14.922811245918275
+    },
+    {
+        "horsepower": 90,
+        "weight": 4400,
+        "mpg": 14.62385060787201
+    },
+    {
+        "horsepower": 90,
+        "weight": 4500,
+        "mpg": 14.33743976354599
+    },
+    {
+        "horsepower": 90,
+        "weight": 4600,
+        "mpg": 14.06330473423004
+    },
+    {
+        "horsepower": 90,
+        "weight": 4700,
+        "mpg": 13.80115305185318
+    },
+    {
+        "horsepower": 90,
+        "weight": 4800,
+        "mpg": 13.550677120685577
+    },
+    {
+        "horsepower": 90,
+        "weight": 4900,
+        "mpg": 13.311549735069274
+    },
+    {
+        "horsepower": 100,
+        "weight": 2000,
+        "mpg": 25.313997864723206
+    },
+    {
+        "horsepower": 100,
+        "weight": 2100,
+        "mpg": 24.568820595741272
+    },
+    {
+        "horsepower": 100,
+        "weight": 2200,
+        "mpg": 23.83396263122559
+    },
+    {
+        "horsepower": 100,
+        "weight": 2300,
+        "mpg": 23.111569857597352
+    },
+    {
+        "horsepower": 100,
+        "weight": 2400,
+        "mpg": 22.40364921092987
+    },
+    {
+        "horsepower": 100,
+        "weight": 2500,
+        "mpg": 21.712412691116334
+    },
+    {
+        "horsepower": 100,
+        "weight": 2600,
+        "mpg": 21.195882701873778
+    },
+    {
+        "horsepower": 100,
+        "weight": 2700,
+        "mpg": 20.690481066703796
+    },
+    {
+        "horsepower": 100,
+        "weight": 2800,
+        "mpg": 20.196793842315675
+    },
+    {
+        "horsepower": 100,
+        "weight": 2900,
+        "mpg": 19.71533088684082
+    },
+    {
+        "horsepower": 100,
+        "weight": 3000,
+        "mpg": 19.246538186073302
+    },
+    {
+        "horsepower": 100,
+        "weight": 3100,
+        "mpg": 18.79078552722931
+    },
+    {
+        "horsepower": 100,
+        "weight": 3200,
+        "mpg": 18.348374903202057
+    },
+    {
+        "horsepower": 100,
+        "weight": 3300,
+        "mpg": 17.919544994831085
+    },
+    {
+        "horsepower": 100,
+        "weight": 3400,
+        "mpg": 17.50446444749832
+    },
+    {
+        "horsepower": 100,
+        "weight": 3500,
+        "mpg": 17.103240835666657
+    },
+    {
+        "horsepower": 100,
+        "weight": 3600,
+        "mpg": 16.715928506851196
+    },
+    {
+        "horsepower": 100,
+        "weight": 3700,
+        "mpg": 16.34251961708069
+    },
+    {
+        "horsepower": 100,
+        "weight": 3800,
+        "mpg": 15.986024010181428
+    },
+    {
+        "horsepower": 100,
+        "weight": 3900,
+        "mpg": 15.644653820991516
+    },
+    {
+        "horsepower": 100,
+        "weight": 4000,
+        "mpg": 15.316524255275727
+    },
+    {
+        "horsepower": 100,
+        "weight": 4100,
+        "mpg": 15.001456582546234
+    },
+    {
+        "horsepower": 100,
+        "weight": 4200,
+        "mpg": 14.699241816997528
+    },
+    {
+        "horsepower": 100,
+        "weight": 4300,
+        "mpg": 14.40964071750641
+    },
+    {
+        "horsepower": 100,
+        "weight": 4400,
+        "mpg": 14.132387149333955
+    },
+    {
+        "horsepower": 100,
+        "weight": 4500,
+        "mpg": 13.86719480752945
+    },
+    {
+        "horsepower": 100,
+        "weight": 4600,
+        "mpg": 13.613757497072221
+    },
+    {
+        "horsepower": 100,
+        "weight": 4700,
+        "mpg": 13.371753334999084
+    },
+    {
+        "horsepower": 100,
+        "weight": 4800,
+        "mpg": 13.140850073099138
+    },
+    {
+        "horsepower": 100,
+        "weight": 4900,
+        "mpg": 12.920704817771911
+    },
+    {
+        "horsepower": 110,
+        "weight": 2000,
+        "mpg": 23.897553706169127
+    },
+    {
+        "horsepower": 110,
+        "weight": 2100,
+        "mpg": 23.173993301391604
+    },
+    {
+        "horsepower": 110,
+        "weight": 2200,
+        "mpg": 22.4647335767746
+    },
+    {
+        "horsepower": 110,
+        "weight": 2300,
+        "mpg": 21.84827587604523
+    },
+    {
+        "horsepower": 110,
+        "weight": 2400,
+        "mpg": 21.328961277008055
+    },
+    {
+        "horsepower": 110,
+        "weight": 2500,
+        "mpg": 20.82061142921448
+    },
+    {
+        "horsepower": 110,
+        "weight": 2600,
+        "mpg": 20.323829197883605
+    },
+    {
+        "horsepower": 110,
+        "weight": 2700,
+        "mpg": 19.83914797306061
+    },
+    {
+        "horsepower": 110,
+        "weight": 2800,
+        "mpg": 19.36702494621277
+    },
+    {
+        "horsepower": 110,
+        "weight": 2900,
+        "mpg": 18.907854557037354
+    },
+    {
+        "horsepower": 110,
+        "weight": 3000,
+        "mpg": 18.461956167221068
+    },
+    {
+        "horsepower": 110,
+        "weight": 3100,
+        "mpg": 18.02957966327667
+    },
+    {
+        "horsepower": 110,
+        "weight": 3200,
+        "mpg": 17.610916101932524
+    },
+    {
+        "horsepower": 110,
+        "weight": 3300,
+        "mpg": 17.206088745594023
+    },
+    {
+        "horsepower": 110,
+        "weight": 3400,
+        "mpg": 16.81516146659851
+    },
+    {
+        "horsepower": 110,
+        "weight": 3500,
+        "mpg": 16.438146591186523
+    },
+    {
+        "horsepower": 110,
+        "weight": 3600,
+        "mpg": 16.07563409805298
+    },
+    {
+        "horsepower": 110,
+        "weight": 3700,
+        "mpg": 15.730848419666291
+    },
+    {
+        "horsepower": 110,
+        "weight": 3800,
+        "mpg": 15.399342584609986
+    },
+    {
+        "horsepower": 110,
+        "weight": 3900,
+        "mpg": 15.080946826934815
+    },
+    {
+        "horsepower": 110,
+        "weight": 4000,
+        "mpg": 14.77546056509018
+    },
+    {
+        "horsepower": 110,
+        "weight": 4100,
+        "mpg": 14.482651281356812
+    },
+    {
+        "horsepower": 110,
+        "weight": 4200,
+        "mpg": 14.20226068496704
+    },
+    {
+        "horsepower": 110,
+        "weight": 4300,
+        "mpg": 13.93400639295578
+    },
+    {
+        "horsepower": 110,
+        "weight": 4400,
+        "mpg": 13.67758669257164
+    },
+    {
+        "horsepower": 110,
+        "weight": 4500,
+        "mpg": 13.432687264680862
+    },
+    {
+        "horsepower": 110,
+        "weight": 4600,
+        "mpg": 13.198971098661424
+    },
+    {
+        "horsepower": 110,
+        "weight": 4700,
+        "mpg": 12.976103985309601
+    },
+    {
+        "horsepower": 110,
+        "weight": 4800,
+        "mpg": 12.763730144500732
+    },
+    {
+        "horsepower": 110,
+        "weight": 4900,
+        "mpg": 12.561500239372254
+    },
+    {
+        "horsepower": 120,
+        "weight": 2000,
+        "mpg": 22.525944566726686
+    },
+    {
+        "horsepower": 120,
+        "weight": 2100,
+        "mpg": 21.98483605384827
+    },
+    {
+        "horsepower": 120,
+        "weight": 2200,
+        "mpg": 21.462779426574706
+    },
+    {
+        "horsepower": 120,
+        "weight": 2300,
+        "mpg": 20.95152170658112
+    },
+    {
+        "horsepower": 120,
+        "weight": 2400,
+        "mpg": 20.451682567596436
+    },
+    {
+        "horsepower": 120,
+        "weight": 2500,
+        "mpg": 19.963811087608338
+    },
+    {
+        "horsepower": 120,
+        "weight": 2600,
+        "mpg": 19.488389110565187
+    },
+    {
+        "horsepower": 120,
+        "weight": 2700,
+        "mpg": 19.025821161270144
+    },
+    {
+        "horsepower": 120,
+        "weight": 2800,
+        "mpg": 18.57644901275635
+    },
+    {
+        "horsepower": 120,
+        "weight": 2900,
+        "mpg": 18.140541040897368
+    },
+    {
+        "horsepower": 120,
+        "weight": 3000,
+        "mpg": 17.71830062866211
+    },
+    {
+        "horsepower": 120,
+        "weight": 3100,
+        "mpg": 17.309872889518736
+    },
+    {
+        "horsepower": 120,
+        "weight": 3200,
+        "mpg": 16.915333461761474
+    },
+    {
+        "horsepower": 120,
+        "weight": 3300,
+        "mpg": 16.53470755815506
+    },
+    {
+        "horsepower": 120,
+        "weight": 3400,
+        "mpg": 16.16796604394913
+    },
+    {
+        "horsepower": 120,
+        "weight": 3500,
+        "mpg": 15.817915380001068
+    },
+    {
+        "horsepower": 120,
+        "weight": 3600,
+        "mpg": 15.48302094936371
+    },
+    {
+        "horsepower": 120,
+        "weight": 3700,
+        "mpg": 15.16128478050232
+    },
+    {
+        "horsepower": 120,
+        "weight": 3800,
+        "mpg": 14.85251189470291
+    },
+    {
+        "horsepower": 120,
+        "weight": 3900,
+        "mpg": 14.55647817850113
+    },
+    {
+        "horsepower": 120,
+        "weight": 4000,
+        "mpg": 14.272931504249573
+    },
+    {
+        "horsepower": 120,
+        "weight": 4100,
+        "mpg": 14.001595652103425
+    },
+    {
+        "horsepower": 120,
+        "weight": 4200,
+        "mpg": 13.742173671722412
+    },
+    {
+        "horsepower": 120,
+        "weight": 4300,
+        "mpg": 13.494353765249253
+    },
+    {
+        "horsepower": 120,
+        "weight": 4400,
+        "mpg": 13.257804244756699
+    },
+    {
+        "horsepower": 120,
+        "weight": 4500,
+        "mpg": 13.03218978047371
+    },
+    {
+        "horsepower": 120,
+        "weight": 4600,
+        "mpg": 12.817161035537719
+    },
+    {
+        "horsepower": 120,
+        "weight": 4700,
+        "mpg": 12.612367272377014
+    },
+    {
+        "horsepower": 120,
+        "weight": 4800,
+        "mpg": 12.41744710803032
+    },
+    {
+        "horsepower": 120,
+        "weight": 4900,
+        "mpg": 12.232045322656631
+    },
+    {
+        "horsepower": 130,
+        "weight": 2000,
+        "mpg": 21.59732594490051
+    },
+    {
+        "horsepower": 130,
+        "weight": 2100,
+        "mpg": 21.083202934265138
+    },
+    {
+        "horsepower": 130,
+        "weight": 2200,
+        "mpg": 20.580342745780946
+    },
+    {
+        "horsepower": 130,
+        "weight": 2300,
+        "mpg": 20.0893146276474
+    },
+    {
+        "horsepower": 130,
+        "weight": 2400,
+        "mpg": 19.610617232322696
+    },
+    {
+        "horsepower": 130,
+        "weight": 2500,
+        "mpg": 19.144677495956422
+    },
+    {
+        "horsepower": 130,
+        "weight": 2600,
+        "mpg": 18.691849517822266
+    },
+    {
+        "horsepower": 130,
+        "weight": 2700,
+        "mpg": 18.252422964572908
+    },
+    {
+        "horsepower": 130,
+        "weight": 2800,
+        "mpg": 17.826618587970735
+    },
+    {
+        "horsepower": 130,
+        "weight": 2900,
+        "mpg": 17.414593267440797
+    },
+    {
+        "horsepower": 130,
+        "weight": 3000,
+        "mpg": 17.016442811489107
+    },
+    {
+        "horsepower": 130,
+        "weight": 3100,
+        "mpg": 16.632205879688264
+    },
+    {
+        "horsepower": 130,
+        "weight": 3200,
+        "mpg": 16.261863422393798
+    },
+    {
+        "horsepower": 130,
+        "weight": 3300,
+        "mpg": 15.905855822563172
+    },
+    {
+        "horsepower": 130,
+        "weight": 3400,
+        "mpg": 15.567564392089844
+    },
+    {
+        "horsepower": 130,
+        "weight": 3500,
+        "mpg": 15.242473244667053
+    },
+    {
+        "horsepower": 130,
+        "weight": 3600,
+        "mpg": 14.93039916753769
+    },
+    {
+        "horsepower": 130,
+        "weight": 3700,
+        "mpg": 14.631124770641328
+    },
+    {
+        "horsepower": 130,
+        "weight": 3800,
+        "mpg": 14.344404649734496
+    },
+    {
+        "horsepower": 130,
+        "weight": 3900,
+        "mpg": 14.06996762752533
+    },
+    {
+        "horsepower": 130,
+        "weight": 4000,
+        "mpg": 13.807523477077485
+    },
+    {
+        "horsepower": 130,
+        "weight": 4100,
+        "mpg": 13.556760400533676
+    },
+    {
+        "horsepower": 130,
+        "weight": 4200,
+        "mpg": 13.317355954647065
+    },
+    {
+        "horsepower": 130,
+        "weight": 4300,
+        "mpg": 13.088972008228303
+    },
+    {
+        "horsepower": 130,
+        "weight": 4400,
+        "mpg": 12.871264266967774
+    },
+    {
+        "horsepower": 130,
+        "weight": 4500,
+        "mpg": 12.663881993293762
+    },
+    {
+        "horsepower": 130,
+        "weight": 4600,
+        "mpg": 12.466465485095977
+    },
+    {
+        "horsepower": 130,
+        "weight": 4700,
+        "mpg": 12.278660362958908
+    },
+    {
+        "horsepower": 130,
+        "weight": 4800,
+        "mpg": 12.100104123353958
+    },
+    {
+        "horsepower": 130,
+        "weight": 4900,
+        "mpg": 11.930443507432937
+    },
+    {
+        "horsepower": 140,
+        "weight": 2000,
+        "mpg": 20.70980076789856
+    },
+    {
+        "horsepower": 140,
+        "weight": 2100,
+        "mpg": 20.215650749206546
+    },
+    {
+        "horsepower": 140,
+        "weight": 2200,
+        "mpg": 19.733707070350647
+    },
+    {
+        "horsepower": 140,
+        "weight": 2300,
+        "mpg": 19.26441683769226
+    },
+    {
+        "horsepower": 140,
+        "weight": 2400,
+        "mpg": 18.808153200149537
+    },
+    {
+        "horsepower": 140,
+        "weight": 2500,
+        "mpg": 18.365224874019624
+    },
+    {
+        "horsepower": 140,
+        "weight": 2600,
+        "mpg": 17.935864937305453
+    },
+    {
+        "horsepower": 140,
+        "weight": 2700,
+        "mpg": 17.520251560211182
+    },
+    {
+        "horsepower": 140,
+        "weight": 2800,
+        "mpg": 17.118491756916047
+    },
+    {
+        "horsepower": 140,
+        "weight": 2900,
+        "mpg": 16.73063987493515
+    },
+    {
+        "horsepower": 140,
+        "weight": 3000,
+        "mpg": 16.356694793701173
+    },
+    {
+        "horsepower": 140,
+        "weight": 3100,
+        "mpg": 15.996600484848024
+    },
+    {
+        "horsepower": 140,
+        "weight": 3200,
+        "mpg": 15.652974033355713
+    },
+    {
+        "horsepower": 140,
+        "weight": 3300,
+        "mpg": 15.324517261981963
+    },
+    {
+        "horsepower": 140,
+        "weight": 3400,
+        "mpg": 15.009127426147462
+    },
+    {
+        "horsepower": 140,
+        "weight": 3500,
+        "mpg": 14.706595540046692
+    },
+    {
+        "horsepower": 140,
+        "weight": 3600,
+        "mpg": 14.41668348312378
+    },
+    {
+        "horsepower": 140,
+        "weight": 3700,
+        "mpg": 14.139126801490784
+    },
+    {
+        "horsepower": 140,
+        "weight": 3800,
+        "mpg": 13.873637509346008
+    },
+    {
+        "horsepower": 140,
+        "weight": 3900,
+        "mpg": 13.619913053512573
+    },
+    {
+        "horsepower": 140,
+        "weight": 4000,
+        "mpg": 13.377628749608995
+    },
+    {
+        "horsepower": 140,
+        "weight": 4100,
+        "mpg": 13.146455150842666
+    },
+    {
+        "horsepower": 140,
+        "weight": 4200,
+        "mpg": 12.926045721769333
+    },
+    {
+        "horsepower": 140,
+        "weight": 4300,
+        "mpg": 12.716050845384597
+    },
+    {
+        "horsepower": 140,
+        "weight": 4400,
+        "mpg": 12.516115301847458
+    },
+    {
+        "horsepower": 140,
+        "weight": 4500,
+        "mpg": 12.325882470607757
+    },
+    {
+        "horsepower": 140,
+        "weight": 4600,
+        "mpg": 12.144990408420563
+    },
+    {
+        "horsepower": 140,
+        "weight": 4700,
+        "mpg": 11.973085016012192
+    },
+    {
+        "horsepower": 140,
+        "weight": 4800,
+        "mpg": 11.809807991981506
+    },
+    {
+        "horsepower": 140,
+        "weight": 4900,
+        "mpg": 11.654811400175095
+    },
+    {
+        "horsepower": 150,
+        "weight": 2000,
+        "mpg": 19.857650780677794
+    },
+    {
+        "horsepower": 150,
+        "weight": 2100,
+        "mpg": 19.3850358247757
+    },
+    {
+        "horsepower": 150,
+        "weight": 2200,
+        "mpg": 18.925357818603516
+    },
+    {
+        "horsepower": 150,
+        "weight": 2300,
+        "mpg": 18.47894060611725
+    },
+    {
+        "horsepower": 150,
+        "weight": 2400,
+        "mpg": 18.04603855609894
+    },
+    {
+        "horsepower": 150,
+        "weight": 2500,
+        "mpg": 17.626842164993285
+    },
+    {
+        "horsepower": 150,
+        "weight": 2600,
+        "mpg": 17.221477496623994
+    },
+    {
+        "horsepower": 150,
+        "weight": 2700,
+        "mpg": 16.830012905597687
+    },
+    {
+        "horsepower": 150,
+        "weight": 2800,
+        "mpg": 16.452460157871247
+    },
+    {
+        "horsepower": 150,
+        "weight": 2900,
+        "mpg": 16.088777232170106
+    },
+    {
+        "horsepower": 150,
+        "weight": 3000,
+        "mpg": 15.739252674579621
+    },
+    {
+        "horsepower": 150,
+        "weight": 3100,
+        "mpg": 15.407418513298035
+    },
+    {
+        "horsepower": 150,
+        "weight": 3200,
+        "mpg": 15.08869947195053
+    },
+    {
+        "horsepower": 150,
+        "weight": 3300,
+        "mpg": 14.782894968986511
+    },
+    {
+        "horsepower": 150,
+        "weight": 3400,
+        "mpg": 14.489773046970367
+    },
+    {
+        "horsepower": 150,
+        "weight": 3500,
+        "mpg": 14.209077656269073
+    },
+    {
+        "horsepower": 150,
+        "weight": 3600,
+        "mpg": 13.94052529335022
+    },
+    {
+        "horsepower": 150,
+        "weight": 3700,
+        "mpg": 13.68381564617157
+    },
+    {
+        "horsepower": 150,
+        "weight": 3800,
+        "mpg": 13.438632154464722
+    },
+    {
+        "horsepower": 150,
+        "weight": 3900,
+        "mpg": 13.204644250869752
+    },
+    {
+        "horsepower": 150,
+        "weight": 4000,
+        "mpg": 12.981510162353516
+    },
+    {
+        "horsepower": 150,
+        "weight": 4100,
+        "mpg": 12.768881112337112
+    },
+    {
+        "horsepower": 150,
+        "weight": 4200,
+        "mpg": 12.566402161121369
+    },
+    {
+        "horsepower": 150,
+        "weight": 4300,
+        "mpg": 12.373717248439789
+    },
+    {
+        "horsepower": 150,
+        "weight": 4400,
+        "mpg": 12.190466111898422
+    },
+    {
+        "horsepower": 150,
+        "weight": 4500,
+        "mpg": 12.016292411088944
+    },
+    {
+        "horsepower": 150,
+        "weight": 4600,
+        "mpg": 11.850838124752045
+    },
+    {
+        "horsepower": 150,
+        "weight": 4700,
+        "mpg": 11.693753916025162
+    },
+    {
+        "horsepower": 150,
+        "weight": 4800,
+        "mpg": 11.544690448045731
+    },
+    {
+        "horsepower": 150,
+        "weight": 4900,
+        "mpg": 11.403308188915252
+    },
+    {
+        "horsepower": 160,
+        "weight": 2000,
+        "mpg": 19.043457770347594
+    },
+    {
+        "horsepower": 160,
+        "weight": 2100,
+        "mpg": 18.593569040298462
+    },
+    {
+        "horsepower": 160,
+        "weight": 2200,
+        "mpg": 18.157137203216553
+    },
+    {
+        "horsepower": 160,
+        "weight": 2300,
+        "mpg": 17.73436620235443
+    },
+    {
+        "horsepower": 160,
+        "weight": 2400,
+        "mpg": 17.325400590896606
+    },
+    {
+        "horsepower": 160,
+        "weight": 2500,
+        "mpg": 16.930324411392213
+    },
+    {
+        "horsepower": 160,
+        "weight": 2600,
+        "mpg": 16.549161195755005
+    },
+    {
+        "horsepower": 160,
+        "weight": 2700,
+        "mpg": 16.181883490085603
+    },
+    {
+        "horsepower": 160,
+        "weight": 2800,
+        "mpg": 15.828414535522462
+    },
+    {
+        "horsepower": 160,
+        "weight": 2900,
+        "mpg": 15.491180920600891
+    },
+    {
+        "horsepower": 160,
+        "weight": 3000,
+        "mpg": 15.169118666648865
+    },
+    {
+        "horsepower": 160,
+        "weight": 3100,
+        "mpg": 14.860026979446411
+    },
+    {
+        "horsepower": 160,
+        "weight": 3200,
+        "mpg": 14.563680064678191
+    },
+    {
+        "horsepower": 160,
+        "weight": 3300,
+        "mpg": 14.279826354980468
+    },
+    {
+        "horsepower": 160,
+        "weight": 3400,
+        "mpg": 14.008190190792085
+    },
+    {
+        "horsepower": 160,
+        "weight": 3500,
+        "mpg": 13.748477423191071
+    },
+    {
+        "horsepower": 160,
+        "weight": 3600,
+        "mpg": 13.500371772050858
+    },
+    {
+        "horsepower": 160,
+        "weight": 3700,
+        "mpg": 13.263547152280807
+    },
+    {
+        "horsepower": 160,
+        "weight": 3800,
+        "mpg": 13.037664592266083
+    },
+    {
+        "horsepower": 160,
+        "weight": 3900,
+        "mpg": 12.822378116846085
+    },
+    {
+        "horsepower": 160,
+        "weight": 4000,
+        "mpg": 12.617333626747131
+    },
+    {
+        "horsepower": 160,
+        "weight": 4100,
+        "mpg": 12.422171980142593
+    },
+    {
+        "horsepower": 160,
+        "weight": 4200,
+        "mpg": 12.236538237333297
+    },
+    {
+        "horsepower": 160,
+        "weight": 4300,
+        "mpg": 12.060072416067124
+    },
+    {
+        "horsepower": 160,
+        "weight": 4400,
+        "mpg": 11.892418736219406
+    },
+    {
+        "horsepower": 160,
+        "weight": 4500,
+        "mpg": 11.733222538232804
+    },
+    {
+        "horsepower": 160,
+        "weight": 4600,
+        "mpg": 11.582137286663055
+    },
+    {
+        "horsepower": 160,
+        "weight": 4700,
+        "mpg": 11.438818687200547
+    },
+    {
+        "horsepower": 160,
+        "weight": 4800,
+        "mpg": 11.302932810783386
+    },
+    {
+        "horsepower": 160,
+        "weight": 4900,
+        "mpg": 11.174148389697075
+    },
+    {
+        "horsepower": 170,
+        "weight": 2000,
+        "mpg": 18.269154715538026
+    },
+    {
+        "horsepower": 170,
+        "weight": 2100,
+        "mpg": 17.84282031059265
+    },
+    {
+        "horsepower": 170,
+        "weight": 2200,
+        "mpg": 17.43026216030121
+    },
+    {
+        "horsepower": 170,
+        "weight": 2300,
+        "mpg": 17.031573832035065
+    },
+    {
+        "horsepower": 170,
+        "weight": 2400,
+        "mpg": 16.64679846763611
+    },
+    {
+        "horsepower": 170,
+        "weight": 2500,
+        "mpg": 16.275920379161835
+    },
+    {
+        "horsepower": 170,
+        "weight": 2600,
+        "mpg": 15.918875133991243
+    },
+    {
+        "horsepower": 170,
+        "weight": 2700,
+        "mpg": 15.5758078455925
+    },
+    {
+        "horsepower": 170,
+        "weight": 2800,
+        "mpg": 15.25039005279541
+    },
+    {
+        "horsepower": 170,
+        "weight": 2900,
+        "mpg": 14.937995493412018
+    },
+    {
+        "horsepower": 170,
+        "weight": 3000,
+        "mpg": 14.638405656814577
+    },
+    {
+        "horsepower": 170,
+        "weight": 3100,
+        "mpg": 14.351376819610596
+    },
+    {
+        "horsepower": 170,
+        "weight": 3200,
+        "mpg": 14.07663780450821
+    },
+    {
+        "horsepower": 170,
+        "weight": 3300,
+        "mpg": 13.813898384571075
+    },
+    {
+        "horsepower": 170,
+        "weight": 3400,
+        "mpg": 13.562849843502045
+    },
+    {
+        "horsepower": 170,
+        "weight": 3500,
+        "mpg": 13.323167496919632
+    },
+    {
+        "horsepower": 170,
+        "weight": 3600,
+        "mpg": 13.094513493776322
+    },
+    {
+        "horsepower": 170,
+        "weight": 3700,
+        "mpg": 12.87654494047165
+    },
+    {
+        "horsepower": 170,
+        "weight": 3800,
+        "mpg": 12.668909978866576
+    },
+    {
+        "horsepower": 170,
+        "weight": 3900,
+        "mpg": 12.47125226855278
+    },
+    {
+        "horsepower": 170,
+        "weight": 4000,
+        "mpg": 12.283210986852646
+    },
+    {
+        "horsepower": 170,
+        "weight": 4100,
+        "mpg": 12.104431194067
+    },
+    {
+        "horsepower": 170,
+        "weight": 4200,
+        "mpg": 11.934552347660064
+    },
+    {
+        "horsepower": 170,
+        "weight": 4300,
+        "mpg": 11.773222589492798
+    },
+    {
+        "horsepower": 170,
+        "weight": 4400,
+        "mpg": 11.620092302560806
+    },
+    {
+        "horsepower": 170,
+        "weight": 4500,
+        "mpg": 11.474816352128983
+    },
+    {
+        "horsepower": 170,
+        "weight": 4600,
+        "mpg": 11.337057447433471
+    },
+    {
+        "horsepower": 170,
+        "weight": 4700,
+        "mpg": 11.20648530125618
+    },
+    {
+        "horsepower": 170,
+        "weight": 4800,
+        "mpg": 11.08277648985386
+    },
+    {
+        "horsepower": 170,
+        "weight": 4900,
+        "mpg": 10.965619495511055
+    },
+    {
+        "horsepower": 180,
+        "weight": 2000,
+        "mpg": 17.536057162284852
+    },
+    {
+        "horsepower": 180,
+        "weight": 2100,
+        "mpg": 17.133761727809905
+    },
+    {
+        "horsepower": 180,
+        "weight": 2200,
+        "mpg": 16.74537197351456
+    },
+    {
+        "horsepower": 180,
+        "weight": 2300,
+        "mpg": 16.370890140533447
+    },
+    {
+        "horsepower": 180,
+        "weight": 2400,
+        "mpg": 16.01026188135147
+    },
+    {
+        "horsepower": 180,
+        "weight": 2500,
+        "mpg": 15.663390266895295
+    },
+    {
+        "horsepower": 180,
+        "weight": 2600,
+        "mpg": 15.332516992092133
+    },
+    {
+        "horsepower": 180,
+        "weight": 2700,
+        "mpg": 15.01680555343628
+    },
+    {
+        "horsepower": 180,
+        "weight": 2800,
+        "mpg": 14.713956546783447
+    },
+    {
+        "horsepower": 180,
+        "weight": 2900,
+        "mpg": 14.423734092712403
+    },
+    {
+        "horsepower": 180,
+        "weight": 3000,
+        "mpg": 14.145873737335204
+    },
+    {
+        "horsepower": 180,
+        "weight": 3100,
+        "mpg": 13.880088615417481
+    },
+    {
+        "horsepower": 180,
+        "weight": 3200,
+        "mpg": 13.626075333356859
+    },
+    {
+        "horsepower": 180,
+        "weight": 3300,
+        "mpg": 13.383511728048326
+    },
+    {
+        "horsepower": 180,
+        "weight": 3400,
+        "mpg": 13.152065551280977
+    },
+    {
+        "horsepower": 180,
+        "weight": 3500,
+        "mpg": 12.931393349170685
+    },
+    {
+        "horsepower": 180,
+        "weight": 3600,
+        "mpg": 12.721143823862075
+    },
+    {
+        "horsepower": 180,
+        "weight": 3700,
+        "mpg": 12.520962595939636
+    },
+    {
+        "horsepower": 180,
+        "weight": 3800,
+        "mpg": 12.33049304485321
+    },
+    {
+        "horsepower": 180,
+        "weight": 3900,
+        "mpg": 12.149372947216033
+    },
+    {
+        "horsepower": 180,
+        "weight": 4000,
+        "mpg": 11.977249044179917
+    },
+    {
+        "horsepower": 180,
+        "weight": 4100,
+        "mpg": 11.813761913776398
+    },
+    {
+        "horsepower": 180,
+        "weight": 4200,
+        "mpg": 11.658565020561218
+    },
+    {
+        "horsepower": 180,
+        "weight": 4300,
+        "mpg": 11.511307907104491
+    },
+    {
+        "horsepower": 180,
+        "weight": 4400,
+        "mpg": 11.371655803918838
+    },
+    {
+        "horsepower": 180,
+        "weight": 4500,
+        "mpg": 11.239272260665894
+    },
+    {
+        "horsepower": 180,
+        "weight": 4600,
+        "mpg": 11.113836234807968
+    },
+    {
+        "horsepower": 180,
+        "weight": 4700,
+        "mpg": 10.995029065012933
+    },
+    {
+        "horsepower": 180,
+        "weight": 4800,
+        "mpg": 10.882546377182006
+    },
+    {
+        "horsepower": 180,
+        "weight": 4900,
+        "mpg": 10.776087999343872
+    },
+    {
+        "horsepower": 190,
+        "weight": 2000,
+        "mpg": 16.844885635375977
+    },
+    {
+        "horsepower": 190,
+        "weight": 2100,
+        "mpg": 16.466795015335084
+    },
+    {
+        "horsepower": 190,
+        "weight": 2200,
+        "mpg": 16.102577579021453
+    },
+    {
+        "horsepower": 190,
+        "weight": 2300,
+        "mpg": 15.75214480161667
+    },
+    {
+        "horsepower": 190,
+        "weight": 2400,
+        "mpg": 15.415501165390015
+    },
+    {
+        "horsepower": 190,
+        "weight": 2500,
+        "mpg": 15.096458840370179
+    },
+    {
+        "horsepower": 190,
+        "weight": 2600,
+        "mpg": 14.790336656570435
+    },
+    {
+        "horsepower": 190,
+        "weight": 2700,
+        "mpg": 14.496903216838838
+    },
+    {
+        "horsepower": 190,
+        "weight": 2800,
+        "mpg": 14.215901911258698
+    },
+    {
+        "horsepower": 190,
+        "weight": 2900,
+        "mpg": 13.94705147743225
+    },
+    {
+        "horsepower": 190,
+        "weight": 3000,
+        "mpg": 13.690052723884584
+    },
+    {
+        "horsepower": 190,
+        "weight": 3100,
+        "mpg": 13.444586288928985
+    },
+    {
+        "horsepower": 190,
+        "weight": 3200,
+        "mpg": 13.21032384634018
+    },
+    {
+        "horsepower": 190,
+        "weight": 3300,
+        "mpg": 12.986924463510514
+    },
+    {
+        "horsepower": 190,
+        "weight": 3400,
+        "mpg": 12.774038243293763
+    },
+    {
+        "horsepower": 190,
+        "weight": 3500,
+        "mpg": 12.571311366558074
+    },
+    {
+        "horsepower": 190,
+        "weight": 3600,
+        "mpg": 12.378388333320618
+    },
+    {
+        "horsepower": 190,
+        "weight": 3700,
+        "mpg": 12.194906640052796
+    },
+    {
+        "horsepower": 190,
+        "weight": 3800,
+        "mpg": 12.020511627197266
+    },
+    {
+        "horsepower": 190,
+        "weight": 3900,
+        "mpg": 11.854845273494721
+    },
+    {
+        "horsepower": 190,
+        "weight": 4000,
+        "mpg": 11.697557401657104
+    },
+    {
+        "horsepower": 190,
+        "weight": 4100,
+        "mpg": 11.548298674821854
+    },
+    {
+        "horsepower": 190,
+        "weight": 4200,
+        "mpg": 11.4067298412323
+    },
+    {
+        "horsepower": 190,
+        "weight": 4300,
+        "mpg": 11.272516271471977
+    },
+    {
+        "horsepower": 190,
+        "weight": 4400,
+        "mpg": 11.14532977938652
+    },
+    {
+        "horsepower": 190,
+        "weight": 4500,
+        "mpg": 11.024854084849357
+    },
+    {
+        "horsepower": 190,
+        "weight": 4600,
+        "mpg": 10.910779491066933
+    },
+    {
+        "horsepower": 190,
+        "weight": 4700,
+        "mpg": 10.802805826067924
+    },
+    {
+        "horsepower": 190,
+        "weight": 4800,
+        "mpg": 10.700642722845078
+    },
+    {
+        "horsepower": 190,
+        "weight": 4900,
+        "mpg": 10.604010179638863
+    },
+    {
+        "horsepower": 200,
+        "weight": 2000,
+        "mpg": 16.19582278728485
+    },
+    {
+        "horsepower": 200,
+        "weight": 2100,
+        "mpg": 15.841821563243865
+    },
+    {
+        "horsepower": 200,
+        "weight": 2200,
+        "mpg": 15.501511430740358
+    },
+    {
+        "horsepower": 200,
+        "weight": 2300,
+        "mpg": 15.176961517333986
+    },
+    {
+        "horsepower": 200,
+        "weight": 2400,
+        "mpg": 14.867549347877503
+    },
+    {
+        "horsepower": 200,
+        "weight": 2500,
+        "mpg": 14.570888674259187
+    },
+    {
+        "horsepower": 200,
+        "weight": 2600,
+        "mpg": 14.286727929115296
+    },
+    {
+        "horsepower": 200,
+        "weight": 2700,
+        "mpg": 14.014791452884674
+    },
+    {
+        "horsepower": 200,
+        "weight": 2800,
+        "mpg": 13.754785096645357
+    },
+    {
+        "horsepower": 200,
+        "weight": 2900,
+        "mpg": 13.506395941972734
+    },
+    {
+        "horsepower": 200,
+        "weight": 3000,
+        "mpg": 13.269295382499696
+    },
+    {
+        "horsepower": 200,
+        "weight": 3100,
+        "mpg": 13.043145006895067
+    },
+    {
+        "horsepower": 200,
+        "weight": 3200,
+        "mpg": 12.827599680423736
+    },
+    {
+        "horsepower": 200,
+        "weight": 3300,
+        "mpg": 12.622305864095688
+    },
+    {
+        "horsepower": 200,
+        "weight": 3400,
+        "mpg": 12.426903015375137
+    },
+    {
+        "horsepower": 200,
+        "weight": 3500,
+        "mpg": 12.241037875413895
+    },
+    {
+        "horsepower": 200,
+        "weight": 3600,
+        "mpg": 12.064347660541534
+    },
+    {
+        "horsepower": 200,
+        "weight": 3700,
+        "mpg": 11.896478271484375
+    },
+    {
+        "horsepower": 200,
+        "weight": 3800,
+        "mpg": 11.737077289819718
+    },
+    {
+        "horsepower": 200,
+        "weight": 3900,
+        "mpg": 11.585793697834015
+    },
+    {
+        "horsepower": 200,
+        "weight": 4000,
+        "mpg": 11.442287403345109
+    },
+    {
+        "horsepower": 200,
+        "weight": 4100,
+        "mpg": 11.30621971487999
+    },
+    {
+        "horsepower": 200,
+        "weight": 4200,
+        "mpg": 11.177264687418937
+    },
+    {
+        "horsepower": 200,
+        "weight": 4300,
+        "mpg": 11.05509959757328
+    },
+    {
+        "horsepower": 200,
+        "weight": 4400,
+        "mpg": 10.93941390812397
+    },
+    {
+        "horsepower": 200,
+        "weight": 4500,
+        "mpg": 10.829905065894128
+    },
+    {
+        "horsepower": 200,
+        "weight": 4600,
+        "mpg": 10.726279762387275
+    },
+    {
+        "horsepower": 200,
+        "weight": 4700,
+        "mpg": 10.628256595134735
+    },
+    {
+        "horsepower": 200,
+        "weight": 4800,
+        "mpg": 10.535560184717179
+    },
+    {
+        "horsepower": 200,
+        "weight": 4900,
+        "mpg": 10.447929018735886
+    },
+    {
+        "horsepower": 210,
+        "weight": 2000,
+        "mpg": 15.58856830596924
+    },
+    {
+        "horsepower": 210,
+        "weight": 2100,
+        "mpg": 15.258314704895021
+    },
+    {
+        "horsepower": 210,
+        "weight": 2200,
+        "mpg": 14.945597982406618
+    },
+    {
+        "horsepower": 210,
+        "weight": 2300,
+        "mpg": 14.645693266391755
+    },
+    {
+        "horsepower": 210,
+        "weight": 2400,
+        "mpg": 14.358355152606965
+    },
+    {
+        "horsepower": 210,
+        "weight": 2500,
+        "mpg": 14.083315825462343
+    },
+    {
+        "horsepower": 210,
+        "weight": 2600,
+        "mpg": 13.820282256603242
+    },
+    {
+        "horsepower": 210,
+        "weight": 2700,
+        "mpg": 13.568946850299834
+    },
+    {
+        "horsepower": 210,
+        "weight": 2800,
+        "mpg": 13.32898576259613
+    },
+    {
+        "horsepower": 210,
+        "weight": 2900,
+        "mpg": 13.100062543153763
+    },
+    {
+        "horsepower": 210,
+        "weight": 3000,
+        "mpg": 12.881833738088607
+    },
+    {
+        "horsepower": 210,
+        "weight": 3100,
+        "mpg": 12.673945528268813
+    },
+    {
+        "horsepower": 210,
+        "weight": 3200,
+        "mpg": 12.47604409456253
+    },
+    {
+        "horsepower": 210,
+        "weight": 3300,
+        "mpg": 12.287769454717637
+    },
+    {
+        "horsepower": 210,
+        "weight": 3400,
+        "mpg": 12.108762747049331
+    },
+    {
+        "horsepower": 210,
+        "weight": 3500,
+        "mpg": 11.938668191432953
+    },
+    {
+        "horsepower": 210,
+        "weight": 3600,
+        "mpg": 11.777130287885665
+    },
+    {
+        "horsepower": 210,
+        "weight": 3700,
+        "mpg": 11.623799419403076
+    },
+    {
+        "horsepower": 210,
+        "weight": 3800,
+        "mpg": 11.47833269238472
+    },
+    {
+        "horsepower": 210,
+        "weight": 3900,
+        "mpg": 11.34039085507393
+    },
+    {
+        "horsepower": 210,
+        "weight": 4000,
+        "mpg": 11.209643760323525
+    },
+    {
+        "horsepower": 210,
+        "weight": 4100,
+        "mpg": 11.085769104957581
+    },
+    {
+        "horsepower": 210,
+        "weight": 4200,
+        "mpg": 10.968452429771423
+    },
+    {
+        "horsepower": 210,
+        "weight": 4300,
+        "mpg": 10.857389920949936
+    },
+    {
+        "horsepower": 210,
+        "weight": 4400,
+        "mpg": 10.752284348011017
+    },
+    {
+        "horsepower": 210,
+        "weight": 4500,
+        "mpg": 10.652852627635003
+    },
+    {
+        "horsepower": 210,
+        "weight": 4600,
+        "mpg": 10.558816859126091
+    },
+    {
+        "horsepower": 210,
+        "weight": 4700,
+        "mpg": 10.469912868738174
+    },
+    {
+        "horsepower": 210,
+        "weight": 4800,
+        "mpg": 10.385883766412736
+    },
+    {
+        "horsepower": 210,
+        "weight": 4900,
+        "mpg": 10.306485268473626
+    },
+    {
+        "horsepower": 220,
+        "weight": 2000,
+        "mpg": 15.024489843845368
+    },
+    {
+        "horsepower": 220,
+        "weight": 2100,
+        "mpg": 14.721324837207796
+    },
+    {
+        "horsepower": 220,
+        "weight": 2200,
+        "mpg": 14.430791425704957
+    },
+    {
+        "horsepower": 220,
+        "weight": 2300,
+        "mpg": 14.152626836299897
+    },
+    {
+        "horsepower": 220,
+        "weight": 2400,
+        "mpg": 13.886546444892883
+    },
+    {
+        "horsepower": 220,
+        "weight": 2500,
+        "mpg": 13.632245177030564
+    },
+    {
+        "horsepower": 220,
+        "weight": 2600,
+        "mpg": 13.389400869607925
+    },
+    {
+        "horsepower": 220,
+        "weight": 2700,
+        "mpg": 13.157682675123215
+    },
+    {
+        "horsepower": 220,
+        "weight": 2800,
+        "mpg": 12.936746859550476
+    },
+    {
+        "horsepower": 220,
+        "weight": 2900,
+        "mpg": 12.726244086027146
+    },
+    {
+        "horsepower": 220,
+        "weight": 3000,
+        "mpg": 12.525816053152084
+    },
+    {
+        "horsepower": 220,
+        "weight": 3100,
+        "mpg": 12.335110062360764
+    },
+    {
+        "horsepower": 220,
+        "weight": 3200,
+        "mpg": 12.153761649131775
+    },
+    {
+        "horsepower": 220,
+        "weight": 3300,
+        "mpg": 11.981418955326081
+    },
+    {
+        "horsepower": 220,
+        "weight": 3400,
+        "mpg": 11.817721438407897
+    },
+    {
+        "horsepower": 220,
+        "weight": 3500,
+        "mpg": 11.662322562932967
+    },
+    {
+        "horsepower": 220,
+        "weight": 3600,
+        "mpg": 11.514872711896896
+    },
+    {
+        "horsepower": 220,
+        "weight": 3700,
+        "mpg": 11.375035434961319
+    },
+    {
+        "horsepower": 220,
+        "weight": 3800,
+        "mpg": 11.242475402355193
+    },
+    {
+        "horsepower": 220,
+        "weight": 3900,
+        "mpg": 11.11687017083168
+    },
+    {
+        "horsepower": 220,
+        "weight": 4000,
+        "mpg": 10.997902619838715
+    },
+    {
+        "horsepower": 220,
+        "weight": 4100,
+        "mpg": 10.88526571393013
+    },
+    {
+        "horsepower": 220,
+        "weight": 4200,
+        "mpg": 10.778661942481994
+    },
+    {
+        "horsepower": 220,
+        "weight": 4300,
+        "mpg": 10.677803039550781
+    },
+    {
+        "horsepower": 220,
+        "weight": 4400,
+        "mpg": 10.582409983873367
+    },
+    {
+        "horsepower": 220,
+        "weight": 4500,
+        "mpg": 10.492216360569
+    },
+    {
+        "horsepower": 220,
+        "weight": 4600,
+        "mpg": 10.406961777806282
+    },
+    {
+        "horsepower": 220,
+        "weight": 4700,
+        "mpg": 10.326399990916252
+    },
+    {
+        "horsepower": 220,
+        "weight": 4800,
+        "mpg": 10.25029091835022
+    },
+    {
+        "horsepower": 220,
+        "weight": 4900,
+        "mpg": 10.178407925367356
+    },
+    {
+        "horsepower": 230,
+        "weight": 2000,
+        "mpg": 14.504040670394897
+    },
+    {
+        "horsepower": 230,
+        "weight": 2100,
+        "mpg": 14.222733449935912
+    },
+    {
+        "horsepower": 230,
+        "weight": 2200,
+        "mpg": 13.953584384918212
+    },
+    {
+        "horsepower": 230,
+        "weight": 2300,
+        "mpg": 13.696294844150543
+    },
+    {
+        "horsepower": 230,
+        "weight": 2400,
+        "mpg": 13.45054658651352
+    },
+    {
+        "horsepower": 230,
+        "weight": 2500,
+        "mpg": 13.216010165214538
+    },
+    {
+        "horsepower": 230,
+        "weight": 2600,
+        "mpg": 12.99234492778778
+    },
+    {
+        "horsepower": 230,
+        "weight": 2700,
+        "mpg": 12.779201537370682
+    },
+    {
+        "horsepower": 230,
+        "weight": 2800,
+        "mpg": 12.576227015256881
+    },
+    {
+        "horsepower": 230,
+        "weight": 2900,
+        "mpg": 12.383065021038055
+    },
+    {
+        "horsepower": 230,
+        "weight": 3000,
+        "mpg": 12.199352490901948
+    },
+    {
+        "horsepower": 230,
+        "weight": 3100,
+        "mpg": 12.024736166000366
+    },
+    {
+        "horsepower": 230,
+        "weight": 3200,
+        "mpg": 11.858857464790344
+    },
+    {
+        "horsepower": 230,
+        "weight": 3300,
+        "mpg": 11.701365649700165
+    },
+    {
+        "horsepower": 230,
+        "weight": 3400,
+        "mpg": 11.551911944150925
+    },
+    {
+        "horsepower": 230,
+        "weight": 3500,
+        "mpg": 11.410155975818634
+    },
+    {
+        "horsepower": 230,
+        "weight": 3600,
+        "mpg": 11.275763115286827
+    },
+    {
+        "horsepower": 230,
+        "weight": 3700,
+        "mpg": 11.148406717181206
+    },
+    {
+        "horsepower": 230,
+        "weight": 3800,
+        "mpg": 11.027767559885978
+    },
+    {
+        "horsepower": 230,
+        "weight": 3900,
+        "mpg": 10.913538187742233
+    },
+    {
+        "horsepower": 230,
+        "weight": 4000,
+        "mpg": 10.80541604757309
+    },
+    {
+        "horsepower": 230,
+        "weight": 4100,
+        "mpg": 10.703112453222275
+    },
+    {
+        "horsepower": 230,
+        "weight": 4200,
+        "mpg": 10.606344881653786
+    },
+    {
+        "horsepower": 230,
+        "weight": 4300,
+        "mpg": 10.51484397649765
+    },
+    {
+        "horsepower": 230,
+        "weight": 4400,
+        "mpg": 10.428348225355148
+    },
+    {
+        "horsepower": 230,
+        "weight": 4500,
+        "mpg": 10.346607041358947
+    },
+    {
+        "horsepower": 230,
+        "weight": 4600,
+        "mpg": 10.269379362463951
+    },
+    {
+        "horsepower": 230,
+        "weight": 4700,
+        "mpg": 10.196434772014618
+    },
+    {
+        "horsepower": 230,
+        "weight": 4800,
+        "mpg": 10.127551607787609
+    },
+    {
+        "horsepower": 230,
+        "weight": 4900,
+        "mpg": 10.062518712878227
+    },
+    {
+        "horsepower": 240,
+        "weight": 2000,
+        "mpg": 14.021400558948518
+    },
+    {
+        "horsepower": 240,
+        "weight": 2100,
+        "mpg": 13.761102294921876
+    },
+    {
+        "horsepower": 240,
+        "weight": 2200,
+        "mpg": 13.51242823600769
+    },
+    {
+        "horsepower": 240,
+        "weight": 2300,
+        "mpg": 13.275050616264345
+    },
+    {
+        "horsepower": 240,
+        "weight": 2400,
+        "mpg": 13.04863382577896
+    },
+    {
+        "horsepower": 240,
+        "weight": 2500,
+        "mpg": 12.832827967405319
+    },
+    {
+        "horsepower": 240,
+        "weight": 2600,
+        "mpg": 12.6272823035717
+    },
+    {
+        "horsepower": 240,
+        "weight": 2700,
+        "mpg": 12.431639933586121
+    },
+    {
+        "horsepower": 240,
+        "weight": 2800,
+        "mpg": 12.245540595054626
+    },
+    {
+        "horsepower": 240,
+        "weight": 2900,
+        "mpg": 12.068628227710724
+    },
+    {
+        "horsepower": 240,
+        "weight": 3000,
+        "mpg": 11.900543969869613
+    },
+    {
+        "horsepower": 240,
+        "weight": 3100,
+        "mpg": 11.74093708395958
+    },
+    {
+        "horsepower": 240,
+        "weight": 3200,
+        "mpg": 11.589455991983414
+    },
+    {
+        "horsepower": 240,
+        "weight": 3300,
+        "mpg": 11.445760601758957
+    },
+    {
+        "horsepower": 240,
+        "weight": 3400,
+        "mpg": 11.30951194167137
+    },
+    {
+        "horsepower": 240,
+        "weight": 3500,
+        "mpg": 11.18038392663002
+    },
+    {
+        "horsepower": 240,
+        "weight": 3600,
+        "mpg": 11.058053413033486
+    },
+    {
+        "horsepower": 240,
+        "weight": 3700,
+        "mpg": 10.94221098423004
+    },
+    {
+        "horsepower": 240,
+        "weight": 3800,
+        "mpg": 10.83255198597908
+    },
+    {
+        "horsepower": 240,
+        "weight": 3900,
+        "mpg": 10.728784650564194
+    },
+    {
+        "horsepower": 240,
+        "weight": 4000,
+        "mpg": 10.630625054240227
+    },
+    {
+        "horsepower": 240,
+        "weight": 4100,
+        "mpg": 10.537800619006157
+    },
+    {
+        "horsepower": 240,
+        "weight": 4200,
+        "mpg": 10.450045770406723
+    },
+    {
+        "horsepower": 240,
+        "weight": 4300,
+        "mpg": 10.367110621929168
+    },
+    {
+        "horsepower": 240,
+        "weight": 4400,
+        "mpg": 10.288748228549958
+    },
+    {
+        "horsepower": 240,
+        "weight": 4500,
+        "mpg": 10.214728453755379
+    },
+    {
+        "horsepower": 240,
+        "weight": 4600,
+        "mpg": 10.144825012981892
+    },
+    {
+        "horsepower": 240,
+        "weight": 4700,
+        "mpg": 10.07882555872202
+    },
+    {
+        "horsepower": 240,
+        "weight": 4800,
+        "mpg": 10.0165243268013
+    },
+    {
+        "horsepower": 240,
+        "weight": 4900,
+        "mpg": 9.957726828753948
+    }
+]
