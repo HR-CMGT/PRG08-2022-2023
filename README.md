@@ -52,4 +52,6 @@ Hieronder vind je handige html,css en javascript code snippets die je in je proj
 
 Ga naar https://classroom.github.com/classrooms en dan naar de assignment van dit vak: **PRG08 2021 Inleveropdracht**. Hier vind je het overzicht van studenten, en de link om studenten uit te nodigen.
 
-De startcode voor inleveropdrachten plaats je in https://github.com/HR-CMGT-Classroom. Hier komt het ingeleverde werk van studenten uiteindelijk ook in te staan.
+De startcode voor inleveropdrachten plaats je in https://github.com/HR-CMGT-Classroom organisation. Let op dat je het vinkje ☑️ **template repository** aanzet. Dit zorgt ervoor dat de forks van studenten niet gelinkt blijven aan de startcode.
+
+Het ingeleverde werk van studenten komt ook in de HR-CMGT-Classroom organisation te staan.
