@@ -1,6 +1,9 @@
 # 3D Plot
 
-In dit voorbeeld tekenen we `horsepower`, `weight` en `mpg` in een 3D weergave. 
+In dit voorbeeld tekenen we `horsepower`, `weight` en `mpg` in 3D! 
+
+- De blauwe bolletjes zijn auto's uit de Kaggle CSV file.
+- De rode bolletjes zijn voorspellingen van het Neural Network voor elke `weight` en `horsepower` combinatie.
 
 ![plot3d](../../images/plot3d.png)
 
