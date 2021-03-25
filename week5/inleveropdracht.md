@@ -83,16 +83,15 @@ Na het trainen teken je in je scatterplot de predictions voor alle waarden. Bv, 
 
 Voeg een knop toe aan je "training" webpagina waarmee je je getrainde model kan opslaan. [Documentatie: ML5 save()](https://learn.ml5js.org/#/reference/neural-network?id=save).
 
-Maak een aparte webpagina waarin je het getrainde model kan inladen. *Op deze pagina hoef je het neural network dus niet te trainen*. [Documentatie: ML5 load()](https://learn.ml5js.org/#/reference/neural-network?id=load)
-
 > ⚠️ Er lijkt een bug in MacOS Safari te zijn waarbij het model niet helemaal wordt opgeslagen. Er moeten drie bestanden verschijnen:
 ```bash
 model_meta.json
 model.json
 model.weights.bin
 ```
+Maak een aparte webpagina waarin je het getrainde model kan inladen. *Op deze pagina hoef je het neural network dus niet te trainen*. [Documentatie: ML5 load()](https://learn.ml5js.org/#/reference/neural-network?id=load)
 
-Je pagina bevat een gebruiksvriendelijke UI waarin je bv. de *horsepower* van je auto kan invoeren, en dan de *miles per gallon* te zien krijgt.
+Deze aparte pagina bevat een gebruiksvriendelijke UI waarin je bv. de *horsepower* van je auto kan invoeren, en dan de *miles per gallon* te zien krijgt.
 
 ![car](../images/carpredict.png)
 
