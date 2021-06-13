@@ -2,11 +2,6 @@
 
 Laat de browser een reactie uitspreken!
 
-```html
-<input type="text" id="inputfield">
-<button id="playbutton">Play</button>
-```
-
 ```javascript
 let synth = window.speechSynthesis
 speak("Hello world")
@@ -24,6 +19,11 @@ function speak(text) {
 
 ```
 Je kan een inputField en de button toevoegen om het te testen met verschillende teksten
+
+```html
+<input type="text" id="inputfield">
+<button id="playbutton">Play</button>
+```
 
 ```javascript
 let inputField = document.querySelector("#inputfield")
