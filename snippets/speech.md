@@ -4,7 +4,6 @@ Laat de browser een reactie uitspreken!
 
 ```javascript
 let synth = window.speechSynthesis
-speak("Hello world")
 
 function speak(text) {
     if (synth.speaking) {
@@ -17,6 +16,7 @@ function speak(text) {
     }
 }
 
+speak("Hello world")
 ```
 Je kan een inputField en de button toevoegen om het te testen met verschillende teksten
 
