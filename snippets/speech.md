@@ -18,6 +18,16 @@ function speak(text) {
 
 speak("Hello world")
 ```
+Je kan verschillende voices gebruiken via:
+
+```typescript
+let voices = window.speechSynthesis.getVoices();
+let name = "Alex"
+utterThis.voice = voices.filter(function(voice) { return voice.name == name; })[0];
+```
+<br>
+<Br>
+
 Je kan een inputField en de button toevoegen om het te testen met verschillende teksten
 
 ```html
