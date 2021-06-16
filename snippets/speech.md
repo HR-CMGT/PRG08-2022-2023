@@ -18,12 +18,12 @@ function speak(text) {
 
 speak("Hello world")
 ```
-Je kan verschillende voices gebruiken via:
+Je kan verschillende voices gebruiken. Zie ook de [docs](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices)
 
 ```typescript
-let voices = window.speechSynthesis.getVoices();
+let voices = window.speechSynthesis.getVoices()
 let name = "Alex"
-utterThis.voice = voices.filter(function(voice) { return voice.name == name; })[0];
+utterThis.voice = voices.filter(function(voice) { return voice.name == name; })[0]
 ```
 <br>
 <Br>
