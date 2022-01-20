@@ -2,66 +2,68 @@
 
 ## College
 
-- Introductie van het vak en van de terminologie
-- Toelichting cursushandleiding
-- Oefening met [Teachable Machine](https://teachablemachine.withgoogle.com). 
+- Introductie ML5
+- Image Classifier
+- Feature Extractor
 
 <br>
 <br>
 
 ## Praktijk
 
-Teachable Machine toepassen
+Bouw een photo hunting app voor mobile met de image classifier en de mobile camera.
 
-- Train een model op [Teachable Machine](https://teachablemachine.withgoogle.com) voor het herkennen van spraak, beeld of een lichaamspose.
-- Klik op **export model** en volg de instructies voor tensorflow.js. Zie screenshot.
-- Test of het lokaal werkt met console berichten die de predictions tonen.
-- Bedenk een eenvoudige toepassing in je HTML pagina die de gestures/sounds gebruikt als input. Bijvoorbeeld:
-    - Toon emoji voor herkende gestures.
-    - Gebruik [web speech](#speech) om iets te zeggen na een herkende gesture.
-    - Bestuur een [game uit PRG4](https://github.com/HR-CMGT/Typescript) met gestures of spraak.
-- 👉 Let op, de webcam output hoeft niet zichtbaar te zijn in de uiteindelijke HTML pagina!
-- In de [Teachable Machine Documentatie](https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image) vind je meer code uitleg.
-- ⚠️ De html embed code werkt niet helemaal goed op iOS, je moet de video tag aanpassen. [Zie deze issue](https://github.com/googlecreativelab/teachablemachine-community/issues/73).
+<a href="https://www.youtube.com/watch?v=tqyG6YZLI0Y)" target="_blank"><img src="./startcode/images/hamsterdetective.png" width="400"></a>
 
-![tmexport](../images/tm-download.png)
-*export window teachable machine*
-
-
+[ML5 documentatie Image Classifier](https://learn.ml5js.org/#/reference/image-classifier)
 
 
 <br>
 <br>
 
-## Inleveropdracht
+# Opdracht
 
-- Meld je aan voor github classroom. De aanmeldlink krijg je van je docent.
-- Clone de github classroom repository. Hierin plaats je het werk dat je wekelijks doet. Push je werk weer terug naar github classroom om het in te leveren. Schrijf altijd kort op wat je gedaan hebt in je `inleverdocument.md`.
+## ImageClassifier
 
-In week 2 lever je in:
-- Een bewijs dat je hebt meegedaan aan international week (kort tekstje, foto of linkje).
-- De bestanden van je lokale teachable machine project.
+Maak een ImageClassifier aan met hulp van de [documentatie](https://learn.ml5js.org/#/reference/image-classifier). Let hierbij op de volgorde van je functies! Je kan pas voorspellen als het model helemaal is ingeladen!
+
+Kies een van de beschikbare pre-trained models om in te laden: *mobilenet, darknet, doodlenet*
+
+## Image voorspellen
+
+Voorspel wat er op de afbeelding in de `<img>` tag staat. Probeer dit met meerdere afbeeldingen. Wat wordt er wel en niet herkend in het pre-trained model?
+
+## Voorspelling uitspreken
+
+Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) om te zeggen wat de afbeelding is. Kan je er ook bij zeggen hoe accuraat de voorspelling is? Of wat de tweede keus is?
+
+## Afbeelding 
+
+Vraag aan de gebruiker om een bepaalde afbeelding te uploaden. Gebruik daarvoor [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md). Test het op mobiel, zodat de speler live een foto kan maken met zijn of haar mobiele camera! Geef via spraak feedback of de speler een goede foto heeft gemaakt. 
+
+## Game
+
+Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iets om hier een game omheen te bouwen.
+
+- [📺  Eenvoudig voorbeeld op YouTube](https://www.youtube.com/watch?v=tqyG6YZLI0Y)
+
+<br>
+
+> 🤯 tip: gebruik je IP adres van je localhost om je site meteen op je mobiel te testen, bv. `http://192.168.2.4/hamsterdetective`. Dit werkt als je mobiel en desktop op dezelfde wifi zitten.
+
+<br>
+<br>
+<br>
 
 ---
+
 <br>
-<br>
-<br>
 
-### Voorbeeldcode web speech
 
-Je kan de web speech api gebruiken om de browser te laten spreken:
+### Links
 
-```javascript
-function speak() {
-    let msg = new SpeechSynthesisUtterance()
-
-    msg.text = "Well done!"
-
-    let selectedVoice = ""
-    if (selectedVoice != "") {
-        msg.voice = speechSynthesis.getVoices().filter(function (voice) { return voice.name == selectedVoice; })[0]
-    }
-
-    window.speechSynthesis.speak(msg)
-}
-```
+- [ML5 Image Classifier](https://learn.ml5js.org/#/reference/image-classifier)
+- [Upload image UI](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
+- [Simple webspeech voorbeeld](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) en [documentatie](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
+- [Hoe kan je het pre-loaded model verbeteren?](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures) en [documentatie](https://learn.ml5js.org/#/reference/feature-extractor)
+- [Foto's maken met de Webcam](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture) met [Demo](https://simpl.info/imagecapture/)

@@ -1,38 +1,90 @@
-# Week 7
+# Week 6
 
-⚠️ Let op! Deze opdracht is verplaatst naar een aparte opdracht op github classroom! Check de opdracht apart uit als een nieuwe opdracht. Je krijgt hiervoor een uitnodigingslink. Je pushed je code dus niet naar dezelfde repository als de 4 eerdere inleveropdrachten.
+## Algoritmes: Neural Networks
+
+In deze oefening kijken we naar `classification` met een ML5 Neural Network. We kijken vooral naar het inladen en opschonen van de data.
+
+<br>
+<br>
+<br>
+
+## CleanData functie
+
+Na het inladen van de CSV roep je de cleanData functie aan. Een Neural Network heeft altijd **numbers** nodig als input, en **strings** als het output label!
 
 
-## Project
+```javascript
+function loadData() {
+    Papa.parse("./data/weather.csv", {
+        download: true,
+        header: true, 
+        dynamicTyping: true,
+        complete: results => cleanData(results.data)
+    })
+}
+```
+Bekijk `weather.csv` of `iris.csv` en kies een aantal features die je wil gebruiken voor classification. Bij de weather prediction kies je bv. `MinTemp` en `MaxTemp`. Check het label is waarop je wil trainen (`RainTomorrow`) en of dat een *string* is.
 
-- Push je project vóór de deadline naar github. Het project sluit na de deadline! De deadline is zondag 18 April 23:00 uur.
-- Wacht niet tot 22:55 uur met pushen! Als er dan iets mis gaat heb je een probleem. Push regelmatig je updates tijdens de drie weken.
-- Vul de **verantwoording** in (typ in het readme.md bestand). Vul bij elk punt in of en hoe je project hieraan voldoet. Verwijs naar relevante code, en vul dit aan met eigen opmerkingen, links, filmpjes, foto's, etc.
-- Lees de cursushandleiding om te kijken hoe je complete eindcijfer tot stand komt.
+Gebruik `map` om deze features uit de CSV te halen. Gebruik `filter` om zeker te weten dat dit `numbers` zijn en niet `null`.
 
-## Ontvankelijkheidseis
+Je kan de data ook nog shufflen! [Zie deze code snippet voor het prepareren van je data](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/csv.md).
 
-- Het inleverdocument van je project is ingevuld en komt overeen met de code van je project. 
-- Het project is zelf bedacht en zelf geschreven.
+<br>
 
-# Verantwoording
 
-## Concept (1 punt)
-Je hebt een eigen concept bedacht voor een Machine Learning applicatie met behulp van de AI x Design Cards. Je inleverdocument bevat een korte uitleg over jouw idee en de toegevoegde waarde van Machine Learning in jouw applicatie. 
 
-Je hebt aan de hand van de "Machine Learning Reading List" op GitHub onderzoek gedaan naar verschillende libraries, tools en API's om te onderzoeken wat zou kunnen werken voor jouw concept. Beschrijf je bevindingen kort in je inleverdocument.
+## Neural Network
 
-## Prototype 1  (1 punt)
-Naar aanleiding van je onderzoek heb je een code prototype gebouwd, om te testen of jouw gekozen algoritme werkt zoals je verwacht. Omschrijf het resultaat in je inleverdocument. Hoe nauwkeurig is je algoritme? Heb je training data nodig en hoe kom je daar aan? Gebruik je classification of regression? Is het algoritme makkelijk in een web app toe te passen?
+De cleanData functie stuurt de opgeschoonde data naar de train functie! Let op dat je hier traint op de features die je hebt gekozen in de cleanData functie.
 
-## Prototype 2  (1 punt)
-Om een betere keuze te maken heb je een tweede prototype gebouwd met een ander algoritme, library of API. Omschrijf ook hier het resultaat in je inleverdocument zoals bij het eerste prototype.
+```javascript
+function trainNeuralNetwork(data) {
+    const nn = ml5.neuralNetwork({ task: 'classification', debug: true })
 
-## Uitwerking  (1 punt)
-Je hebt je prototype uitgewerkt tot een werkende machine learning applicatie. Je hebt supervised of unsupervised learning gebruikt om een model te bouwen dat goed werkt voor jouw concept. Je hebt getest of het werkt onder verschillende omstandigheden of met verschillende gebruikers.
+    for (let day of data) {
+        const inputs = { Cloudy: day.Cloudy, Rain: day.Rain }
+        const output = { RainTomorrow: day.RainTomorrow } 
+        nn.addData(inputs, output)
+    }
 
-## Web applicatie (1 punt)
-Je hebt een werkende **html + css + javascript** applicatie gebouwd om je algoritme heen. De applicatie staat online. Je hebt tijd besteed aan een werkbare gebruikerservaring en layout.
+    nn.normalizeData()
+    nn.train({ epochs: 32 }, () => finishedTraining())
+}
+```
 
-## Organisatie van code (1 punt)
-Je hebt nagedacht over de organisatie van code. Je project gebruikt coding standards zoals je die geleerd hebt in eerdere programmeervakken: je deelt functionaliteit op in eigen bestanden. Je gebruikt classes of functies om code overzichtelijk te maken. Je readme file bevat installatie instructies waarmee anderen de applicatie lokaal kunnen installeren.
+## Prediction
+
+Als het trainen klaar is roep je de `finishedTraining` functie aan. Hierin kan je een voorspelling doen voor het weer van morgen met zelfbedachte fake data.
+
+Toon het resultaat in de console om te kijken wat voor informatie het Neural Network terug geeft.
+
+```javascript
+function finishedTraining() {
+    const fakeDay = { Pressure: 7, PreviousRain: 10 }
+    
+    nn.classify(fakeDay, (error, result) => {
+        console.log(result)
+        console.log(`Rain Tomorrow: ${result[0].label}`)
+    })
+}
+```
+
+## Model opslaan
+
+Gebruik `nn.save()` om je getrainde weermodel op te slaan. Als je het inlaadt met `nn.load()` in een aparte webpagina, dan hoef je daar het model dus niet meer te trainen!
+
+
+<br>
+<br>
+<br>
+
+
+
+## Datasets voor classification
+
+- [Weather prediction](https://www.kaggle.com/zaraavagyan/weathercsv)
+- [Iris Flower prediction](https://www.kaggle.com/arshid/iris-flower-dataset)
+
+## Documentation
+
+- [ML5 Neural Networks in Javascript](https://learn.ml5js.org/#/reference/neural-network)
