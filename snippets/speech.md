@@ -2,20 +2,8 @@
 
 Laat de browser een reactie uitspreken!
 
-```html
-<input type="text" id="inputfield">
-<button id="playbutton">Play</button>
-```
-
 ```javascript
 let synth = window.speechSynthesis
-let inputField = document.querySelector("#inputfield")
-let playButton = document.querySelector("#playbutton")
-
-playButton.addEventListener("click", () => {
-    let text = inputField.value
-    speak(text)
-})
 
 function speak(text) {
     if (synth.speaking) {
@@ -28,8 +16,34 @@ function speak(text) {
     }
 }
 
+speak("Hello world")
 ```
-Je kan het inputField en de button ook weglaten en rechtstreeks `speak("hello there!")` aanroepen.
+Je kan verschillende voices gebruiken. Zie ook de [docs](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices)
+
+```typescript
+let voices = window.speechSynthesis.getVoices()
+let name = "Alex"
+utterThis.voice = voices.filter(function(voice) { return voice.name == name; })[0]
+```
+<br>
+<Br>
+
+Je kan een inputField en de button toevoegen om het te testen met verschillende teksten
+
+```html
+<input type="text" id="inputfield">
+<button id="playbutton">Play</button>
+```
+
+```javascript
+let inputField = document.querySelector("#inputfield")
+let playButton = document.querySelector("#playbutton")
+
+playButton.addEventListener("click", () => {
+    let text = inputField.value
+    speak(text)
+})
+```
 
 ⚠️ In nieuwe browsers mag je geen geluid laten horen zonder dat er een gebruikers interactie is geweest. Dit kan je bijvoorbeeld oplossen door een "start" knop in je applicatie te bouwen.
 

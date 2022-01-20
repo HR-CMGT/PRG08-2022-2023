@@ -216,6 +216,7 @@ Kan je jouw confusion matrix in de HTML file tonen?
 
 - [Kaggle datasets](https://www.kaggle.com/datasets)
 - [Decision Tree Javascript](https://github.com/lagodiuk/decision-tree-js)
+- [Een getal voorspellen met een Regression Tree](https://winkjs.org/wink-regression-tree/)
 - [Vega tree hierarchy viewer](https://vega.github.io/vega/examples/tree-layout/)
 - [Papa Parse](https://www.papaparse.com)
 - [Towards Data Science : Decision Tree explanation](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052/)

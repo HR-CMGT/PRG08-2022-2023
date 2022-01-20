@@ -135,3 +135,4 @@ Bij de inleveropdracht van week 4 ga je een van deze datasets gebruiken, en je g
 - [Decision Tree Javascript](https://github.com/lagodiuk/decision-tree-js)
 - [Vega tree hierarchy viewer](https://vega.github.io/vega/examples/tree-layout/)
 - [Towards Data Science : Decision Tree explanation](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052/)
+- [Een getal voorspellen met een Regression Tree](https://winkjs.org/wink-regression-tree/)
