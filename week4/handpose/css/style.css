@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: #bbd5dc;
+    overflow: hidden;
+    /* centered column with flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#array {
+    background-color: rgb(36, 32, 65);
+    color: white;
+    font-family: monospace;
+    min-height: 20px;
+    width:720px;
+}
+
+video {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    display:none;
+    width: auto;
+    height: auto;
+}

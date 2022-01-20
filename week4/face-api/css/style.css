@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: #bbd5dc;
+    overflow: hidden;
+    /* centered column with flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+div {
+    background-color:rgb(36, 32, 65);
+    color:white;
+    font-family: monospace;
+    min-height:20px;
+    width:720px;
+}
+
+.video-wrapper {
+    width: 720px;
+    height: 405px;
+}
+
+video {
+    position: fixed;
+}
+
+canvas {
+    position: fixed;
+}
+
+button {
+    width: 200px;
+    height: 80px;
+    font-size: 2em;
+    padding: 10px;
+    background: white;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    margin: 20px;
+}

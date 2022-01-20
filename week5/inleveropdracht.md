@@ -1,136 +1,222 @@
 
-# Inleveropdracht week 5
+# Inleveropdracht week 4
 
-Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint! Als iets niet lukt, ga dan door met de volgende stap. 
+Bij de inleveropdracht van week 4 ga je een echte dataset gebruiken, én testen hoe accuraat je voorspellingen zijn. 
 
-### Lezen:
+## Inleveren:
 
- - [Lees de ML5 documentatie over neural networks](https://learn.ml5js.org/#/reference/neural-network)
- - Bekijk de links onderin dit document en bekijk een van de artikelen of filmpjes
-
-### Inleveren:
-
-- De uitgewerkte opdracht
-  - Dataset gebruiken
-  - Scatterplot tekenen van punten en voorspelling
-  - Model opslaan en inladen in een aparte UI
-  - Optioneel : kan je de accuracy uitrekenen met testdata?
+- Project waarin: 
+  - Je een van de drie CSV datasets (*diabetes, mushrooms, titanic*) uit dit project hebt ingeladen.
+  - De dataset als decision tree getekend wordt.
+  - Je hebt de accuracy uitgerekend. 
+  - Je hebt een extra uitdaging gekozen en deze geprobeerd uit te werken.
 - Ingevuld inleverdocument 
   - Welke data heb je gebruikt? 
-  - Ging dat in een keer goed? Waar liep je tegen aan?
-  - Is je prediction een mooie lijn in je data scatterplot?
-  - Kon je een accuracy uitrekenen met testdata?
-  - Wat heb je gelezen van de geleverde externe links / filmpjes? Zat hier iets bij dat jij interessant vindt?
+  - Wat is je accuracy? Hoe zou dat nog beter kunnen?
+  - Hoe ver ben je gekomen met de extra uitdagingen?
+
 
 <br>
 <br>
-<br>
-
-# Opdracht
-
 <br>
 
 ## Data
 
-Gebruik een dataset die geschikt is voor regression. Onderaan deze pagina vind je een aantal links, en je mag ook zelf zoeken naar [regression datasets op Kaggle](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets). Gebruik [Papa Parse](https://www.papaparse.com) om CSV files te laden. 
+Gebruik een van deze datasets. Deze staan al in de `data` folder! Je kan op de Kaggle link klikken om er wat meer over te lezen.
+
+- Voorspel of je het eten van een paddestoel gaat overleven
+<br> [**Poisonous mushrooms dataset**](https://www.kaggle.com/uciml/mushroom-classification)
+- Voorspel of je huidige levensstijl diabetes gaat opleveren <br>[**Diabetes dataset**](https://www.kaggle.com/uciml/pima-indians-diabetes-database)
+- Voorspel of iemand zijn vakantie op de Titanic gaat overleven
+<br> [**Titanic dataset**](https://www.kaggle.com/c/titanic). Let op, deze tabel heeft veel kolommen die je weg kan laten.
+
+
+
+
+<br>
+<br>
+<br>
+
+## Traindata en testdata
+
+Bij het inlezen van de data moet je controleren wat het **label** is waarop we willen trainen. Ook moet je even kijken of er kolommen zijn die niet relevant zijn bij het trainen.
+
+- Bij 'mushrooms.csv' is het label "class", en de inhoud is "p" (poisonous) en "e" (edible.)
+- Bij 'diabetes.csv' is het label "Label" en de inhoud is "1" (diabetes) en "0" (geen diabetes)
+- Bij 'titanic.csv' is het label "Survived" en de inhoud is "1" (survived) en "0" (not survived). Ook heeft de titanic dataset veel kolommen die misschien niet relevant zijn: "Name", "Cabin", "PassengerId", "Ticket", "Fare". Je kan kijken of je algoritme beter wordt als de deze kolommen negeert.
+
+
+
+We gaan de data opsplitsen in trainingdata en testdata om te kunnen uitrekenen hoe goed het algoritme werkt. Sommige Kaggle sets zijn al opgesplitst. Als dat niet zo is kan je het zelf doen met javascript. 
 
 ```javascript
-function loadData() {
-    Papa.parse("./data/cars.csv", {
-        download: true,
-        header: true, // true maakt objecten, false maakt arrays
-        dynamicTyping: true,
-        complete: results => console.log(results.data)
-    })
-}
+let trainData = data.slice(0, Math.floor(data.length * 0.8))
+let testData = data.slice(Math.floor(data.length * 0.8) + 1)
+```
+Nu kan je de decision tree genereren en tekenen.
+```javascript
+let decisionTree = new DecisionTree({
+    // hier kan je aangeven welke kolommen genegeerd moeten worden
+    ignoredAttributes: ['Name'],    
+    trainingSet: trainData,
+    // dit is het label dat je wil gaan voorspellen
+    categoryAttr: "survived"          
+})
+// teken de tree
+let json = decisionTree.toJSON()
+let visual = new VegaTree('#view', 2300, 1000, json)
+```
+> ⚠️ Als je CSV file toevallig is gesorteerd op label, dan heeft je traindata alle positieve labels, en je testdata alle negatieve labels. Dat is natuurlijk niet handig. Om dit te voorkomen kan je je array shufflen **voordat** je splitst op traindata en testdata.
+
+```javascript
+data.sort(() => (Math.random() - 0.5)
 ```
 
 <br>
-
-### Data opschonen
-
-Een CSV file is niet altijd netjes ingedeeld. Controleer of er verkeerde waarden in staan. Dit kan je doen in Excel, of je kan in javascript de verkeerde waarden filteren. Je moet data shufflen voordat je een neural network gaat trainen. [Zie deze code snippet voor het prepareren van je data](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/csv.md).
-
-<br>
-
-### Scatterplot tekenen
-
-Teken nu de scatterplot van twee kolommen in je data. Op de Y as zet je het getrainde label (bv. de "mpg" van de auto). Op de X as zet je de feature waar je op wil trainen (bv. de "horsepower" van de auto).
-
-Het scatterplot kan verkeerde waarden aan het licht brengen, bv. een auto met een "mpg" van 0. 
-
-> ⚠️ Een scatterplot toont alleen een X en een Y as, maar je kan eventueel wel trainen op meer features, bv. het gewicht en bouwjaar van de auto. Let op dat je alleen een X en Y aan de scatterplot visualiser doorgeeft.
-
-<br>
 <br>
 <br>
 
-## Training en Prediction
+## Prediction
 
-Bij het trainen kan je meegeven hoeveel *epochs* dit moet duren. Experimenteer hiermee en kijk of dit veel verschil maakt voor je eindresultaat.
+Uiteindelijk kunnen we voorspellingen gaan doen. Gebruik hiervoor een item uit de testdata.
 
 ```javascript
-nn.train({ epochs: 12 }, finishedTraining)
+let passenger = testData[0]
+let passengerPrediction = decisionTree.predict(passenger)
+console.log(`Survived the holiday : ${passengerPrediction}`)
 ```
-
-Na het trainen teken je in je scatterplot de predictions voor alle waarden. Bv, als een auto een horsepower van 10 tot 200 heeft, teken je 190 voorspellingen van de *miles per gallon* voor elke *horsepower*
 
 <br>
 <Br>
 <br>
 
-## Model opslaan en inladen
+## Accuracy
 
-Voeg een knop toe aan je "training" webpagina waarmee je je getrainde model kan opslaan. [Documentatie: ML5 save()](https://learn.ml5js.org/#/reference/neural-network?id=save).
+Als we de testdata gebruiken voor onze voorspellingen, dan kunnen we aan het label van de testdata zien of de voorspelling goed was of niet!
 
-> ⚠️ Er lijkt een bug in MacOS Safari te zijn waarbij het model niet helemaal wordt opgeslagen. Er moeten drie bestanden verschijnen:
-```bash
-model_meta.json
-model.json
-model.weights.bin
+Als we weten dat 70 van de 100 voorspellingen goed gedaan zijn, dan zeggen we dat ons algoritme een **Accuracy van 70%** heeft.
+
+<br>
+
+> ⚠️ Bij een prediction moet je nooit het correcte label meegeven. Die moet je dus eerst verwijderen uit je test sample. In dit voorbeeld maken we eerst een kopie van de titanic testdata en daaruit verwijderen we het "survived" label.
+
+```javascript
+function testPassenger(passenger) {
+    // kopie van passenger maken, zonder het label
+    const passengerWithoutLabel = Object.assign({}, passenger)
+    delete passengerWithoutLabel.survived
+
+    // prediction
+    let prediction = decisionTree.predict(passengerWithoutLabel)
+
+    // vergelijk de prediction met het echte label
+    if (prediction == passenger.survived) {
+        console.log("Deze voorspelling is goed gegaan!")
+    }
+}
+
+testPassenger(testData[0])
 ```
-Maak een aparte webpagina waarin je het getrainde model kan inladen. *Op deze pagina hoef je het neural network dus niet te trainen*. [Documentatie: ML5 load()](https://learn.ml5js.org/#/reference/neural-network?id=load)
+Schrijf nu een `for` loop waarin je alle rijen uit de testdata test! Je kan nu bijhouden hoeveel van jouw predictions overeenkomen met de werkelijkheid. Dit geeft uiteindelijk je accuracy:
 
-Deze aparte pagina bevat een gebruiksvriendelijke UI waarin je bv. de *horsepower* van je auto kan invoeren, en dan de *miles per gallon* te zien krijgt.
+```javascript
+let accuracy = amountCorrect / totalAmount
+```
 
-![car](../images/carpredict.png)
-
-> ⚠️ Als je neural network is getrained op meer dan één feature, dan kan je ook meer invoervelden in de UI plaatsen.
-
-<br>
-<br>
-<br>
-<br>
-
-## Optioneel : Traindata en testdata
-
-Net zoals bij de decision tree kan je de CSV data [opsplitsen](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/csv.md) zodat je na het trainen kan uitrekenen wat de accuracy van je voorspellingen is.
+Toon in de HTML wat de accuracy is van jouw decision tree.
 
 <br>
 <br>
 <br>
 
 
+# Extra uitdaging
 
+Kies één (of meer) van deze drie extra uitdagingen om meer te leren over het werken met Machine Learning.
 
-## Datasets voor regression
+1. Data van Kaggle gebruiken
+2. Model opslaan als JSON
+3. Confusion Matrix tekenen
 
-- [Beijing Pollution, Salary Prediction](https://www.kaggle.com/ahmettezcantekin/beginner-dataset-v2)
-- [Boston House Prices](https://www.kaggle.com/vikrishnan/boston-house-prices)
-- [Cars miles per gallon](https://www.kaggle.com/uciml/autompg-dataset)
-- [Kaggle regression dataset search](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets)
+<br>
+<br>
+<br>
 
-## Documentation
+## 1 - Data van Kaggle gebruiken
 
-- [🔥 ML5 Neural Networks in Javascript](https://learn.ml5js.org/#/reference/neural-network)
-- [Vega Scatterplot documentation](https://vega.github.io/vega/examples/scatter-plot/)
+[Browse naar een dataset op Kaggle](https://www.kaggle.com). Let hierbij op dat je zoekt naar data die geschikt is voor **classification**. Dat betekent dat de data een **label** moet hebben. Bijvoorbeeld : *giftig/niet giftig* of *kat/hond/hamster*. Teken een decision tree voor deze data.
 
+<br>
+<br>
+<br>
+
+## 2 - Model opslaan als JSON
+
+Als je het model hebt gemaakt (de Decision Tree), dan heb je de originele data niet meer nodig. Je kan de decision tree als JSON opvragen:
+
+```javascript
+let decisionTree = new DecisionTree({...})
+
+// de tree kan je opvragen als JSON
+let json = decisionTree.toJSON()
+let jsonString = JSON.stringify(json)
+console.log(jsonString)
+```
+
+🔥  Sla deze JSON op in een apart bestand (Bv. met copy>paste vanuit de console), en gebruik [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) om dit weer in te laden. Nu kan je je decision tree gebruiken zonder dat je het originele CSV bestand nog nodig hebt!
+
+<br>
+<br>
+<br>
+
+## 3 - Confusion Matrix
+
+Met een ***Confusion Matrix*** krijg je nog wat meer inzicht in je accuracy. Je gaat nu ook bijhouden waarom een voorspelling goed of fout was. Bijvoorbeeld bij de mushrooms:
+
+```javascript
+if(prediction == "e" && label == "p") {
+    console.log("🍄 predicted edible, but was actually poisonous!🤮 ⚰️")
+}
+if(prediction == "p" && label == "e") {
+    console.log("🍄 predicted poisonous, but was actually edible! 😬")
+}
+```
+
+![confusion](../images/confusion.png)
+
+Kan je jouw confusion matrix in de HTML file tonen?
+
+```html
+<div>
+    <h4>Confusion Matrix</h4>
+    <table id="confusion">
+        <tr>
+            <td></td>
+            <td>Predicted true</td>
+            <td>Predicted false</td>
+        </tr>
+        <tr>
+            <td>Actually true</td>
+            <td> - </td>
+            <td> - </td>
+        </tr>
+        <tr>
+            <td>Actually false</td>
+            <td> - </td>
+            <td> - </td>
+        </tr>`
+    </table>
+</div>
+```
+
+<br>
+<br>
 
 ## Externe links
 
-- [📺 Crash Course Neural Networks](https://www.youtube.com/watch?v=JBlm4wnjNMY)
-- [📺  But what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk)
-- [📺  Showcase: Made with TensorFlowJS](https://www.youtube.com/watch?v=GskMuu821NI)
-- [📺 Code a perceptron from scratch in javascript!](https://www.youtube.com/watch?v=o98qlvrcqiU&t=26s)
-- [Neural Network Playground](https://playground.tensorflow.org/)
-- [Towards Data Science : Neural Networks for beginners](https://towardsdatascience.com/a-beginners-guide-to-neural-networks-d5cf7e369a13)
+- [Kaggle datasets](https://www.kaggle.com/datasets)
+- [Decision Tree Javascript](https://github.com/lagodiuk/decision-tree-js)
+- [Een getal voorspellen met een Regression Tree](https://winkjs.org/wink-regression-tree/)
+- [Vega tree hierarchy viewer](https://vega.github.io/vega/examples/tree-layout/)
+- [Papa Parse](https://www.papaparse.com)
+- [Towards Data Science : Decision Tree explanation](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052/)

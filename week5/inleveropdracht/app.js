@@ -1,55 +1,51 @@
-import { VegaScatterplot } from "./libraries/vegascatterplot.js"
-
-let nn
-let fakeData = createFakedata()
-let plot
+import { DecisionTree } from "./libraries/decisiontree.js"
+import { VegaTree } from "./libraries/vegatree.js"
 
 //
-// teken de scatterplot voor de fake data
+// DATA
 //
-async function drawScatterPlot() {
-    plot = new VegaScatterplot()
-    // await plot.initialise("horsepower", "mpg", 600, 400, fakeData)
+const csvFile = ""
+const trainingLabel = ""  
+const ignored = []  
 
+//
+// laad csv data als json
+//
+function loadData() {
+    Papa.parse(csvFile, {
+        download: true,
+        header: true,
+        dynamicTyping: true,
+        complete: results => console.log(results.data)   // gebruik deze data om te trainen
+    })
 }
 
 //
-// maak en train het neural network
+// MACHINE LEARNING - Decision Tree
 //
-async function createNeuralNetwork() {
-    // maak neural network
+function trainModel(data) {
+    // todo : splits data in traindata en testdata
 
 
-    // voeg data toe aan neural network met addData
-    for (let row of fakeData) {
-        // nn.addData({ horsepower: row.horsepower }, { mpg: row.mpg })
-    }
+    // maak het algoritme aan
+    let decisionTree = new DecisionTree({
+        ignoredAttributes: ignored,
+        trainingSet: data,
+        categoryAttr: trainingLabel
+    })
 
-    // train neural network
+    // Teken de boomstructuur - DOM element, breedte, hoogte, decision tree
+    let visual = new VegaTree('#view', 800, 400, decisionTree.toJSON())
+
+
+    // todo : maak een prediction met een sample uit de testdata
+
+
+    // todo : bereken de accuracy met behulp van alle test data
+
+
 
 }
 
 
-//
-// predictions
-//
-async function trainingFinished() {
-    // doe een enkele voorspelling om te zien of alles werkt
-    let testCar = { horsepower: 220 }
-
-
-
-    // maak een voorspelling voor elk punt op de X as
-    let predictions = []
-    for (let i = 0; i < 400; i++) {
-        // let prediction = ....
-        // predictions.push(...)
-    }
-
-
-    // stuur nu de hele predictions array naar de scatterplot met "plot.addPoints"
-    // ...
-}
-
-// start de applicatie
-// drawScatterPlot()
+loadData()
