@@ -1,36 +1,34 @@
 # Machine Learning Fundamentals with Javascript
 
-Cursus PRG08-2020-2021 - Jaar 2 - Periode 3
+### Cursus PRG08-2021-2022 - Jaar 2 - Periode 3
 
-In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties en cursushandleiding vind je in Cum Laude en onder FILES in TEAMS. De lessen worden gegeven in TEAMS studiejaar 2
+In deze repository vind je startcode voor opdrachten van het vak PRG08. De presentaties en cursushandleiding vind je in Cum Laude en onder FILES in TEAMS. De lessen worden gegeven in TEAMS studiejaar 2
 
 <br>
 <br>
 
 ## Inleveren opdrachten
 
-- Meld je aan bij Github Classroom. De link krijg je van je docent.
-- Je krijgt dan een lege **classroom repository**. Clone deze naar je eigen laptop.
-- In je **classroom repository** ga je wekelijks je eigen werk plaatsen en weer terug pushen naar Github Classroom.
-- In *deze PRG08 repository* vind je lesopdrachten en voorbeeldcode. Je kan deze ook clonen of via de browser bekijken.
-- In de cursushandleiding vind je de beoordeling voor dit vak.
+- Je krijgt voor elke opdracht een github classroom link. Een link geeft je een lege repository.
+- Clone deze naar je eigen computer. Push je updates terug naar deze repository voor de deadline.
+- In *deze repository* vind je lesopdrachten en voorbeeldcode. Je kan deze ook clonen of via de browser bekijken.
 
 <br>
 <br>
 
 ## Programma
 
-| Week | Onderwerp | Inleveropdracht |
-|------|-----------|-----------------|
-| 1 | International Week | - |
-| 2 | [Introductie](./week2) | Intl. week + Teachable Machine |
-| 3 | [Algoritmes: KNN met webcam data](./week3) | KNN opdracht |
-| 4 | [Algoritmes: Decision tree met CSV data](./week4) | Kaggle opdracht |
-| 5 | [Algoritmes: Neural Networks](./week5) | NN opdracht 1 |
-| 6 | [Algoritmes: Neural Networks](./week6) | NN opdracht 2 |
-| 7 | [Eindopdracht CASE](./week7) | - |
-| 8 | Begeleid zelfstudie | - |
-| 9 | Begeleid/onbegeleid zelfstudie - Showcase op donderdag | CASE inleveren |
+| Week | Theorie | Praktijk | Inleveropdracht |
+|------|---------|----------|-----------------|
+| 1 | [Introductie](./week1) | Teachable Machine |
+| 2 | [ML5 Image Classifier](./week2) | Mobile app bouwen |
+| 3 | [ML5 Models](./week3) | Pose, Face, Hand, Object recognition | ML5 Opdracht |
+| 4 | [Algoritmes: KNN](./week4) | KNN opdracht | |
+| 5 | [Algoritmes: Decision Tree](./week5) | Kaggle en Confusion Matrix | Kaggle opdracht |
+| 6 | [Algoritmes: Neural Networks](./week6) | Classification en Regression |  |
+| 7 | [Data en Neural Networks](./week7) | Scatterplot tekenen | Opdracht Neural Networks |
+| 8 | Begeleid zelfstudie | Begeleid zelfstudie  |
+| 9 | Onbegeleid zelfstudie | Onbegeleid zelfstudie | Eindopdracht
 
 <br>
 <br>
@@ -38,7 +36,7 @@ In deze repository vind je alle opdrachten voor het vak PRG08. De presentaties e
 
 ## Code snippets
 
-🤯 Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
+Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
 
 - [Laat de browser praten met web speech](./snippets/speech.md)
 - [Normaliseer data om beter te trainen](./snippets/normalise.md)
