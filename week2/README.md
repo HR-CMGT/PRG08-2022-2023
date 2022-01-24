@@ -78,5 +78,5 @@ Laad het MobileNet model en train dit model met een aantal eigen afbeeldingen (b
 
 - [ML5 Feature Extractor documentatie](https://learn.ml5js.org/#/reference/feature-extractor)
 - [🔥 Code voorbeeld : herken of iemand een mondmasker draagt](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
-- [ML5 Plain Javascript example](https://github.com/ml5js/ml5-library/tree/main/examples/javascript/FeatureExtractor/FeatureExtractor_Image_Classification))
+- [ML5 Plain Javascript example](https://github.com/ml5js/ml5-library/tree/main/examples/javascript/FeatureExtractor/FeatureExtractor_Image_Classification)
 - [🔥🔥 Youtube with Daniel Shiffman tutorial](https://www.youtube.com/watch?v=eeO-rWYFuG0)
