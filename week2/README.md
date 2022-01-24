@@ -37,17 +37,21 @@ Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/sn
 
 Vraag aan de gebruiker om een bepaalde afbeelding te uploaden. Gebruik daarvoor [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md). Test het op mobiel, zodat de speler live een foto kan maken met zijn of haar mobiele camera! Geef via spraak feedback of de speler een goede foto heeft gemaakt. 
 
-## Feature extractor
-
-Gebruik de ML5 feature extractor, in plaats van de image classifier. Nu kan je zelf afbeeldingen toevoegen die je ook wil kunnen herkennen. Bijvoorbeeld je eigen gezicht of je huisdier. Train het model en gebruik dit in je toepassing!
-
-- [Documentatie](https://learn.ml5js.org/#/reference/feature-extractor) en [🔥 tutorial](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
-
 ## Game
 
 Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iets om hier een game omheen te bouwen.
 
 - [📺  Eenvoudig voorbeeld op YouTube](https://www.youtube.com/watch?v=tqyG6YZLI0Y)
+
+## Feature extractor
+
+Gebruik de ML5 feature extractor, in plaats van de image classifier. Nu kan je zelf afbeeldingen toevoegen die je ook wil kunnen herkennen. Bijvoorbeeld je eigen gezicht of je huisdier.
+
+Laad het MobileNet model en train dit model met een aantal eigen afbeeldingen (bij voorkeur tussen 10 en 20 afbeeldingen, of meer). **Save** het model zodat je niet telkens opnieuw hoeft te trainen. **Laad** het model in een nieuwe webpagina. 
+
+- [Documentatie](https://learn.ml5js.org/#/reference/feature-extractor) en [🔥 tutorial](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
+
+
 
 
 <br>
@@ -74,4 +78,5 @@ Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iet
 
 - [ML5 Feature Extractor documentatie](https://learn.ml5js.org/#/reference/feature-extractor)
 - [🔥 Code voorbeeld : herken of iemand een mondmasker draagt](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
-- [🔥🔥 Coding Train with Daniel Shiffman tutorial](https://www.youtube.com/watch?v=eeO-rWYFuG0)
+- [ML5 Plain Javascript example](https://github.com/ml5js/ml5-library/tree/main/examples/javascript/FeatureExtractor/FeatureExtractor_Image_Classification))
+- [🔥🔥 Youtube with Daniel Shiffman tutorial](https://www.youtube.com/watch?v=eeO-rWYFuG0)
