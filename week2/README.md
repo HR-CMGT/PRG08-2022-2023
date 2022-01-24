@@ -72,6 +72,6 @@ Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iet
 
 ### Feature Extractor Links
 
-- [ML5 Feature Extractor](https://learn.ml5js.org/#/reference/feature-extractor)
-- [🔥 Code voorbeeld](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
+- [ML5 Feature Extractor documentatie](https://learn.ml5js.org/#/reference/feature-extractor)
+- [🔥 Code voorbeeld : herken of iemand een mondmasker draagt](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
 - [🔥🔥 Coding Train with Daniel Shiffman tutorial](https://www.youtube.com/watch?v=eeO-rWYFuG0)
