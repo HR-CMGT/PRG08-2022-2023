@@ -41,11 +41,18 @@ Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/sn
 
 Vraag aan de gebruiker om een bepaalde afbeelding te uploaden. Gebruik daarvoor [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md). Test het op mobiel, zodat de speler live een foto kan maken met zijn of haar mobiele camera! Geef via spraak feedback of de speler een goede foto heeft gemaakt. 
 
+## Feature extractor
+
+Gebruik de ML5 feature extractor, in plaats van de image classifier. Nu kan je zelf afbeeldingen toevoegen die je ook wil kunnen herkennen. Bijvoorbeeld je eigen gezicht of je huisdier. Train het model en gebruik dit in je toepassing!
+
+- [Voorbeeldcode](https://learn.ml5js.org/#/reference/feature-extractor)
+
 ## Game
 
 Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iets om hier een game omheen te bouwen.
 
 - [📺  Eenvoudig voorbeeld op YouTube](https://www.youtube.com/watch?v=tqyG6YZLI0Y)
+
 
 <br>
 
@@ -63,7 +70,8 @@ Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iet
 ### Links
 
 - [ML5 Image Classifier](https://learn.ml5js.org/#/reference/image-classifier)
-- [Upload image UI](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
+- [ML5 Feature Extractor](https://learn.ml5js.org/#/reference/feature-extractor)
+- [🔥 Code voorbeeld Extractor](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
+- [Upload image button, werkt met webcam](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
 - [Simple webspeech voorbeeld](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) en [documentatie](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
-- [Hoe kan je het pre-loaded model verbeteren?](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures) en [documentatie](https://learn.ml5js.org/#/reference/feature-extractor)
-- [Foto's maken met de Webcam](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture) met [Demo](https://simpl.info/imagecapture/)
+- [MDN documentatie webcam image capture](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture) met [Demo](https://simpl.info/imagecapture/)
