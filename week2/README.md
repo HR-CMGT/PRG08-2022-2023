@@ -33,7 +33,7 @@ Voorspel wat er op de afbeelding in de `<img>` tag staat. Probeer dit met meerde
 
 Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) om te zeggen wat de afbeelding is. Kan je er ook bij zeggen hoe accuraat de voorspelling is? Of wat de tweede keus is?
 
-## Afbeelding 
+## Mobiele camera gebruiken 
 
 Vraag aan de gebruiker om een bepaalde afbeelding te uploaden. Gebruik daarvoor [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md). Test het op mobiel, zodat de speler live een foto kan maken met zijn of haar mobiele camera! Geef via spraak feedback of de speler een goede foto heeft gemaakt. 
 
@@ -45,7 +45,7 @@ Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iet
 
 ## Feature extractor
 
-Als je je eigen unieke images wil kunnen herkennen, dan gebruik je de ML5 feature extractor, in plaats van de imageClassifier. Hiermee "re-train" je het model van de imageClassifier, bijvoorbeeld met afbeeldingen van je eigen gezicht of je huisdier. 
+Als je je eigen unieke images wil kunnen herkennen, dan kan je de ML5 feature extractor gebruiken in plaats van de imageClassifier. Hiermee "re-train" je het model van de imageClassifier, bijvoorbeeld met afbeeldingen van je eigen gezicht of je huisdier. 
 
 Train het model met minimaal 10 tot 20 eigen afbeeldingen per klasse die je wil herkennen. **Save** het model zodat je niet telkens opnieuw hoeft te trainen. **Laad** het model in een nieuwe webpagina. 
 
