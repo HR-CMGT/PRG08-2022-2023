@@ -15,8 +15,6 @@ Bouw een photo hunting app voor mobile met de image classifier en de mobile came
 
 <a href="https://www.youtube.com/watch?v=tqyG6YZLI0Y)" target="_blank"><img src="./startcode/images/hamsterdetective.png" width="400"></a>
 
-[ML5 documentatie Image Classifier](https://learn.ml5js.org/#/reference/image-classifier)
-
 
 <br>
 <br>
@@ -26,8 +24,6 @@ Bouw een photo hunting app voor mobile met de image classifier en de mobile came
 ## ImageClassifier
 
 Maak een ImageClassifier aan met hulp van de [documentatie](https://learn.ml5js.org/#/reference/image-classifier). Let hierbij op de volgorde van je functies! Je kan pas voorspellen als het model helemaal is ingeladen!
-
-Kies een van de beschikbare pre-trained models om in te laden: *mobilenet, darknet, doodlenet*
 
 ## Image voorspellen
 
@@ -45,7 +41,7 @@ Vraag aan de gebruiker om een bepaalde afbeelding te uploaden. Gebruik daarvoor 
 
 Gebruik de ML5 feature extractor, in plaats van de image classifier. Nu kan je zelf afbeeldingen toevoegen die je ook wil kunnen herkennen. Bijvoorbeeld je eigen gezicht of je huisdier. Train het model en gebruik dit in je toepassing!
 
-- [Voorbeeldcode](https://learn.ml5js.org/#/reference/feature-extractor)
+- [Documentatie](https://learn.ml5js.org/#/reference/feature-extractor) en [🔥 tutorial](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
 
 ## Game
 
