@@ -45,11 +45,12 @@ Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iet
 
 ## Feature extractor
 
-Gebruik de ML5 feature extractor, in plaats van de image classifier. Nu kan je zelf afbeeldingen toevoegen die je ook wil kunnen herkennen. Bijvoorbeeld je eigen gezicht of je huisdier.
+Als je je eigen unieke images wil kunnen herkennen, dan gebruik je de ML5 feature extractor, in plaats van de imageClassifier. Hiermee "re-train" je het model van de imageClassifier, bijvoorbeeld met afbeeldingen van je eigen gezicht of je huisdier. 
 
-Laad het MobileNet model en train dit model met een aantal eigen afbeeldingen (bij voorkeur tussen 10 en 20 afbeeldingen, of meer). **Save** het model zodat je niet telkens opnieuw hoeft te trainen. **Laad** het model in een nieuwe webpagina. 
+Train het model met minimaal 10 tot 20 eigen afbeeldingen per klasse die je wil herkennen. **Save** het model zodat je niet telkens opnieuw hoeft te trainen. **Laad** het model in een nieuwe webpagina. 
 
-- [Documentatie](https://learn.ml5js.org/#/reference/feature-extractor) en [🔥 tutorial](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
+- [🔥 In dit code voorbeeld wordt de webcam gebruikt om te trainen](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures))
+- [Documentatie](https://learn.ml5js.org/#/reference/feature-extractor) 
 
 
 
