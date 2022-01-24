@@ -16,6 +16,7 @@ Bedenk zelf een eigen toepassing voor het werken met een van deze startprojecten
 - [ML5 Hand Pose detection](https://learn.ml5js.org/#/reference/handpose)
 - [ML5 Face landmark detection](https://learn.ml5js.org/#/reference/face-api)
 - [ML5 Object detection](https://learn.ml5js.org/#/reference/object-detector)
+- [ML5 Feature Extractor](https://learn.ml5js.org/#/reference/feature-extractor). zie ook Week 2](https://github.com/HR-CMGT/PRG08-2021-2022/tree/main/week2)
 - [FaceApiJS Code Voorbeeld](#face)
 - [HandPoseJS Code Voorbeeld](#hand)
 
