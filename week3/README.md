@@ -25,11 +25,15 @@ Bedenk zelf een eigen toepassing voor het werken met een van deze startprojecten
 
 ## Opdracht
 
-Bouw een UI met HTML,CSS,Javascript. Lees de pose data uit met javascript. *(bijvoorbeeld: de positie van de ogen bij de Face landmark detection.)*
+- Bedenk een concept voor het werken met een van bovenstaande ML5 modellen: gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning, object detectie, of de image feature extraction uit week 2.
+- Bouw een UI voor dit concept met HTML,CSS,Javascript. 
+- Lees de pose data uit met javascript en geef feedback aan de gebruiker via de UI.
 
-Programmeer je toepassing voor deze pose data.
+### Voorbeeld
 
-Het moet duidelijk naar de gebruiker zijn wat de bedoeling is, en wat het resultaat is. Gebruik dus geen console.logs maar toon feedback in de UI.
+Via FaceApi haal je data binnen over het gezicht van de gebruiker. Met `requestAnimationFrame` kijk je telkens naar de `data.leftEye()` en `data.rightEye()` data. Je kijkt wat de `x,y` posities van de ogen zijn. Als deze posities te ver uit elkaar zijn, dan zit de gebruiker te dicht met zijn snufferd over het scherm van de computer gebogen! Geef een waarschuwing via een browser notificatie. Check dit elke 5 minuten.
+
+![posture](../images/posture.png)
 
 ---
 
