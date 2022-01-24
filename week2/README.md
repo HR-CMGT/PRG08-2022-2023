@@ -49,7 +49,7 @@ Als je je eigen unieke images wil kunnen herkennen, dan kan je de ML5 feature ex
 
 Train het model met minimaal 10 tot 20 eigen afbeeldingen per klasse die je wil herkennen. **Save** het model zodat je niet telkens opnieuw hoeft te trainen. **Laad** het model in een nieuwe webpagina. 
 
-- [🔥 In dit code voorbeeld wordt de webcam gebruikt om te trainen](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures))
+- [🔥 Code voorbeeld met webcam](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
 - [Documentatie](https://learn.ml5js.org/#/reference/feature-extractor) 
 
 
