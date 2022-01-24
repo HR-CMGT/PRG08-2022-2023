@@ -63,11 +63,15 @@ Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iet
 <br>
 
 
-### Links
+### Image Classifier Game Links
 
 - [ML5 Image Classifier](https://learn.ml5js.org/#/reference/image-classifier)
-- [ML5 Feature Extractor](https://learn.ml5js.org/#/reference/feature-extractor)
-- [🔥 Code voorbeeld Extractor](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
 - [Upload image button, werkt met webcam](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
 - [Simple webspeech voorbeeld](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) en [documentatie](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
 - [MDN documentatie webcam image capture](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture) met [Demo](https://simpl.info/imagecapture/)
+
+### Feature Extractor Links
+
+- [ML5 Feature Extractor](https://learn.ml5js.org/#/reference/feature-extractor)
+- [🔥 Code voorbeeld](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
+- [🔥🔥 Coding Train with Daniel Shiffman tutorial](https://www.youtube.com/watch?v=eeO-rWYFuG0)
