@@ -54,7 +54,7 @@ console.log(`I think this is a ${prediction}`)
 <br>
 <br>
 
-# Les oefening week 3
+# Theorie les oefening week 3
 
 ### Cat or dog?
 
