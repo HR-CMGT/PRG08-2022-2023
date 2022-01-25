@@ -67,11 +67,11 @@ console.log(`I think this is a ${prediction}`)
 | 16 | 9.0 | 10 | 2.1 | 'cat' |
 | 21 | 16.7 | 16 | 3.3 | 'dog' |
 
-Gebruik bovenstaande javascript uitleg, de data in de tabel, en de [startcode](./knear) om een KNN algoritme te trainen. Test of het werkt door nieuwe data in te voeren en te voorspellen of dit een kat of een hond is.
+Gebruik bovenstaande javascript uitleg, de data in de tabel om een KNN algoritme te trainen. Leer wat katten en honden zijn, en test of het werkt door nieuwe data in te voeren. Voorspel vervolgens of dit een kat of een hond is.
 
-Kan je andere data vinden om je KNN algoritme mee te trainen?
-
-- [Starter files met KNear algoritme](./knear)
+- [Startproject op Codesandbox](https://codesandbox.io/s/knear-week4-57wqe?file=/src/index.js)
+- [Lokaal startpoject](./knear)
+- [kNear documentatie](https://github.com/NathanEpstein/KNear)
 
 <br>
 <br>
@@ -85,7 +85,7 @@ In de praktijkles van week 3 ga je KNN gebruiken om de input van een webcam te c
 <br>
 <br>
 
-## Externe links
+## Links
 
 - [Codepen Demo](https://codepen.io/Qbrid/pen/OwpjLX)
 - [KNear Github](https://github.com/NathanEpstein/KNear)
