@@ -1,4 +1,4 @@
-# Inleveropdracht Week 3
+# Praktijkles Week 3
 
 We gaan het K-Nearest-Neighbour algoritme gebruiken met de webcam. De webcam geeft je ***Training data*** in de vorm van pixeldata of landmarkdata.
 
@@ -18,7 +18,7 @@ Dit kan je doen door een **input veld** en een **button** aan je html toe te voe
 > ⚠️ Het KNN algoritme heeft voor elk label minimaal 10, maar liever meer voorbeelden nodig, om te kunnen voorspellen! Experimenteer zelf met het aantal voorbeelden.
 
 
-## Inleveropdracht
+## Opdracht
 
 - Kies een van de drie voorbeeldprojecten om webcam data uit te lezen:
    - [Pixel data uit de webcam](#pixel) (meest eenvoudig)
@@ -88,15 +88,6 @@ if (predictions.length > 0) {
 
 [Het voorbeeldproject vind je in de handpose map](./handpose).
 
----
-
-<br>
-<br>
-<br>
-
-## Extra uitdaging
-
-Kan je je model opslaan, zodat je niet telkens opnieuw hoeft te trainen met de webcam?
 
 
 ---
