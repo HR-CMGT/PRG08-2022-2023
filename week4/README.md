@@ -76,11 +76,11 @@ Kan je andere data vinden om je KNN algoritme mee te trainen?
 <br>
 <br>
 
-# Inleveropdracht week 3
+# Praktijk week 3
 
-Bij de inleveropdracht van week 3 ga je KNN gebruiken om de input van een webcam te classificeren.
+In de praktijkles van week 3 ga je KNN gebruiken om de input van een webcam te classificeren.
 
-[Ga naar de inleveropdracht](./inleveropdracht.md)
+[Ga naar de praktijkles opdracht](./praktijkles.md)
 
 <br>
 <br>
@@ -89,4 +89,4 @@ Bij de inleveropdracht van week 3 ga je KNN gebruiken om de input van een webcam
 
 - [Codepen Demo](https://codepen.io/Qbrid/pen/OwpjLX)
 - [KNear Github](https://github.com/NathanEpstein/KNear)
-- [Uitleg K-Nearest-Neighbour](https://burakkanber.com/blog/machine-learning-in-js-k-nearest-neighbor-part-1/)
+- [Uitleg K-Nearest-Neighbour met Javascript](https://burakkanber.com/blog/machine-learning-in-js-k-nearest-neighbor-part-1/)
