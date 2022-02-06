@@ -121,11 +121,11 @@ let decisionTree = new DecisionTree({
 <br>
 <br>
 
-# Inleveropdracht week 4
+# Praktijkopdracht week 4
 
-Bij de inleveropdracht van week 4 ga je een van deze datasets gebruiken, en je gaat testen hoe accuraat je voorspellingen zijn.
+Bij de praktijkopdracht van week 4 ga je een van deze datasets gebruiken, en je gaat testen hoe accuraat je voorspellingen zijn.
 
-[Ga naar de inleveropdracht](./inleveropdracht.md)
+[Ga naar de praktijkopdracht](./praktijkopdracht.md)
 
 <br>
 <br>
