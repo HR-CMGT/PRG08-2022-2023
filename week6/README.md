@@ -201,7 +201,8 @@ Bij de praktijkopdracht van week 6 ga je deze oefening af maken, en dan een echt
 
 - [🔥 ML5 Neural Networks in Javascript](https://learn.ml5js.org/#/reference/neural-network)
 - [Vega Scatterplot documentation](https://vega.github.io/vega/examples/scatter-plot/)
-
+- [Werken met hidden layers in ML5](./snippets/layers.md)
+- [3D plot tekenen met Plotly.js](./snippets/plot3d)
 
 ## Externe links
 
