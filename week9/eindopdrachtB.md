@@ -4,10 +4,18 @@ Github classroom inleverlink: https://classroom.github.com/a/P1HZQRRx
 
 Zie de cursushandleiding voor de exacte beoordeling.
 
+<br>
+<br>
+<br>
+
 ## Stap 2 VERVOLG - OPTIONEEL 
 
-Om je beter voor te bereiden op het uitwerken van je product heb je een vervolg tweede prototype gebouwd. Het doel van het prototype is hetzelfde, maar je gaat kijken of
+Om je beter voor te bereiden op het uitwerken van je product heb je een tweede prototype gebouwd. Het doel van het prototype is hetzelfde, maar je gaat kijken of
 jouw idee beter kan werken als je een ander algoritme gebruikt.
+
+<br>
+<br>
+<br>
 
 ## Stap 3 Uitwerking
 
@@ -17,6 +25,10 @@ Je code staat in GitHub classroom. Je werkende eindproduct staat live online op 
 
 ### Bonuspunt
 Je hebt getest met eindgebruikers uit de doelgroep. Dit is iemand die zonder enige voorkennis jouw app kan testen. Voeg het resultaat van deze test toe aan je inleverdocument.
+
+<br>
+<br>
+<br>
 
 ## Stap 4 Reflectie
 
