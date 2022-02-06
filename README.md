@@ -6,14 +6,6 @@ In deze repository vind je startcode voor opdrachten van het vak PRG08. De prese
 
 <br>
 <br>
-
-## Inleveren opdrachten
-
-- Je krijgt voor elke opdracht een github classroom link. Een link geeft je een lege repository.
-- Clone deze naar je eigen computer. Push je updates terug naar deze repository voor de deadline.
-- In *deze repository* vind je lesopdrachten en voorbeeldcode. Je kan deze ook clonen of via de browser bekijken.
-
-<br>
 <br>
 
 ## Programma
@@ -34,6 +26,21 @@ In deze repository vind je startcode voor opdrachten van het vak PRG08. De prese
 <br>
 <br>
 
+## Inleveropdrachten
+
+- Je levert opdrachten in via github classroom. 
+- Meld je aan en clone de classroom repository naar je eigen computer. Push je updates terug naar deze repository voor de deadline.
+- De deadline is altijd zondagavond 23:00 van de week waarin de opdracht ingeleverd moet worden.
+
+Week 3 https://classroom.github.com/a/2Mfl_DnD
+Week 5 https://classroom.github.com/a/Op5yVC7F
+Week 7 https://classroom.github.com/a/RQLVouUr
+Week 9 https://classroom.github.com/a/P1HZQRRx
+
+<br>
+<br>
+<br>
+
 ## Code snippets
 
 Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
@@ -41,7 +48,6 @@ Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
 - [Laat de browser praten met web speech](./snippets/speech.md)
 - [Normaliseer data om beter te trainen](./snippets/normalise.md)
 - [CSV en JSON data laden en filteren](./snippets/csv.md)
-
 
 <br>
 <br>
