@@ -41,8 +41,7 @@ Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
 - [Laat de browser praten met web speech](./snippets/speech.md)
 - [Normaliseer data om beter te trainen](./snippets/normalise.md)
 - [CSV en JSON data laden en filteren](./snippets/csv.md)
-- [Werken met hidden layers in ML5](./snippets/layers.md)
-- [3D plot tekenen met Plotly.js](./snippets/plot3d)
+
 
 <br>
 <br>
