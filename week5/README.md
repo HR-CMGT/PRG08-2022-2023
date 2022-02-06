@@ -1,4 +1,4 @@
-# Week 4
+# Week 5
 
 ## Algoritmes: Decision Tree
 
@@ -121,11 +121,11 @@ let decisionTree = new DecisionTree({
 <br>
 <br>
 
-# Praktijkopdracht week 4
+# Inleveropdracht week 5
 
-Bij de praktijkopdracht van week 4 ga je een van deze datasets gebruiken, en je gaat testen hoe accuraat je voorspellingen zijn.
+Bij de inleveropdracht van week 5 ga je een van deze datasets gebruiken, en je gaat testen hoe accuraat je voorspellingen zijn.
 
-[Ga naar de praktijkopdracht](./praktijkopdracht.md)
+[Ga naar de inleveropdracht](./inleveropdracht.md.md)
 
 <br>
 <br>
