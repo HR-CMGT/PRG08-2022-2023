@@ -23,10 +23,12 @@ Bedenk zelf een eigen toepassing voor het werken met een van deze startprojecten
 <br>
 <br>
 
-## Opdracht
+## Inleveropdracht Week 3
+
+Inleveren via github classroom: https://classroom.github.com/a/2Mfl_DnD
 
 - Bedenk een concept voor het werken met een van bovenstaande ML5 modellen: gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning, object detectie, of de image feature extraction uit week 2.
-- Bouw een UI voor dit concept met HTML,CSS,Javascript. De gebruiker hoeft nooit in de console te kijken!
+- Bouw een basic UI voor dit concept met HTML,CSS,Javascript. De gebruiker hoeft nooit in de console te kijken!
 - Lees data uit met javascript en geef feedback aan de gebruiker via de UI.
 
 ### Voorbeeld
