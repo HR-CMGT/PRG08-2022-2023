@@ -1,5 +1,6 @@
-
 # Inleveropdracht week 5
+
+Github classroom : https://classroom.github.com/a/Op5yVC7F
 
 Bij de inleveropdracht van week 5 ga je een echte dataset gebruiken, én testen hoe accuraat je voorspellingen zijn. 
 
