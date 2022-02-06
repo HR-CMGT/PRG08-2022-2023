@@ -125,7 +125,7 @@ let decisionTree = new DecisionTree({
 
 Bij de inleveropdracht van week 5 ga je een van deze datasets gebruiken, en je gaat testen hoe accuraat je voorspellingen zijn.
 
-[Ga naar de inleveropdracht](./inleveropdracht.md.md)
+[Ga naar de inleveropdracht](./inleveropdracht.md)
 
 <br>
 <br>
