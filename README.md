@@ -22,9 +22,9 @@ In deze repository vind je startcode voor opdrachten van het vak PRG08. De prese
 |------|---------|----------|-----------------|
 | 1 | [Introductie](./week1) | Teachable Machine |
 | 2 | [ML5 Image Classifier](./week2) | Mobile app bouwen |
-| 3 | [ML5 Models](./week3) | Pose, Face, Hand, Object recognition | [Opdracht](./week3/inleveropdracht.md) |
+| 3 | [ML5 Models](./week3) | Pose, Face, Hand, Object recognition | [Opdracht](./week3/week3.md) |
 | 4 | [Algoritmes: KNN](./week4) | KNN opdracht | |
-| 5 | [Algoritmes: Decision Tree](./week5) | Kaggle en Confusion Matrix | Opdracht |
+| 5 | [Algoritmes: Decision Tree](./week5) | Kaggle en Confusion Matrix | [Opdracht](week5/inleveropdracht.md) |
 | 6 | [Algoritmes: Neural Networks](./week6) | Classification en Regression |  |
 | 7 | [Data en Neural Networks](./week7) | Scatterplot tekenen | Eindopdracht A |
 | 8 | Begeleid zelfstudie | Begeleid zelfstudie  |
