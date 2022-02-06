@@ -78,6 +78,10 @@ Gebruik `nn.save()` om je getrainde weermodel op te slaan. Als je het inlaadt me
 <br>
 <br>
 
+## Inleveropdrahct
+
+[In week 7 werk je aan deel A van de eindopdracht](eindopdrachtA.md).
+
 
 
 ## Datasets voor classification
