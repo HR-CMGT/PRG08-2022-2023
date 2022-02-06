@@ -4,6 +4,10 @@ Github Classroom inleverlink: https://classroom.github.com/a/RQLVouUr
 
 Lees de cursushandleiding voor de beoordeling van de eindopdracht.
 
+<br>
+<br>
+<br>
+
 ## Stap 1 Concept
 
 Omschrijf kort jouw concept in je inleverdocument:
@@ -14,6 +18,10 @@ Omschrijf kort jouw concept in je inleverdocument:
 - Welke library / algoritme denk jij dat geschikt is voor jouw concept?
 - Beschrijf de de uiteindelijke vorm (Website, app, installatie, etc).
 - Beschrijf kort de eindgebruiker en de doelgroep.
+
+<br>
+<br>
+<br>
 
 ## Stap 2 Prototype
 
