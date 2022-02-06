@@ -1,6 +1,6 @@
 # Week 7 eindopdracht deel A
-
-Github link: https://classroom.github.com/a/RQLVouUr
+ 
+Github Classroom inleverlink: https://classroom.github.com/a/RQLVouUr
 
 Lees de cursushandleiding voor de beoordeling van de eindopdracht.
 
