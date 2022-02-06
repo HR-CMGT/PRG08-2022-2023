@@ -1,4 +1,4 @@
-# Week 5
+# Week 6
 
 ## Algoritmes: Neural Networks
 
@@ -179,11 +179,11 @@ async function doSomething() {
 <br>
 <br>
 
-# Inleveropdracht week 5
+# Praktijkopdracht week 6
 
-Bij de inleveropdracht van week 5 ga je deze oefening af maken, en dan een echte dataset toevoegen. Ook ga je het model opslaan zodat je niet telkens opnieuw hoeft te trainen.
+Bij de praktijkopdracht van week 6 ga je deze oefening af maken, en dan een echte dataset toevoegen. Ook ga je het model opslaan zodat je niet telkens opnieuw hoeft te trainen.
 
-[Ga naar de inleveropdracht](./inleveropdracht.md)
+[Ga naar de praktijkopdracht](./praktijkopdracht.md)
 
 <br>
 <br>
