@@ -28,14 +28,11 @@ In deze repository vind je startcode voor opdrachten van het vak PRG08. De prese
 
 ## Inleveropdrachten
 
-- Je levert opdrachten in via github classroom. 
+- Je levert opdrachten in via github classroom: [Week 3](https://classroom.github.com/a/2Mfl_DnD), [Week 5](https://classroom.github.com/a/Op5yVC7F), [Week 7](https://classroom.github.com/a/RQLVouUr), [Week 9](https://classroom.github.com/a/P1HZQRRx)
 - Meld je aan en clone de classroom repository naar je eigen computer. Push je updates terug naar deze repository voor de deadline.
 - De deadline is altijd zondagavond 23:00 van de week waarin de opdracht ingeleverd moet worden.
 
-Week 3 https://classroom.github.com/a/2Mfl_DnD
-Week 5 https://classroom.github.com/a/Op5yVC7F
-Week 7 https://classroom.github.com/a/RQLVouUr
-Week 9 https://classroom.github.com/a/P1HZQRRx
+
 
 <br>
 <br>
