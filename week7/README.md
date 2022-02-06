@@ -92,3 +92,4 @@ Gebruik `nn.save()` om je getrainde weermodel op te slaan. Als je het inlaadt me
 ## Documentation
 
 - [ML5 Neural Networks in Javascript](https://learn.ml5js.org/#/reference/neural-network)
+- [Werken met hidden layers in ML5](./snippets/layers.md)
