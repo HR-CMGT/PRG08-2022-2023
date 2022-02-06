@@ -1,8 +1,6 @@
+# CMTPRG02-8 2021-2022 Smart Technologies
+
 # Machine Learning Fundamentals with Javascript
-
-# ⚠️ WORK IN PROGRESS ⚠️
-
-### Cursus PRG08-2021-2022 - Jaar 2 - Periode 3
 
 In deze repository vind je startcode voor opdrachten van het vak PRG08. De presentaties en cursushandleiding vind je in Cum Laude en onder FILES in TEAMS. De lessen worden gegeven in TEAMS studiejaar 2
 
