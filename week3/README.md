@@ -10,7 +10,13 @@
 
 # Inleveropdracht Week 3
 
-Bedenk zelf een eigen toepassing voor het werken met een van deze startprojecten:
+Inleveren via github classroom: https://classroom.github.com/a/2Mfl_DnD
+
+- Bedenk een concept voor het werken met gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning, object detectie, of de image feature herkenning uit week 2.
+- Lees data uit met javascript en geef feedback aan de gebruiker via de UI.
+- Bouw een eenvoudige UI voor dit concept met HTML en CSS. De gebruiker hoeft dus niet in de console te kijken.
+
+Je kan een start maken met deze voorbeeldcode:
 
 - [ML5 Body Pose detection](https://learn.ml5js.org/#/reference/posenet)
 - [ML5 Hand Pose detection](https://learn.ml5js.org/#/reference/handpose)
@@ -20,18 +26,12 @@ Bedenk zelf een eigen toepassing voor het werken met een van deze startprojecten
 - [FaceApiJS Code Voorbeeld](#face)
 - [HandPoseJS Code Voorbeeld](#hand)
 
+
 <br>
 <br>
+<br>
 
-## Inleveropdracht Week 3
-
-Inleveren via github classroom: https://classroom.github.com/a/2Mfl_DnD
-
-- Bedenk een concept voor het werken met een van bovenstaande ML5 modellen: gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning, object detectie, of de image feature extraction uit week 2.
-- Bouw een basic UI voor dit concept met HTML,CSS,Javascript. De gebruiker hoeft nooit in de console te kijken!
-- Lees data uit met javascript en geef feedback aan de gebruiker via de UI.
-
-### Voorbeeld
+### Voorbeeld inleveropdracht
 
 Via FaceApi haal je data binnen over het gezicht van de gebruiker. Met `requestAnimationFrame` kijk je telkens naar de `data.leftEye()` en `data.rightEye()` data. Je kijkt wat de `x,y` posities van de ogen zijn. Als deze posities te ver uit elkaar zijn, dan zit de gebruiker te dicht met zijn snufferd over het scherm van de computer gebogen! Geef een waarschuwing via een browser notificatie. Check dit elke 5 minuten.
 
