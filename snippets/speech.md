@@ -18,6 +18,19 @@ function speak(text) {
 
 speak("Hello world")
 ```
+
+## User interaction
+
+Speak werkt alleen als de gebruiker dit specifiek toestaat, bv. via een button:
+
+```typescript
+btn.addEventListener("click", () => {
+  speak(`I think it's a hamster!`)
+})
+```
+
+## Voices
+
 Je kan verschillende voices gebruiken. Zie ook de [docs](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices)
 
 ```typescript
