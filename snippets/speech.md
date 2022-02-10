@@ -21,7 +21,7 @@ speak("Hello world")
 
 ## User interaction
 
-Speak werkt alleen als de gebruiker dit specifiek toestaat, bv. via een button:
+⚠️ Speech werkt alleen als er een gebruikers interactie is geweest, bv. via een button:
 
 ```typescript
 btn.addEventListener("click", () => {
@@ -40,6 +40,8 @@ utterThis.voice = voices.filter(function(voice) { return voice.name == name; })[
 ```
 <br>
 <Br>
+    
+## Form
 
 Je kan een inputField en de button toevoegen om het te testen met verschillende teksten
 
@@ -58,7 +60,6 @@ playButton.addEventListener("click", () => {
 })
 ```
 
-⚠️ In nieuwe browsers mag je geen geluid laten horen zonder dat er een gebruikers interactie is geweest. Dit kan je bijvoorbeeld oplossen door een "start" knop in je applicatie te bouwen.
 
 <br>
 <br>
