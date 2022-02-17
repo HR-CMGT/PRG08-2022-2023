@@ -100,11 +100,3 @@ if (predictions.length > 0) {
 <br>
 <br>
 
-
-
-## Links
-
-- [Handpose API](https://github.com/tensorflow/tfjs-models/tree/master/handpose) en [tutorial](https://handsondeeplearning.com/a-quick-example-using-tensorflow-js-handpose-model/)
-- [Face-api](https://github.com/justadudewhohacks/face-api.js/) 
-
-<br>
