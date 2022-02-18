@@ -71,7 +71,7 @@ In de model summary kan je zien of je instellingen goed zijn gegaan:
 
 ### Regression
 
-Bij regression moet je opletten dat `activation` bij de output layer op `sigmoid` staat. Dit zorgt ervoor dat je output een getal tussen 0 en 1 wordt.
+Bij regression moet je opletten dat `activation` bij de output layer op `sigmoid` staat. Dit zorgt ervoor dat je output een getal tussen 0 en 1 wordt. Je kan dit ook leeg laten, dan krijg je een getal dat niet wordt afgerond.
 
 ```javascript
 const options = { 
