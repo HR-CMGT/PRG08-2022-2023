@@ -43,6 +43,7 @@ In deze repository vind je startcode voor opdrachten van het vak PRG08. De prese
 Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
 
 - [Laat de browser praten met web speech](./snippets/speech.md)
+- [Lees de webcam](./snippets/camera.md)
 - [Normaliseer data om beter te trainen](./snippets/normalise.md)
 - [CSV en JSON data laden en filteren](./snippets/csv.md)
 
