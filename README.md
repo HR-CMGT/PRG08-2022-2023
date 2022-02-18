@@ -46,6 +46,7 @@ Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
 - [Lees de webcam](./snippets/camera.md)
 - [Normaliseer data om beter te trainen](./snippets/normalise.md)
 - [CSV en JSON data laden en filteren](./snippets/csv.md)
+- [Neural Networks in ML5](./snippets/layers.md)
 
 <br>
 <br>
