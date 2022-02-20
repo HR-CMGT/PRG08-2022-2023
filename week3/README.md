@@ -12,7 +12,7 @@
 
 Inleveren via github classroom: https://classroom.github.com/a/2Mfl_DnD
 
-- Bedenk een concept voor het werken met gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning, object detectie, of de image feature herkenning uit week 2.
+- Bedenk een concept voor het werken met gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning, object detectie, of de **image feature** herkenning uit week 2. (Dat is de imageClassifier waar je je eigen images aan hebt toegevoegd)
 - Lees data uit met javascript en geef feedback aan de gebruiker via de UI.
 - Bouw een eenvoudige UI voor dit concept met HTML en CSS. De gebruiker hoeft dus niet in de console te kijken.
 
