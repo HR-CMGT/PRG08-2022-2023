@@ -1,4 +1,4 @@
-# Praktijkles Week 3
+# Praktijkles Week 4
 
 We gaan het K-Nearest-Neighbour algoritme gebruiken met de webcam. De webcam geeft je ***Training data*** in de vorm van pixeldata of landmarkdata.
 
