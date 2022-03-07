@@ -1,4 +1,4 @@
-# Week 3
+# Week 4
 
 ## Algoritmes: K-Nearest-Neighbour
 
@@ -54,7 +54,7 @@ console.log(`I think this is a ${prediction}`)
 <br>
 <br>
 
-# Theorie les oefening week 3
+# Theorie les oefening week 4
 
 ### Cat or dog?
 
@@ -76,9 +76,9 @@ Gebruik bovenstaande javascript uitleg, de data in de tabel om een KNN algoritme
 <br>
 <br>
 
-# Praktijk week 3
+# Praktijk week 4
 
-In de praktijkles van week 3 ga je KNN gebruiken om de input van een webcam te classificeren.
+In de praktijkles van week 4 ga je KNN gebruiken om de input van een webcam te classificeren.
 
 [Ga naar de praktijkles opdracht](./praktijkles.md)
 
