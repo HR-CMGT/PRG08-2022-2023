@@ -1,4 +1,4 @@
-# Week 4
+# Week 5
 
 ## Algoritmes: Decision Tree
 
@@ -69,12 +69,14 @@ function trainModel(data) {
 
 Je kan visualiseren hoe de tree er uit ziet! Dat doe je door de tree structuur op te vragen als JSON. Die JSON kan je doorgeven aan de [visualiser](https://vega.github.io/vega/examples/tree-layout/). 
 
-Je geeft ook een DOM element mee, en de breedte en hoogte.
+Je geeft ook een DOM element mee, en de breedte en hoogte. 
 
 ```javascript
 let json = decisionTree.toJSON()
 let visual = new VegaTree('#view', 2300, 1000, json)
 ```
+
+De visualisatie is niet per sé nodig om een voorspelling te maken. Het helpt wel om te zien hoe het algoritme tot een keuze komt.
 
 <br>
 <br>
@@ -121,9 +123,9 @@ let decisionTree = new DecisionTree({
 <br>
 <br>
 
-# Inleveropdracht week 4
+# Inleveropdracht week 5
 
-Bij de inleveropdracht van week 4 ga je een van deze datasets gebruiken, en je gaat testen hoe accuraat je voorspellingen zijn.
+Bij de inleveropdracht van week 5 ga je een van deze datasets gebruiken, en je gaat testen hoe accuraat je voorspellingen zijn.
 
 [Ga naar de inleveropdracht](./inleveropdracht.md)
 

@@ -1,5 +1,5 @@
 
-# Inleveropdracht week 5
+# Praktijkopdracht week 6
 
 Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint! Als iets niet lukt, ga dan door met de volgende stap. 
 
@@ -8,14 +8,15 @@ Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint! Als ie
  - [Lees de ML5 documentatie over neural networks](https://learn.ml5js.org/#/reference/neural-network)
  - Bekijk de links onderin dit document en bekijk een van de artikelen of filmpjes
 
-### Inleveren:
+### Uitwerken:
 
-- De uitgewerkte opdracht
   - Dataset gebruiken
   - Scatterplot tekenen van punten en voorspelling
   - Model opslaan en inladen in een aparte UI
   - Optioneel : kan je de accuracy uitrekenen met testdata?
-- Ingevuld inleverdocument 
+
+Denk na over:
+
   - Welke data heb je gebruikt? 
   - Ging dat in een keer goed? Waar liep je tegen aan?
   - Is je prediction een mooie lijn in je data scatterplot?

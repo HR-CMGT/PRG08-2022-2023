@@ -1,19 +1,32 @@
+# Inleveropdracht week 5
 
-# Inleveropdracht week 4
+Github classroom : https://classroom.github.com/a/Op5yVC7F
 
-Bij de inleveropdracht van week 4 ga je een echte dataset gebruiken, én testen hoe accuraat je voorspellingen zijn. 
+Bij de inleveropdracht van week 5 ga je een echte dataset gebruiken, én testen hoe accuraat je voorspellingen zijn. 
 
-## Inleveren:
+## Opdracht
 
-- Project waarin: 
-  - Je een van de drie CSV datasets (*diabetes, mushrooms, titanic*) uit dit project hebt ingeladen.
+Maak een project waarin: 
+
+  - Je een van de drie CSV datasets (*diabetes, mushrooms, titanic*) hebt ingeladen.
   - De dataset als decision tree getekend wordt.
   - Je hebt de accuracy uitgerekend. 
-  - Je hebt een extra uitdaging gekozen en deze geprobeerd uit te werken.
-- Ingevuld inleverdocument 
-  - Welke data heb je gebruikt? 
-  - Wat is je accuracy? Hoe zou dat nog beter kunnen?
-  - Hoe ver ben je gekomen met de extra uitdagingen?
+  - Je hebt een van de drie extra uitdagingen uitgewerkt.
+
+## Voorwaarden
+
+- Je werk is vóór de deadline ingeleverd. 
+- Je hebt een eigen invulling aan je werk gegeven. Hierbij is aantoonbaar een stap gemaakt van voorbeeldcode naar jouw eigen code. 
+- ⚠ Het is geen vereiste dat het resultaat perfect werkt! Experimenteren wordt aangemoedigd.
+
+## Reflectie 
+
+Plaats een korte screencast in je inleverdocument. Dit kan een YouTube filmpje zijn, waarin je laat zien hoe je concept werkt. Beantwoord kort de volgende vragen in je inleverdocument: 
+
+- Wat is het doel van je experiment?
+- Wat is de data (input), en wat wordt er voorspeld (output) ?
+- Welk algoritme of library wordt gebruikt?
+- Is het doel behaald? Kan je de opgedane kennis gebruiken voor het eindproject? Wat vond jij makkelijk of moeilijk aan het programmeren?
 
 
 <br>
@@ -216,7 +229,6 @@ Kan je jouw confusion matrix in de HTML file tonen?
 
 - [Kaggle datasets](https://www.kaggle.com/datasets)
 - [Decision Tree Javascript](https://github.com/lagodiuk/decision-tree-js)
-- [Een getal voorspellen met een Regression Tree](https://winkjs.org/wink-regression-tree/)
-- [Vega tree hierarchy viewer](https://vega.github.io/vega/examples/tree-layout/)
+- [Vega tree viewer](https://vega.github.io/vega/examples/tree-layout/)
 - [Papa Parse](https://www.papaparse.com)
 - [Towards Data Science : Decision Tree explanation](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052/)

@@ -10,25 +10,34 @@
 
 # Inleveropdracht Week 3
 
-Bedenk zelf een eigen toepassing voor het werken met een van deze startprojecten:
+Inleveren via github classroom: https://classroom.github.com/a/2Mfl_DnD
+
+- Bedenk een concept voor het werken met gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning, object detectie, of de **image feature** herkenning uit week 2. (Dat is de imageClassifier waar je je eigen images aan hebt toegevoegd)
+- Lees data uit met javascript en geef feedback aan de gebruiker via de UI.
+- Bouw een eenvoudige UI voor dit concept met HTML en CSS. De gebruiker hoeft dus niet in de console te kijken.
+
+Je kan een start maken met deze voorbeeldcode:
 
 - [ML5 Body Pose detection](https://learn.ml5js.org/#/reference/posenet)
 - [ML5 Hand Pose detection](https://learn.ml5js.org/#/reference/handpose)
 - [ML5 Face landmark detection](https://learn.ml5js.org/#/reference/face-api)
 - [ML5 Object detection](https://learn.ml5js.org/#/reference/object-detector)
+- [ML5 Feature Extractor](https://learn.ml5js.org/#/reference/feature-extractor). zie ook [Week 2](https://github.com/HR-CMGT/PRG08-2021-2022/tree/main/week2)
 - [FaceApiJS Code Voorbeeld](#face)
 - [HandPoseJS Code Voorbeeld](#hand)
 
+
 <br>
 <br>
+<br>
 
-## Opdracht
+### Voorbeelden inleveropdracht
 
-Bouw een UI met HTML,CSS,Javascript. Lees de pose data uit met javascript. *(bijvoorbeeld: de positie van de ogen bij de Face landmark detection.)*
+Via FaceApi haal je data binnen over het gezicht van de gebruiker. Met `requestAnimationFrame` kijk je telkens naar de `data.leftEye()` en `data.rightEye()` data. Je kijkt wat de `x,y` posities van de ogen zijn. Als deze posities te ver uit elkaar zijn, dan zit de gebruiker te dicht met zijn snufferd over het scherm van de computer gebogen! Geef een waarschuwing via een browser notificatie. Check dit elke 5 minuten.
 
-Programmeer je toepassing voor deze pose data.
+![posture](../images/posture.png)
 
-Het moet duidelijk naar de gebruiker zijn wat de bedoeling is, en wat het resultaat is. Gebruik dus geen console.logs maar toon feedback in de UI.
+Of bekijk de startcode voor [schilderen met canvas](https://glitch.com/~draw-circle), of een [canvas PONG game](https://glitch.com/edit/#!/pong-game-canvas) en kijk of je dit kan besturen met de positie van je polsen.
 
 ---
 
@@ -91,12 +100,3 @@ if (predictions.length > 0) {
 <br>
 <br>
 
-
-
-## Links
-
-- [ML5.JS](https://ml5js.org)
-- [Handpose API](https://github.com/tensorflow/tfjs-models/tree/master/handpose) en [tutorial](https://handsondeeplearning.com/a-quick-example-using-tensorflow-js-handpose-model/)
-- [Face-api](https://github.com/justadudewhohacks/face-api.js/) 
-
-<br>

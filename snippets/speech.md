@@ -18,6 +18,19 @@ function speak(text) {
 
 speak("Hello world")
 ```
+
+## User interaction
+
+⚠️ Speech werkt alleen als er een gebruikers interactie is geweest, bv. via een button:
+
+```typescript
+btn.addEventListener("click", () => {
+  speak(`I think it's a hamster!`)
+})
+```
+
+## Voices
+
 Je kan verschillende voices gebruiken. Zie ook de [docs](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices)
 
 ```typescript
@@ -27,6 +40,8 @@ utterThis.voice = voices.filter(function(voice) { return voice.name == name; })[
 ```
 <br>
 <Br>
+    
+## Form
 
 Je kan een inputField en de button toevoegen om het te testen met verschillende teksten
 
@@ -45,7 +60,6 @@ playButton.addEventListener("click", () => {
 })
 ```
 
-⚠️ In nieuwe browsers mag je geen geluid laten horen zonder dat er een gebruikers interactie is geweest. Dit kan je bijvoorbeeld oplossen door een "start" knop in je applicatie te bouwen.
 
 <br>
 <br>

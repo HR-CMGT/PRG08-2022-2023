@@ -1,4 +1,4 @@
-# Week 6
+# Week 7
 
 ## Algoritmes: Neural Networks
 
@@ -78,6 +78,10 @@ Gebruik `nn.save()` om je getrainde weermodel op te slaan. Als je het inlaadt me
 <br>
 <br>
 
+## Eindopdracht deel A
+
+[In week 7 werk je aan deel A van de eindopdracht](eindopdrachtA.md).
+
 
 
 ## Datasets voor classification
@@ -88,3 +92,4 @@ Gebruik `nn.save()` om je getrainde weermodel op te slaan. Als je het inlaadt me
 ## Documentation
 
 - [ML5 Neural Networks in Javascript](https://learn.ml5js.org/#/reference/neural-network)
+- [Werken met hidden layers in ML5](./snippets/layers.md)

@@ -1,4 +1,4 @@
-# Week 3
+# Week 4
 
 ## Algoritmes: K-Nearest-Neighbour
 
@@ -54,7 +54,7 @@ console.log(`I think this is a ${prediction}`)
 <br>
 <br>
 
-# Les oefening week 3
+# Theorie les oefening week 4
 
 ### Cat or dog?
 
@@ -67,26 +67,26 @@ console.log(`I think this is a ${prediction}`)
 | 16 | 9.0 | 10 | 2.1 | 'cat' |
 | 21 | 16.7 | 16 | 3.3 | 'dog' |
 
-Gebruik bovenstaande javascript uitleg, de data in de tabel, en de [startcode](./knear) om een KNN algoritme te trainen. Test of het werkt door nieuwe data in te voeren en te voorspellen of dit een kat of een hond is.
+Gebruik bovenstaande javascript uitleg, de data in de tabel om een KNN algoritme te trainen. Leer wat katten en honden zijn, en test of het werkt door nieuwe data in te voeren. Voorspel vervolgens of dit een kat of een hond is.
 
-Kan je andere data vinden om je KNN algoritme mee te trainen?
-
-- [Starter files met KNear algoritme](./knear)
-
-<br>
-<br>
-
-# Inleveropdracht week 3
-
-Bij de inleveropdracht van week 3 ga je KNN gebruiken om de input van een webcam te classificeren.
-
-[Ga naar de inleveropdracht](./inleveropdracht.md)
+- [Startproject op Codesandbox](https://codesandbox.io/s/knear-week4-57wqe?file=/src/index.js)
+- [Lokaal startpoject](./knear)
+- [kNear documentatie](https://github.com/NathanEpstein/KNear)
 
 <br>
 <br>
 
-## Externe links
+# Praktijk week 4
+
+In de praktijkles van week 4 ga je KNN gebruiken om de input van een webcam te classificeren.
+
+[Ga naar de praktijkles opdracht](./praktijkles.md)
+
+<br>
+<br>
+
+## Links
 
 - [Codepen Demo](https://codepen.io/Qbrid/pen/OwpjLX)
 - [KNear Github](https://github.com/NathanEpstein/KNear)
-- [Uitleg K-Nearest-Neighbour](https://burakkanber.com/blog/machine-learning-in-js-k-nearest-neighbor-part-1/)
+- [Uitleg K-Nearest-Neighbour met Javascript](https://burakkanber.com/blog/machine-learning-in-js-k-nearest-neighbor-part-1/)
