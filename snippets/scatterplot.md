@@ -1,8 +1,13 @@
 # Scatterplot tekenen
 
-[Javascript scatterplot library: ChartJS](https://www.chartjs.org/docs/latest/charts/scatter.html)
-
 In dit voorbeeld lezen we een CSV file en gebruiken we twee kolommen voor de x en y as van het scatterplot.
+
+- [Voorbeeldcode](./scatterplot)
+- [Documentatie ChartJS](https://www.chartjs.org/docs/latest/charts/scatter.html)
+
+<br>
+<br>
+<br>
 
 ## HTML
 
