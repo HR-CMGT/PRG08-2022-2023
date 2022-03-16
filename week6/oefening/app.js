@@ -1,18 +1,29 @@
-import { VegaScatterplot } from "./libraries/vegascatterplot.js"
-import { createFakedata } from "./libraries/fakedata.js"
+import { createChart, updateChart } from "./scatterplot.js"
 
 let nn
-let fakeData = createFakedata()
-let plot
 
 //
-// teken de scatterplot voor de fake data
+// cars data
 //
-async function drawScatterPlot() {
-    plot = new VegaScatterplot()
-    // await plot.initialise("horsepower", "mpg", 600, 400, fakeData)
-    
+function createData() {
+    let data = [
+        { horsepower: 130, mpg: 18 },
+        { horsepower: 165, mpg: 15 },
+        { horsepower: 225, mpg: 14 },
+        { horsepower: 97, mpg: 18 },
+        { horsepower: 88, mpg: 27 },
+        { horsepower: 193, mpg: 9 },
+        { horsepower: 80, mpg: 25 },
+    ]
 }
+
+//
+// teken een scatterplot
+//
+function drawScatterplot(data) {
+
+}
+
 
 //
 // maak en train het neural network
@@ -20,11 +31,7 @@ async function drawScatterPlot() {
 async function createNeuralNetwork() {
     // maak neural network
 
-
     // voeg data toe aan neural network met addData
-    for (let row of fakeData) {
-        // nn.addData({ horsepower: row.horsepower }, { mpg: row.mpg })
-    }
 
     // train neural network
 
@@ -35,22 +42,13 @@ async function createNeuralNetwork() {
 // predictions
 //
 async function trainingFinished() {
-    // doe een enkele voorspelling om te zien of alles werkt
+    // doe een voorspelling voor horsepower 220 om te zien of het werkt
     let testCar = { horsepower: 220 }
 
-
-
-    // maak een voorspelling voor elk punt op de X as
-    let predictions = []
-    for(let i = 0; i< 400; i++) {
-        // let prediction = ....
-        // predictions.push(...)
-    }
-
-
-    // stuur nu de hele predictions array naar de scatterplot met "plot.addPoints"
-    // ...
+    // maak een voorspelling voor elke horsepower, sla op in array
+    
+    // toon de hele predictions array in de scatterplot 
 }
 
 // start de applicatie
-// drawScatterPlot()
+createData()

@@ -1,6 +1,6 @@
 # Week 6
 
-## Algoritmes: Neural Networks
+## Neural Networks
 
 ![nn](../images/carnn.png)
 
@@ -15,20 +15,23 @@ In deze oefening werken we met regression. Ook gaan we kijken hoe we data kunnen
 <br>
 <br>
 
-# ML5
+# ML5 Neural Network
 
-[ML5](https://ml5js.org) is een gebruiksvriendelijke library om snel met Machine Learning en Neural Networks aan de slag te kunnen. De onderliggende techniek is [TensorFlowJS](https://www.tensorflow.org/js/).
+[ML5](https://learn.ml5js.org/#/reference/neural-network) is een gebruiksvriendelijke library om snel met Machine Learning en Neural Networks aan de slag te kunnen. De onderliggende techniek is [TensorFlow](https://www.tensorflow.org/js/).
 
-### Fake data
+### 🚗  Data 
 
-In de startcode van deze oefening werken we met fake data. Dit zijn een aantal random punten met een "horsepower" en "mpg" waarde. Dit gebruiken we om te leren hoe de scatterplot werkt en hoe we eenvouding een neural network kunnen trainen.
+In dit voorbeeld gebruiken we hardcoded data, dit zijn `cars` met een `horsepower` en `mpg` (miles per gallon) waarde. 
 
 ```javascript
-let fakeData = createFakeData()
-
-// result:
-[
-    { horsepower: 220, mpg: 30 }, { horsepower: 300, mpg: 20 }, ...
+let data = [
+    { horsepower: 130, mpg: 18 },
+    { horsepower: 165, mpg: 15 },
+    { horsepower: 225, mpg: 14 },
+    { horsepower: 97, mpg: 18 },
+    { horsepower: 88, mpg: 27 },
+    { horsepower: 193, mpg: 9 },
+    { horsepower: 80, mpg: 25 }
 ]
 ```
 
@@ -38,40 +41,45 @@ let fakeData = createFakeData()
 
 ## 🔥 Neural Network
 
-In ML5 maak je als volgt een Neural Network voor regression:
+We willen de "miles per gallon" voorspellen van een auto waarvan we alleen de horsepower weten. Omdat we een *getal* voorspellen moeten we de `task:regression` doorgeven.
 
 ```javascript
 const options = { task: 'regression', debug: true }
 const nn = ml5.neuralNetwork(options)
 ```
-In de afbeelding hierboven zie je dat een neural network *hidden layers* heeft. ML5 maakt deze automatisch voor je aan. 
-
-<br>
 <br>
 <br>
 <br>
 
-## Training
+## Data toevoegen aan Neural Network
 
 Nu kan je data gaan toevoegen met de `addData` functie. 
 
 > ⚠️ Trainingdata in een neural network voor regression bestaat altijd uit getallen!
 
-Let op dat je eerst de data shuffled, om te voorkomen dat er een patroon herkend wordt in de volgorde van je data. We gebruiken de `horsepower` van de auto om te voorspellen wat de `mpg` gaat zijn.
+Let op dat je eerst de data shuffled, om te voorkomen dat er een patroon herkend wordt in de volgorde van je data. We gebruiken de `horsepower` van de auto om te voorspellen wat de `mpg` gaat zijn. Daarna normaliseren we de data om te zorgen dat alle kolommen even belangrijk zijn.
 
 ```javascript
 // shuffle
-fakeData.sort(() => (Math.random() - 0.5))
+data.sort(() => (Math.random() - 0.5))
 
-// een voor een de training data toevoegen aan het neural network
-for (let car of fakeData) {
+// een voor een de data toevoegen aan het neural network
+for (let car of data) {
     nn.addData({ horsepower: car.horsepower }, { mpg: car.mpg })
 }
+
+// normalize
+nn.normalizeData()
 ```
-Je moet de data normaliseren, en dan kan je gaan trainen. Bij het trainen moet je aangeven hoeveel `epochs` dit moet duren. Hier kan je zelf mee experimenteren.
+<br>
+<br>
+<br>
+
+## Trainen
+
+Bij het trainen moet je aangeven hoeveel `epochs` dit moet duren. Hier kan je zelf mee experimenteren.
 
 ```javascript
-nn.normalizeData()
 nn.train({ epochs: 10 }, () => finishedTraining()) 
 
 function finishedTraining(){
@@ -84,17 +92,17 @@ function finishedTraining(){
 
 ## Prediction
 
-Met de `predict` functie kunnen we nieuwe data voorspellen! Dit kan je makkelijk testen met een fake auto:
+Met de `predict` functie kunnen we nieuwe data voorspellen! Maak een nieuwe `car` met een `horsepower` van `90`, waarvan we niet de `mpg` weten:
 
 ```javascript
 async function finishedTraining() {
-    let testCar = { horsepower: 90 }
+    const testCar = { horsepower: 90 }
 
     const results = await nn.predict(testCar)
     console.log(results)
 
     const prediction = results[0].value
-    console.log(`Deze auto zal een verbruik hebben van: ${prediction}`)
+    console.log(`Geschat verbruik: ${prediction}`)
 }
 ```
 
@@ -106,26 +114,28 @@ async function finishedTraining() {
 
 # Scatterplot
 
-Je kan meteen na het inladen van je data (voor het trainen) al een scatterplot tekenen. Hieraan kan je zien hoe de `mpg` zich verhoudt tot de `horsepower`.
+Een scatterplot kan je gebruiken om te zien hoe je data in elkaar zit. In deze afbeelding zie je data van 400 auto's. Zie je een verband tussen `horsepower` en `miles per gallon` ?
 
+![scatterfake](../images/scatterplotcars.png)
 
-![scatterfake](../images/scatterplotfake.png)
+Je kan een scatterplot tekenen met de voorbeeldcode uit deze repository. 
 
-Omdat onze data er zo uit ziet: `{ horsepower: 220, mpg: 30 }` geven we onderstaande arguments mee aan de scatterplot. 
+Een scatterplot verwacht een array met x,y coordinaten, bijvoorbeeld: `[{x: 20, y: 30}, {x:40, y:50}]`. Je kan deze array aanmaken aan de hand van de bestaande `data` met de `.map()` functie.
 
 ```javascript
-import { VegaScatterplot } from "./libraries/vegascatterplot.js"
+// scatterplot
+import { createChart } from "./scatterplot.js"
 
-async function createScatterplot(data) {
-    let plot = new VegaScatterplot()
+const chartdata = data.map(car => ({
+    x: car.horsepower,
+    y: car.mpg,
+}))
 
-    // x-axis, y-axis, width, height, data (array of objects)
-    await plot.initialise("horsepower", "mpg", 600, 400, data)
-
-    // do the next step
-    // ...
-}
+// chartjs aanmaken
+createChart(chartdata)
 ```
+
+
 
 <br>
 <br>
@@ -133,37 +143,44 @@ async function createScatterplot(data) {
 
 ## Prediction tekenen als lijn
 
-Als we nu voor elke mogelijke `horsepower` (waarden van 0 tot 400) een prediction doen, dan krijgen we een array van punten. Deze kunnen we tekenen in de scatterplot. Dit illustreert of het neural network de complexiteit in de data kan herkennen.
+![scatterfinished](../images/scatterfinished2.png)
 
-![scatterfinished](../images/scatterfinished.png)
-
-In de vega scatterplot moet je nieuwe data in één keer als array doorgeven. Je moet dus eerst alle predictions doen en die tijdelijk in een array zetten.
-
+We kunnen voor elke mogelijke `horsepower` (waarden van 40 tot 250) een prediction doen, en die toevoegen aan een array. 
 
 ```javascript
-async function drawPredictions() {
-    // tijdelijke array om predictions in op te slaan
-    let predictions = []
+const chartresults = []
 
-    // horsepower gaat van 0 tot 400
-    for(let hp=0; hp<400; hp++) {
-
-        // prediction voor waarde hp
-        const results = ...
-
-        // object opslaan voor scatterplot: { horsepower: 3, mpg: 10 }
-        predictions.push(...)
-    }
-
-    // teken predictions in scatterplot
-    await plot.addPoints(predictions)
+for(let hp = 40; hp<250; hp+=2) {
+    const results = await nn.predict({horsepower:hp})
+    chartresults.push({ x: hp, y: results[0].value})
 }
 ```
+Deze array kunnen we tekenen in de scatterplot! Dit illustreert of het neural network de complexiteit in de data kan herkennen.
+
+```javascript
+import { updateChart } from "./scatterplot.js"
+updateChart("Predictions", chartresults)
+```
+
+
+
 <br>
 <br>
 <br>
 
-## ⚠️ Async await
+# Praktijkopdracht week 6
+
+Bij de praktijkopdracht van week 6 ga je deze oefening maken met een CSV file, en kijken of je meer data kan gebruiken om te trainen.
+
+Ook ga je het model opslaan, zodat je niet telkens opnieuw hoeft te trainen.
+
+[Ga naar de praktijkopdracht](./praktijkopdracht.md)
+
+<br>
+<br>
+<br>
+
+### ⚠️ Async await
 
 > Let op het gebruik van `async await`. Zodra je ergens `await` nodig hebt, moet je zorgen dat dit binnen een `async` functie staat!
 
@@ -179,36 +196,14 @@ async function doSomething() {
 <br>
 <br>
 
-# Praktijkopdracht week 6
 
-Bij de praktijkopdracht van week 6 ga je deze oefening af maken, en dan een echte dataset toevoegen. Ook ga je het model opslaan zodat je niet telkens opnieuw hoeft te trainen.
-
-[Ga naar de praktijkopdracht](./praktijkopdracht.md)
-
-<br>
-<br>
-<br>
-
-
-## Datasets voor regression
-
-- [Beijing Pollution, Salary Prediction](https://www.kaggle.com/ahmettezcantekin/beginner-dataset-v2)
-- [Boston House Prices](https://www.kaggle.com/vikrishnan/boston-house-prices)
-- [Cars miles per gallon](https://www.kaggle.com/uciml/autompg-dataset)
-- [Kaggle regression dataset search](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets)
-
-## Documentation
+## Documentatie
 
 - [🔥 ML5 Neural Networks in Javascript](https://learn.ml5js.org/#/reference/neural-network)
-- [Vega Scatterplot documentation](https://vega.github.io/vega/examples/scatter-plot/)
-- [Werken met hidden layers in ML5](./snippets/layers.md)
-- [3D plot tekenen met Plotly.js](./snippets/plot3d)
+- [ChartJS Scatterplot code voorbeeld](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/snippets/scatterplot.md)
+- [ChartJS Scatterplot documentatie](https://www.chartjs.org/docs/latest/charts/scatter.html)
 
 ## Externe links
 
 - [📺 Crash Course Neural Networks](https://www.youtube.com/watch?v=JBlm4wnjNMY)
 - [📺  But what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk)
-- [📺  Showcase: Made with TensorFlowJS](https://www.youtube.com/watch?v=GskMuu821NI)
-- [📺 Code a perceptron from scratch in javascript!](https://www.youtube.com/watch?v=o98qlvrcqiU&t=26s)
-- [Neural Network Playground](https://playground.tensorflow.org/)
-- [Towards Data Science : Neural Networks for beginners](https://towardsdatascience.com/a-beginners-guide-to-neural-networks-d5cf7e369a13)
