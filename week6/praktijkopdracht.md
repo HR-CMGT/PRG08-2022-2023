@@ -64,7 +64,7 @@ Een scatterplot toont alleen een X en een Y as, maar je kan het Neural Network w
 
 ***mpg, cylinders, displacement, horsepower, weight, acceleration,model year, origin, car name***
 
-In het eerste object geef je alle features mee, en in het tweede object de waarde die geleerd moet worden:
+In dit voorbeeld geven we `horsepower` en `weight` mee, om de `mpg` te leren:
 
 ```javascript
 for (let car of data) {
