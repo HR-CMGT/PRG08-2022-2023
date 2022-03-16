@@ -1,4 +1,5 @@
 const canvas = document.getElementById('myChart')
+let myChart
 
 export function createChart(columns) {
     const config = {
@@ -25,5 +26,15 @@ export function createChart(columns) {
         }
     }
 
-    const myChart = new Chart(canvas, config)
+    myChart = new Chart(canvas, config)
+}
+
+// update an existing chart
+// add points in this format: updateChart([{x:19,y:14, x:1, y:12}])
+// https://www.chartjs.org/docs/latest/developers/updates.html
+export function updateChart(newData) {
+    for (let point of newData) {
+        myChart.data.datasets[0].data.push(point)
+    }
+    myChart.update()
 }

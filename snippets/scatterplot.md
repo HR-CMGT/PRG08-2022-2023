@@ -46,13 +46,25 @@ function cleanData(data) {
     createChart(columns)
 }
 ```
+
+### Achteraf punten toevoegen
+
+Je kan achteraf nog punten toevoegen aan een bestaande grafiek.
+
+```javascript
+import { updateChart } from "scatterplot.js"
+
+updateChart([{ x: 5, y: 45 }, { x: 8, y: 48 }])
+```
+
+<br>
 <br>
 <br>
 <br>
 
 ## Scatterplot.js
 
-In het bestand `scatterplot.js` worden de functies van `chart.js` aangeroepen om de plot te tekenen. Hier kan je de labels en kleuren ook aanpassen.
+In het bestand `scatterplot.js` worden de functies van `chart.js` aangeroepen om de plot te tekenen. Hier kan je de labels en kleuren  aanpassen.
 
 ```javascript
 const canvas = document.getElementById('myChart')
