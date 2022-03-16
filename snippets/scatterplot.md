@@ -59,7 +59,7 @@ Je kan achteraf nog punten toevoegen aan een bestaande grafiek.
 ```javascript
 import { updateChart } from "scatterplot.js"
 
-updateChart([{ x: 5, y: 45 }, { x: 8, y: 48 }])
+updateChart("New data", [{ x: 5, y: 45 }, { x: 8, y: 48 }])
 ```
 
 <br>
