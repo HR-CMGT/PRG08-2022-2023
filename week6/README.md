@@ -11,6 +11,8 @@ Een neural network is in staat om complexe patronen in data te vinden. Je kan ee
 
 In deze oefening werken we met regression. Ook gaan we kijken hoe we data kunnen tekenen in een grafiek. We gaan de voorspelling ook tekenen!
 
+👨🏻‍💻👩🏽‍💻 Je kan de oefening downloaden uit deze repository of live meedoen op [glitch](https://glitch.com/edit/#!/ml5-cars-tutorial?path=index.html%3A1%3A0)
+
 <br>
 <br>
 <br>
