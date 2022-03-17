@@ -7,7 +7,7 @@ Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint!
 
   - CSV cars data inladen
   - CSV `horsepower` en `mpg` tonen in scatterplot
-  - Neural Network trainen. Meerdere kolommen gebruiken?
+  - Neural Network trainen
   - Model opslaan en inladen in een andere HTML pagina.
   - Train en testdata gebruiken
 
@@ -18,7 +18,11 @@ Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint!
 
 ## CSV data
 
-Gebruik een dataset die geschikt is voor *regression* (voorspellen van een getal). In deze repository staat `cars.csv` als voorbeeld. Gebruik [Papa Parse](https://www.papaparse.com) om CSV files te laden. 
+Gebruik een dataset die geschikt is voor *regression* (voorspellen van een getal). Gebruik [Papa Parse](https://www.papaparse.com) om CSV files te laden. In deze repository staan drie oefenbestanden:
+
+- ***cars.csv*** - voorspel brandstofverbruik met de eigenschappen van bestaande auto's.
+- ***houseprices.csv*** - voorspel huizenprijzen met de eigenschappen van bestaande huizen.
+- ***winequality.csv*** - voorspel wijnkwaliteit naar aanleiding van eigenschappen van de wijn.
 
 ```javascript
 function loadData() {
@@ -35,7 +39,9 @@ function loadData() {
 <br>
 <br>
 
-## Scatterplot tekenen voor MPG en Horsepower
+## Scatterplot tekenen 
+
+De voorbeeldcode gebruikt ***cars.csv***.
 
 Op de X as zet je de "horsepower" van de auto. Op de Y as zet je de "mpg" van de auto. 
 
@@ -56,11 +62,11 @@ createChart(chartdata)
 <br>
 <br>
 
-## Training met meer features
+## Training
 
 Zie het [vorige voorbeeld](./README.md) voor het trainen van een Neural Network.
 
-Een scatterplot toont alleen een X en een Y as, maar je kan het Neural Network wel trainen op meer features! De `cars.csv` bevat:
+Een scatterplot toont een X en een Y as, maar je kan het Neural Network wel trainen op meer features! Bijvoorbeeld, de `cars.csv` bevat:
 
 ***mpg, cylinders, displacement, horsepower, weight, acceleration,model year, origin, car name***
 
@@ -71,7 +77,7 @@ for (let car of data) {
     nn.addData({ horsepower: car.horsepower, weight:car.weight }, { mpg: car.mpg })
 }
 ```
-Je kan nu een prediction doen waarbij je horsepower en weight doorgeeft:
+⚠️ Bij de prediction moet je wel dezelfde features doorgeven om een voorspelling te krijgen:
 ```javascript
 const results = await nn.predict({horsepower:90, weight:220})
 ```
