@@ -146,7 +146,8 @@ let testData = data.slice(Math.floor(data.length * 0.8) + 1)
 ## Documentatie
 
 - [Opschonen van CSV data met filter en map](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/csv.md).
-- [🔥 ML5 Neural Networks in Javascript](https://learn.ml5js.org/#/reference/neural-network)
+- [🔥 ML5 Neural Networks](https://learn.ml5js.org/#/reference/neural-network)
+- [Hidden Layers toevoegen](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/snippets/layers.md)
 - [ChartJS Scatterplot code voorbeeld](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/snippets/scatterplot.md)
 - [ChartJS Scatterplot documentatie](https://www.chartjs.org/docs/latest/charts/scatter.html)
 
