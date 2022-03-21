@@ -5,11 +5,11 @@ Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint!
 
 ## Stappen
 
-  - CSV cars data inladen
-  - CSV `horsepower` en `mpg` tonen in scatterplot
+  - CSV data inladen
+  - Verbanden in data tonen in scatterplot
   - Neural Network trainen
-  - Model opslaan en inladen in een andere HTML pagina.
-  - Train en testdata gebruiken
+  - Model opslaan en inladen in een aparte HTML pagina.
+  - Kijken naar classification met Neural Network
 
 
 <br>
@@ -18,7 +18,7 @@ Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint!
 
 ## CSV data
 
-Gebruik een dataset die geschikt is voor *regression* (voorspellen van een getal). Gebruik [Papa Parse](https://www.papaparse.com) om CSV files te laden. In deze repository staan drie oefenbestanden:
+Gebruik een dataset die geschikt is voor *regression* (voorspellen van een getal). Gebruik [Papa Parse](https://www.papaparse.com) om CSV files te laden. In deze repository staan drie oefenbestanden, je kan meer voorbeelden vinden onder "links" en door op kaggle te zoeken naar "regression datasets".
 
 - ***cars.csv*** - voorspel brandstofverbruik met de eigenschappen van bestaande auto's.
 - ***houseprices.csv*** - voorspel huizenprijzen met de eigenschappen van bestaande huizen.
@@ -41,7 +41,7 @@ function loadData() {
 
 ## Scatterplot tekenen 
 
-De voorbeeldcode gebruikt ***cars.csv***.
+Deze voorbeeldcode gebruikt ***cars.csv***.
 
 Op de X as zet je de "horsepower" van de auto. Op de Y as zet je de "mpg" van de auto. 
 
@@ -55,8 +55,9 @@ const chartdata = data.map(car => ({
 
 createChart(chartdata)
 ```
+### Opdracht
 
-
+Kijk of er nog meer kolommen in de CSV file relevant zijn voor hetgene dat je wil leren, door daar ook een scatterplot voor te tekenen. (bv. gewicht versus mpg van de auto).
 
 <br>
 <br>
@@ -64,7 +65,7 @@ createChart(chartdata)
 
 ## Training
 
-Zie het [vorige voorbeeld](./README.md) voor het trainen van een Neural Network.
+Zie de code uit het [vorige voorbeeld](./README.md) voor het trainen van een Neural Network.
 
 Een scatterplot toont een X en een Y as, maar je kan het Neural Network wel trainen op meer features! Bijvoorbeeld, de `cars.csv` bevat:
 
@@ -81,7 +82,9 @@ for (let car of data) {
 ```javascript
 const results = await nn.predict({horsepower:90, weight:220})
 ```
+### Opdracht
 
+Kan je het trainen verbeteren door meerdere kolommen toe te voegen?
 
 <br>
 <Br>
@@ -118,13 +121,30 @@ Maak een gebruiksvriendelijke UI waarin je bv. de *horsepower* van je auto kan i
 <br>
 <br>
 
-## Traindata en testdata
+## Classification 
 
-Net zoals bij de decision tree kan je de CSV data [opsplitsen](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/csv.md). De testdata kan je dan gebruiken om te zien of jouw neural network goede voorspellingen maakt. Dit doe je door jouw voorspelling te vergelijken met de echte `mpg` waarde van de test data.
-
+Bij de K-Nearest-Neighbour en Decision Tree hebben we gewerkt met data voor classification. Dit kan je ook doen met een Neural Network. Gebruik deze ML5 voorbeeldcode om een van de eerdere datasets te trainen met een Neural Network. 
+  
 ```javascript
-let trainData = data.slice(0, Math.floor(data.length * 0.8))
-let testData = data.slice(Math.floor(data.length * 0.8) + 1)
+const nn = ml5.neuralNetwork({
+   task: 'classification',
+   debug: true
+})
+
+// voorbeeld titanic data
+const inputs = { Pclass: 7, Sex: 1, Age: 22, SibSp:0 }
+const output = { Survived: "Died" }
+
+// gebruik een for-loop om alle rijen uit de CSV toe te voegen
+nn.addData(inputs, output)
+  
+// trainen
+nn.normalizeData()
+nn.train({ epochs: 32 }, () => console.log("Finished training!"))
+
+// classify
+const passenger = { Pclass: 7, Sex: 1, Age: 22, SibSp:0 }
+nn.classify(passenger, (error, result) => console.log(result))
 ```
 
 <br>
@@ -141,7 +161,13 @@ let testData = data.slice(Math.floor(data.length * 0.8) + 1)
 - [Boston House Prices](https://www.kaggle.com/vikrishnan/boston-house-prices)
 - [Cars miles per gallon](https://www.kaggle.com/uciml/autompg-dataset)
 - [Kaggle regression dataset search](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets)
-
+  
+## Datasets voor classification
+  
+- [Diabetes](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/week5/oefening/data/diabetes.csv)
+- [Poisonous Mushrooms](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/week5/oefening/data/mushrooms.csv)
+- [Titanic Survivors](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/week5/oefening/data/titanic.csv)
+- [Speed Dating - who gets the most dates?](https://www.kaggle.com/datasets/annavictoria/speed-dating-experiment)
 
 ## Documentatie
 
