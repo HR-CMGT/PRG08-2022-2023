@@ -67,21 +67,15 @@ Kijk of er nog meer kolommen in de CSV file relevant zijn voor hetgene dat je wi
 
 Zie de code uit het [vorige voorbeeld](./README.md) voor het trainen van een Neural Network.
 
-Een scatterplot toont een X en een Y as, maar je kan het Neural Network wel trainen op meer features! Bijvoorbeeld, de `cars.csv` bevat:
+Een scatterplot toont een X en een Y as, maar je kan het Neural Network wel trainen op meer features! Bijvoorbeeld, de `cars.csv` bevat ***mpg, cylinders, displacement, horsepower, weight, acceleration,model year, origin, car name***
 
-***mpg, cylinders, displacement, horsepower, weight, acceleration,model year, origin, car name***
-
-In dit voorbeeld geven we `horsepower` en `weight` mee, om de `mpg` te leren:
+In het eerste object van `addData()` geef je alle features mee waarvan je wil leren. Het tweede object bevat de data die je wil kunnen voorspellen.
 
 ```javascript
-for (let car of data) {
-    nn.addData({ horsepower: car.horsepower, weight:car.weight }, { mpg: car.mpg })
-}
+nn.addData({ feature1: data.feature1, feature2:data.feature2, ... }, { label: data.label })
 ```
-⚠️ Bij de prediction moet je wel dezelfde features doorgeven om een voorspelling te krijgen:
-```javascript
-const results = await nn.predict({horsepower:90, weight:220})
-```
+> ⚠️ Bij een prediction moet je wel dezelfde features doorgeven om een voorspelling te krijgen!
+
 ### Opdracht
 
 Kan je het trainen verbeteren door meerdere kolommen toe te voegen?
