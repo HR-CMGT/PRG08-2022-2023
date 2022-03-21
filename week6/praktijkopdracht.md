@@ -113,15 +113,16 @@ Maak nu een nieuwe webpagina waarin je dit getrainde model gaat inladen. Lees hi
 
 ## Classification 
 
-Bij de K-Nearest-Neighbour en Decision Tree hebben we gewerkt met data voor classification. Dit kan je ook doen met een Neural Network. Gebruik deze ML5 voorbeeldcode om een van de eerdere datasets te trainen met een Neural Network. 
+Bij de K-Nearest-Neighbour en Decision Tree hebben we gewerkt met data voor classification. Dit kan je ook doen met een Neural Network. Gebruik deze ML5 voorbeeldcode om een van de eerdere datasets te trainen met een Neural Network. Let op dat de code nét iets anders is dan bij regression!
   
 ```javascript
+// voorbeeld titanic data
+  
 const nn = ml5.neuralNetwork({
    task: 'classification',
    debug: true
 })
 
-// voorbeeld titanic data
 const inputs = { Pclass: 7, Sex: 1, Age: 22, SibSp:0 }
 const output = { Survived: "Died" }
 
