@@ -76,7 +76,8 @@ nn.addData({ feature1: data.feature1, feature2:data.feature2, ... }, { label: da
 
 ### Opdracht
 
-Kan je het trainen verbeteren door meerdere kolommen toe te voegen?
+- Kan je het trainen verbeteren door meerdere kolommen toe te voegen?
+- Teken je voorspellingen in de scatterplot, door voor elke waarde op de x-as een voorspelling te doen.
 
 <br>
 <Br>
