@@ -41,9 +41,7 @@ function loadData() {
 
 ## Scatterplot tekenen 
 
-Deze voorbeeldcode gebruikt ***cars.csv***.
-
-Op de X as zet je de "horsepower" van de auto. Op de Y as zet je de "mpg" van de auto. 
+Op de X as zet je de feature waar je op wil trainen. Op de Y as zet je de waarde die je wil kunnen voorspellen. Bijvoorbeeld voor een auto:
 
 ```javascript
 import { createChart } from "./scatterplot.js"
