@@ -18,7 +18,7 @@ Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint!
 
 ## CSV data
 
-Gebruik een dataset die geschikt is voor *regression* (voorspellen van een getal). Gebruik [Papa Parse](https://www.papaparse.com) om CSV files te laden. In deze repository staan drie oefenbestanden, je kan meer voorbeelden vinden onder "links" en door op kaggle te zoeken naar "regression datasets".
+Gebruik een dataset die geschikt is voor *regression* (voorspellen van een getal). Gebruik [Papa Parse](https://www.papaparse.com) om CSV files te laden. In deze repository staan drie oefenbestanden, je kan meer voorbeelden vinden onder "links" en door [op kaggle te zoeken naar regression datasets](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets)
 
 - ***cars.csv*** - voorspel brandstofverbruik met de eigenschappen van bestaande auto's.
 - ***houseprices.csv*** - voorspel huizenprijzen met de eigenschappen van bestaande huizen.
