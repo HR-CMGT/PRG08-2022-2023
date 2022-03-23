@@ -46,7 +46,7 @@ Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
 - [Lees de webcam](./snippets/camera.md)
 - [Normaliseer data om beter te trainen](./snippets/normalise.md)
 - [CSV en JSON data laden en filteren](./snippets/csv.md)
-- [Neural Networks in ML5](./snippets/layers.md)
+- [Neural Networks hidden layers in ML5](./snippets/layers.md)
 - [Scatterplot tekenen met een CSV bestand](./snippets/scatterplot.md)
 - [Image recognition trainen op je eigen afbeeldingen](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
 
