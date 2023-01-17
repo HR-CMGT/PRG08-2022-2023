@@ -1,211 +1,140 @@
 # Week 6
 
-## Neural Networks
+## Algoritmes: Decision Tree
 
-![nn](../images/carnn.png)
+Dit algoritme bouwt een hiërarchische boomstructuur om te bepalen wat het belangrijkst is in een dataset. 
 
-Een neural network is in staat om complexe patronen in data te vinden. Je kan een neural network gebruiken voor:
+- **Classification** : we geven data een label, bv, "survived" of "died"
+- **Supervised Learning** : het algoritme wordt getrained met bestaande data die al labels heeft.
 
-- **Classification** : het algoritme voorspelt een label, bv: "survived" of "died"
-- **Regression** : het algoritme voorspelt een getal, bv: "temperatuur", "prijs", "luchtvervuiling"
+In deze Decision Tree zien we de kans dat een passagier zijn vakantie op de Titanic overleeft. Het algoritme genereert deze tree op basis van training data.
 
-In deze oefening werken we met regression. Ook gaan we kijken hoe we data kunnen tekenen in een grafiek. We gaan de voorspelling ook tekenen!
+<br>
 
-👨🏻‍💻👩🏽‍💻 Je kan de oefening downloaden uit deze repository of [live meedoen op glitch](https://glitch.com/edit/#!/ml5-cars-tutorial)
+![knn](../images/titanic.png)
 
 <br>
 <br>
+
+# Opdracht
+
+In deze voorbeeldcode werken we met het `decisiontree` algoritme en een `tree visualiser` waarmee de tree getekend kan worden. We gebruiken de `papa parse` library om CSV bestanden in te laden.
+
+<br>
 <br>
 
-# ML5 Neural Network
+## Data laden
 
-[ML5](https://learn.ml5js.org/#/reference/neural-network) is een gebruiksvriendelijke library om snel met Machine Learning en Neural Networks aan de slag te kunnen. De onderliggende techniek is [TensorFlow](https://www.tensorflow.org/js/).
-
-### 🚗  Data 
-
-In dit voorbeeld gebruiken we hardcoded data, dit zijn `cars` met een `horsepower` en `mpg` (miles per gallon) waarde. 
+Gebruik Papa Parse om een van de datasets te laden. 
 
 ```javascript
-let data = [
-    { horsepower: 130, mpg: 18 },
-    { horsepower: 165, mpg: 15 },
-    { horsepower: 225, mpg: 14 },
-    { horsepower: 97, mpg: 18 },
-    { horsepower: 88, mpg: 27 },
-    { horsepower: 193, mpg: 9 },
-    { horsepower: 80, mpg: 25 }
-]
-```
-
-<br>
-<br>
-<br>
-
-## 🔥 Neural Network
-
-We willen de "miles per gallon" voorspellen van een auto waarvan we alleen de horsepower weten. Omdat we een *getal* voorspellen moeten we de `task:regression` doorgeven.
-
-```javascript
-const options = { task: 'regression', debug: true }
-const nn = ml5.neuralNetwork(options)
-```
-<br>
-<br>
-<br>
-
-## Data toevoegen aan Neural Network
-
-Nu kan je data gaan toevoegen met de `addData` functie. 
-
-> ⚠️ Trainingdata in een neural network voor regression bestaat altijd uit getallen!
-
-Let op dat je eerst de data shuffled, om te voorkomen dat er een patroon herkend wordt in de volgorde van je data. We gebruiken de `horsepower` van de auto om te voorspellen wat de `mpg` gaat zijn. Daarna normaliseren we de data om te zorgen dat alle kolommen even belangrijk zijn.
-
-```javascript
-// shuffle
-data.sort(() => (Math.random() - 0.5))
-
-// een voor een de data toevoegen aan het neural network
-for (let car of data) {
-    nn.addData({ horsepower: car.horsepower }, { mpg: car.mpg })
-}
-
-// normalize
-nn.normalizeData()
-```
-<br>
-<br>
-<br>
-
-## Trainen
-
-Bij het trainen moet je aangeven hoeveel `epochs` dit moet duren. Hier kan je zelf mee experimenteren.
-
-```javascript
-nn.train({ epochs: 10 }, () => finishedTraining()) 
-
-function finishedTraining(){
-    console.log("Finished training!")
+function loadData(){
+    Papa.parse("data/simpsons.csv", {
+        download:true,
+        header:true, 
+        dynamicTyping:true,
+        complete: results => console.log(results.data)
+    })
 }
 ```
+
+<br>
+<br>
+<br>
+
+## Training
+
+In de CSV moet je controleren wat de **naam is van het label**. In het geval van de Simpsons data (waarbij we gaan kijken of een Simpsons karakter een man of een vrouw is), is het label **"Gender"**. 
+
+Het algoritme geeft ook de mogelijkheid om kolommen te negeren. In het geval van de simpsons data is de `Name` kolom niet behulpzaam bij de voorspelling.
+
+```javascript
+let ignoredColumns = ['Name']
+let label = "Gender"
+
+function trainModel(data) {
+    let decisionTree = new DecisionTree({
+        ignoredAttributes: ignoredColumns,
+        trainingSet: data,
+        categoryAttr: label
+    })
+}
+```
+
+<br>
+<br>
+<br>
+
+## Boomstructuur visualiseren 🌳 
+
+Je kan visualiseren hoe de tree er uit ziet! Dat doe je door de tree structuur op te vragen als JSON. Die JSON kan je doorgeven aan de [visualiser](https://vega.github.io/vega/examples/tree-layout/). 
+
+Je geeft ook een DOM element mee, en de breedte en hoogte. 
+
+```javascript
+let json = decisionTree.toJSON()
+let visual = new VegaTree('#view', 2300, 1000, json)
+```
+
+De visualisatie is niet per sé nodig om een voorspelling te maken. Het helpt wel om te zien hoe het algoritme tot een keuze komt.
+
 <br>
 <br>
 <br>
 
 ## Prediction
 
-Met de `predict` functie kunnen we nieuwe data voorspellen! Maak een nieuwe `car` met een `horsepower` van `90`, waarvan we niet de `mpg` weten:
+Nu kunnen we nieuwe data classificeren! Bedenk zelf fictieve eigenschappen en kijk wat het algoritme erover zegt:
 
 ```javascript
-async function finishedTraining() {
-    const testCar = { horsepower: 90 }
-
-    const results = await nn.predict(testCar)
-    console.log(results)
-
-    const prediction = results[0].value
-    console.log(`Geschat verbruik: ${prediction}`)
-}
+let person = {Name:"Bob", Hairlength:0.1, Weight:77, Age:33}
+let prediction = decisionTree.predict(person)
+console.log(`${person.Name}'s gender is ${prediction}`)
 ```
-
 <br>
 <br>
 <br>
-<br>
 
+## Grotere datasets
 
-# Scatterplot
+We gaan dit nu uitproberen met *real world data*. Deze kan je vinden in de `data` map.
 
-Een scatterplot kan je gebruiken om te zien hoe je data in elkaar zit. In deze afbeelding zie je data van 400 auto's. Zie je een verband tussen `horsepower` en `miles per gallon` ?
+- Poisonous mushrooms: voorspel of een paddestoel giftig is of niet
+- Diabetes: voorspel of iemand diabetes gaat krijgen
+- Titanic: voorspel of iemand zijn vakantie op de titanic gaat overleven
 
-![scatterfake](../images/scatterplotcars.png)
-
-Je kan een scatterplot tekenen met de voorbeeldcode uit deze repository. 
-
-Een scatterplot verwacht een array met x,y coordinaten, bijvoorbeeld: `[{x: 20, y: 30}, {x:40, y:50}]`. Je kan deze array aanmaken aan de hand van de bestaande `data` met de `.map()` functie.
+Let hierbij op de **naam van het label** in de CSV file, en of er kolommen zijn die je wil negeren. Kijk ook naar de betekenis van de labels. Bijvoorbeeld: bij de paddestoelen betekent "P" poisonous en "E" edible.
 
 ```javascript
-// scatterplot
-import { createChart } from "./scatterplot.js"
+// mushroom data
+let ignoredColumns = []
+let label = "class"
 
-const chartdata = data.map(car => ({
-    x: car.horsepower,
-    y: car.mpg,
-}))
-
-// chartjs aanmaken
-createChart(chartdata)
+let decisionTree = new DecisionTree({
+    ignoredAttributes: ignoredColumns,
+    trainingSet: data,
+    categoryAttr: label     
+})
 ```
 
 
-
-<br>
-<br>
-<br>
-
-## Prediction tekenen als lijn
-
-![scatterfinished](../images/scatterfinished2.png)
-
-We kunnen voor elke mogelijke `horsepower` (waarden van 40 tot 250) een prediction doen, en die toevoegen aan een array. 
-
-```javascript
-const chartresults = []
-
-for(let hp = 40; hp<250; hp+=2) {
-    const results = await nn.predict({horsepower:hp})
-    chartresults.push({ x: hp, y: results[0].value})
-}
-```
-Deze array kunnen we tekenen in de scatterplot! Dit illustreert of het neural network de complexiteit in de data kan herkennen.
-
-```javascript
-import { updateChart } from "./scatterplot.js"
-updateChart("Predictions", chartresults)
-```
-
-
-
-<br>
-<br>
-<br>
-
-# Praktijkopdracht week 6
-
-Bij de praktijkopdracht van week 6 ga je deze oefening maken met een CSV file, en kijken of je meer data kan gebruiken om te trainen.
-
-Ook ga je het model opslaan, zodat je niet telkens opnieuw hoeft te trainen.
-
-[Ga naar de praktijkopdracht](./praktijkopdracht.md)
-
-<br>
-<br>
-<br>
-
-### ⚠️ Async await
-
-> Let op het gebruik van `async await`. Zodra je ergens `await` nodig hebt, moet je zorgen dat dit binnen een `async` functie staat!
-
-```javascript
-async function doSomething() {
-    let result = await doComplicatedThing()
-    console.log("ready!")
-}
-```
-
 <br>
 <br>
 <br>
 <br>
 
+# Inleveropdracht week 5
 
-## Documentatie
+Bij de inleveropdracht van week 5 ga je een van deze datasets gebruiken, en je gaat testen hoe accuraat je voorspellingen zijn.
 
-- [🔥 ML5 Neural Networks in Javascript](https://learn.ml5js.org/#/reference/neural-network)
-- [ChartJS Scatterplot code voorbeeld](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/snippets/scatterplot.md)
-- [ChartJS Scatterplot documentatie](https://www.chartjs.org/docs/latest/charts/scatter.html)
+[Ga naar de inleveropdracht](./inleveropdracht.md)
+
+<br>
+<br>
 
 ## Externe links
 
-- [📺 Crash Course Neural Networks](https://www.youtube.com/watch?v=JBlm4wnjNMY)
-- [📺  But what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk)
+- [Decision Tree Javascript](https://github.com/lagodiuk/decision-tree-js)
+- [Vega tree hierarchy viewer](https://vega.github.io/vega/examples/tree-layout/)
+- [Towards Data Science : Decision Tree explanation](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052/)
+- [Een getal voorspellen met een Regression Tree](https://winkjs.org/wink-regression-tree/)

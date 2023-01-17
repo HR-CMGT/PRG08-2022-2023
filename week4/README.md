@@ -1,92 +1,100 @@
 # Week 4
 
-## Algoritmes: K-Nearest-Neighbour
+### College
+- Introductie ML5 pre-trained models: handpose, bodypose, face, object recognition
+### Lesopdracht
+- Bouwen ML5 webcam app
 
-Dit algoritme gebruikt afstanden tussen punten om te bepalen waar een punt bij hoort. Je leert de termen:
+<br>
+<br>
 
-- **Classification** : we geven data een label, bv, "kat" of "hond"
-- **Supervised Learning** : het algoritme wordt getrained met bestaande data die al labels heeft.
+# Inleveropdracht Week 4
+
+- Bedenk een concept voor het werken met gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning, object detectie, of de **image feature** herkenning uit week 2. (Dat is de imageClassifier waar je je eigen images aan hebt toegevoegd)
+- Lees data uit met javascript en geef feedback aan de gebruiker via de UI.
+- Bouw een eenvoudige UI voor dit concept met HTML en CSS. De gebruiker hoeft dus niet in de console te kijken.
+
+Je kan een start maken met deze voorbeeldcode:
+
+- [ML5 Body Pose detection](https://learn.ml5js.org/#/reference/posenet)
+- [ML5 Hand Pose detection](https://learn.ml5js.org/#/reference/handpose)
+- [ML5 Face landmark detection](https://learn.ml5js.org/#/reference/face-api)
+- [ML5 Object detection](https://learn.ml5js.org/#/reference/object-detector)
+- [ML5 Feature Extractor](https://learn.ml5js.org/#/reference/feature-extractor). zie ook [Week 2](https://github.com/HR-CMGT/PRG08-2021-2022/tree/main/week2)
+- [FaceApiJS Code Voorbeeld](#face)
+- [HandPoseJS Code Voorbeeld](#hand)
+
 
 <br>
 <br>
 <br>
 
-## K-Nearest-Neighbour
+### Voorbeelden inleveropdracht
 
-We tekenen de *weight* en *ear length* features van katten en honden in een 2D grafiek als X en Y coördinaten:
+Via FaceApi haal je data binnen over het gezicht van de gebruiker. Met `requestAnimationFrame` kijk je telkens naar de `data.leftEye()` en `data.rightEye()` data. Je kijkt wat de `x,y` posities van de ogen zijn. Als deze posities te ver uit elkaar zijn, dan zit de gebruiker te dicht met zijn snufferd over het scherm van de computer gebogen! Geef een waarschuwing via een browser notificatie. Check dit elke 5 minuten.
+
+![posture](../images/posture.png)
+
+Of bekijk de startcode voor [schilderen met canvas](https://glitch.com/~draw-circle), of een [canvas PONG game](https://glitch.com/edit/#!/pong-game-canvas) en kijk of je dit kan besturen met de positie van je polsen.
+
+---
 
 <br>
-
-![knn](../images/knn_catdog_icons.png)
-
-Als we een nieuw punt tekenen in de grafiek, kunnen we via de **afstand tot de andere punten** bepalen of het nieuwe punt een kat of een hond is! Dit is wat het KNN algoritme doet. Zie ook dit [interactief voorbeeld op Codepen](https://codepen.io/Qbrid/pen/OwpjLX). Meer informatie over KNN vind je in de PDF van deze week.
-
 <br>
 <br>
 
-# Werken met KNN in Javascript
+## <a name="face"></a> Face API JS
 
-Laad het KNN algoritme, en een leeg javascript bestand:
 
-```html
-<script src="knear.js"></script>
-<script src="app.js"></script>
-```
-Maak het algoritme aan in app.js
+De FACE API geeft een array van "landmark points" voor de belangrijkste features van je gezicht.
+
+![landmarks](../images/landmarks.png)
 
 ```javascript
-const k = 3
-const machine = new kNear(k)
+// get face landmarks as array
+const detections = await faceapi
+        .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
+        .withFaceLandmarks();
+
+// all positions in the first face
+console.log(detections[0].landmarks.positions)        
+
+// get specific features in the first face
+const leftEye = detections[0].landmarks.getLeftEye()
+const rightEye = detections[0].landmarks.getRightEye()
 ```
-Nu kan je het algoritme trainen met data uit de bovenstaande tabel. Gebruik bv. ear length, weight, height. Voeg alle data uit de tabel toe op deze manier:
+
+- [Het voorbeeldproject vind je in de face-api map](./face-api).
+- [Face-API.JS website](https://justadudewhohacks.github.io/face-api.js/docs/index.html)
+
+---
+<br>
+<br>
+<br>
+
+## <a name="hand"></a> Handpose API
+
+De HANDPOSE API geeft een array van "landmark points" voor de vingers van je hand in 3D.
+
+![handpose](../images/handpose.png)
+
 ```javascript
-machine.learn([6.2, 20, 9], 'cat')
+const predictions = await model.estimateHands(video)
+if (predictions.length > 0) {
+    const result = predictions[0].landmarks
+    // x, y, z van de top van de wijsvinger:
+    let y = predictions[0].landmarks[8][0]
+    let x = predictions[0].landmarks[8][1]
+    let z = predictions[0].landmarks[8][2]
+}
 ```
 
-## Classifying
+- [Het voorbeeldproject vind je in de handpose map](./handpose).
+- [Handpose github](https://github.com/tensorflow/tfjs-models/tree/master/handpose)
 
-Nu kunnen we nieuwe data classificeren! Bedenk zelf de eigenschappen van een dier (ear length, weight, height) en vraag wat voor dier dit is:
-
-```javascript
-let prediction = machine.classify([7,18,7])
-console.log(`I think this is a ${prediction}`)
-```
-<br>
-<br>
-
-# Theorie les oefening week 4
-
-### Cat or dog?
-
-| Body length | Height | Weight | Ear length |  Label |
-| ----------- | ------ | ------ | ---------- |  ----- |
-| 18 | 9.2 | 8.1 | 2 | 'cat' |
-| 20.1 | 17 | 15.5 | 5 | 'dog' |
-| 17 | 9.1 | 9 | 1.95 | 'cat' |
-| 23.5 | 20 | 20 | 6.2 | 'dog' |
-| 16 | 9.0 | 10 | 2.1 | 'cat' |
-| 21 | 16.7 | 16 | 3.3 | 'dog' |
-
-Gebruik bovenstaande javascript uitleg, de data in de tabel om een KNN algoritme te trainen. Leer wat katten en honden zijn, en test of het werkt door nieuwe data in te voeren. Voorspel vervolgens of dit een kat of een hond is.
-
-- [Startproject op Codesandbox](https://codesandbox.io/s/knear-week4-57wqe?file=/src/index.js)
-- [Lokaal startpoject](./knear)
-- [kNear documentatie](https://github.com/NathanEpstein/KNear)
+---
 
 <br>
 <br>
-
-# Praktijk week 4
-
-In de praktijkles van week 4 ga je KNN gebruiken om de input van een webcam te classificeren.
-
-[Ga naar de praktijkles opdracht](./praktijkles.md)
-
-<br>
 <br>
 
-## Links
-
-- [Codepen Demo](https://codepen.io/Qbrid/pen/OwpjLX)
-- [KNear Github](https://github.com/NathanEpstein/KNear)
-- [Uitleg K-Nearest-Neighbour met Javascript](https://burakkanber.com/blog/machine-learning-in-js-k-nearest-neighbor-part-1/)

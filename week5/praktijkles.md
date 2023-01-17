@@ -1,4 +1,4 @@
-# Praktijkles Week 4
+# Praktijkles Week 5
 
 We gaan het K-Nearest-Neighbour algoritme gebruiken met de webcam. De webcam geeft je ***Training data*** in de vorm van pixeldata of landmarkdata.
 
@@ -110,7 +110,7 @@ In dit voorbeeld is een label gemaakt met een train button. Elke keer dat je op 
 
 ## Links
 
-- [KNN week 3](./README.md)
+- [KNN](./README.md)
 - [Handpose API](https://github.com/tensorflow/tfjs-models/tree/master/handpose) en [tutorial](https://handsondeeplearning.com/a-quick-example-using-tensorflow-js-handpose-model/)
 - [Face-api](https://github.com/justadudewhohacks/face-api.js/) 
 - [Codepen KNN Demo](https://codepen.io/Qbrid/pen/OwpjLX)

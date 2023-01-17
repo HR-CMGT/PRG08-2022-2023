@@ -1,5 +1,5 @@
 
-# Praktijkopdracht week 6
+# Praktijkopdracht week 7
 
 Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint!
 

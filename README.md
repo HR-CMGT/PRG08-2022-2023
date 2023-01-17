@@ -16,7 +16,7 @@ In deze repository vind je startcode voor opdrachten van het vak PRG08. De prese
 | 6 | [Algoritmes: Decision Tree](./week6) | Kaggle en Confusion Matrix | [Opdracht](week5/inleveropdracht.md) |
 | 7 | [Algoritmes: Neural Networks Regression](./week7) | Regression en Scatterplots | Inleveropdracht regression |
 | 8 | [Algoritmes: Neural Networks Classification](./week8) | Scatterplot tekenen |  |
-| 9 | Zelfstudie | Zelfstudie  | Eindopdracht |
+| 9 | Zelfstudie | Zelfstudie  | [Eindopdracht](./week9) |
 
 ## Inleveropdrachten
 

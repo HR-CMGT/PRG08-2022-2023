@@ -1,102 +1,76 @@
 # Week 3
 
-### College
-- Introductie ML5 pre-trained models: handpose, bodypose, face, object recognition
-### Praktijk en inleveropdracht
-- Bouwen ML5 webcam app
+- Introductie ML5
+- Image Classifier
+- Feature Extractor
 
 <br>
 <br>
 
-# Inleveropdracht Week 3
+# Oefening
 
-Inleveren via github classroom: https://classroom.github.com/a/2Mfl_DnD
+Bouw een photo hunting app voor mobile met de image classifier en de mobile camera.
 
-- Bedenk een concept voor het werken met gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning, object detectie, of de **image feature** herkenning uit week 2. (Dat is de imageClassifier waar je je eigen images aan hebt toegevoegd)
-- Lees data uit met javascript en geef feedback aan de gebruiker via de UI.
-- Bouw een eenvoudige UI voor dit concept met HTML en CSS. De gebruiker hoeft dus niet in de console te kijken.
+<a href="https://www.youtube.com/watch?v=tqyG6YZLI0Y)" target="_blank"><img src="./startcode/images/hamsterdetective.png" width="400"></a>
 
-Je kan een start maken met deze voorbeeldcode:
+## ImageClassifier
 
-- [ML5 Body Pose detection](https://learn.ml5js.org/#/reference/posenet)
-- [ML5 Hand Pose detection](https://learn.ml5js.org/#/reference/handpose)
-- [ML5 Face landmark detection](https://learn.ml5js.org/#/reference/face-api)
-- [ML5 Object detection](https://learn.ml5js.org/#/reference/object-detector)
-- [ML5 Feature Extractor](https://learn.ml5js.org/#/reference/feature-extractor). zie ook [Week 2](https://github.com/HR-CMGT/PRG08-2021-2022/tree/main/week2)
-- [FaceApiJS Code Voorbeeld](#face)
-- [HandPoseJS Code Voorbeeld](#hand)
+Maak een ImageClassifier aan met hulp van de [documentatie](https://learn.ml5js.org/#/reference/image-classifier). Let hierbij op de volgorde van je functies! Je kan pas voorspellen als het model helemaal is ingeladen!
 
+## Image voorspellen
 
-<br>
-<br>
-<br>
+Voorspel wat er op de afbeelding in de `<img>` tag staat. Probeer dit met meerdere afbeeldingen. Wat wordt er wel en niet herkend in het pre-trained model?
 
-### Voorbeelden inleveropdracht
+## Voorspelling uitspreken
 
-Via FaceApi haal je data binnen over het gezicht van de gebruiker. Met `requestAnimationFrame` kijk je telkens naar de `data.leftEye()` en `data.rightEye()` data. Je kijkt wat de `x,y` posities van de ogen zijn. Als deze posities te ver uit elkaar zijn, dan zit de gebruiker te dicht met zijn snufferd over het scherm van de computer gebogen! Geef een waarschuwing via een browser notificatie. Check dit elke 5 minuten.
+Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) om te zeggen wat de afbeelding is. Kan je er ook bij zeggen hoe accuraat de voorspelling is? Of wat de tweede keus is?
 
-![posture](../images/posture.png)
+## Mobiele camera gebruiken 
 
-Of bekijk de startcode voor [schilderen met canvas](https://glitch.com/~draw-circle), of een [canvas PONG game](https://glitch.com/edit/#!/pong-game-canvas) en kijk of je dit kan besturen met de positie van je polsen.
+Vraag aan de gebruiker om een bepaalde afbeelding te uploaden. Gebruik daarvoor [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md). Test het op mobiel, zodat de speler live een foto kan maken met zijn of haar mobiele camera! Geef via spraak feedback of de speler een goede foto heeft gemaakt. 
 
----
+## Game
+
+Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iets om hier een game omheen te bouwen.
+
+- [📺  Eenvoudig voorbeeld op YouTube](https://www.youtube.com/watch?v=tqyG6YZLI0Y)
 
 <br>
 <br>
 <br>
 
-## <a name="face"></a> Face API JS
+# Inleveropdracht week 3
+
+## Feature extractor
+
+Als je je eigen unieke images wil kunnen herkennen, dan kan je de [ML5 feature extractor](https://learn.ml5js.org/#/reference/feature-extractor) gebruiken in plaats van de imageClassifier. Hiermee "re-train" je het model van de imageClassifier, bijvoorbeeld met afbeeldingen van je eigen gezicht of je huisdier. 
+
+Train het model met minimaal 10 tot 20 eigen afbeeldingen per klasse die je wil herkennen. **Save** het model zodat je niet telkens opnieuw hoeft te trainen. **Laad** het model in een nieuwe webpagina. 
+
+- [🔥 Code voorbeeld met webcam](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
+- [Documentatie](https://learn.ml5js.org/#/reference/feature-extractor) 
 
 
-De FACE API geeft een array van "landmark points" voor de belangrijkste features van je gezicht.
 
-![landmarks](../images/landmarks.png)
 
-```javascript
-// get face landmarks as array
-const detections = await faceapi
-        .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
-        .withFaceLandmarks();
-
-// all positions in the first face
-console.log(detections[0].landmarks.positions)        
-
-// get specific features in the first face
-const leftEye = detections[0].landmarks.getLeftEye()
-const rightEye = detections[0].landmarks.getRightEye()
-```
-
-- [Het voorbeeldproject vind je in de face-api map](./face-api).
-- [Face-API.JS website](https://justadudewhohacks.github.io/face-api.js/docs/index.html)
-
----
-<br>
-<br>
 <br>
 
-## <a name="hand"></a> Handpose API
-
-De HANDPOSE API geeft een array van "landmark points" voor de vingers van je hand in 3D.
-
-![handpose](../images/handpose.png)
-
-```javascript
-const predictions = await model.estimateHands(video)
-if (predictions.length > 0) {
-    const result = predictions[0].landmarks
-    // x, y, z van de top van de wijsvinger:
-    let y = predictions[0].landmarks[8][0]
-    let x = predictions[0].landmarks[8][1]
-    let z = predictions[0].landmarks[8][2]
-}
-```
-
-- [Het voorbeeldproject vind je in de handpose map](./handpose).
-- [Handpose github](https://github.com/tensorflow/tfjs-models/tree/master/handpose)
-
----
+> 🤯 tip: gebruik je IP adres van je localhost om je site meteen op je mobiel te testen, bv. `http://192.168.2.4/hamsterdetective`. Dit werkt als je mobiel en desktop op dezelfde wifi zitten.
 
 <br>
 <br>
 <br>
 
+##  Links
+
+- [ML5 Image Classifier](https://learn.ml5js.org/#/reference/image-classifier)
+- [Upload image button, werkt met webcam](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
+- [Simple webspeech voorbeeld](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) en [documentatie](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
+- [MDN documentatie webcam image capture](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture) met [Demo](https://simpl.info/imagecapture/)
+
+### Feature Extractor
+
+- [ML5 Feature Extractor documentatie](https://learn.ml5js.org/#/reference/feature-extractor)
+- [🔥 Code voorbeeld : herken of iemand een mondmasker draagt](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
+- [ML5 Plain Javascript example](https://github.com/ml5js/ml5-library/tree/main/examples/javascript/FeatureExtractor/FeatureExtractor_Image_Classification)
+- [🔥🔥 Youtube with Daniel Shiffman tutorial](https://www.youtube.com/watch?v=eeO-rWYFuG0)
