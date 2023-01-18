@@ -28,6 +28,14 @@ In deze repository vind je startcode voor opdrachten van het vak PRG08. De prese
 <br>
 <br>
 
+## Javascript Machine Learning Reading List
+
+In de repository [Javascript Machine Learning](https://github.com/HR-CMGT/Javascript-Machine-Learning) kan je je zelfstandig verder verdiepen in de basics van Machine Learning en het coderen met javascript.
+
+<br>
+<br>
+<br>
+
 ## Code snippets
 
 Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
