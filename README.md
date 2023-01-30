@@ -18,11 +18,23 @@ In deze repository vind je startcode voor opdrachten van het vak PRG08. De prese
 | 8 | [Algoritmes: Neural Networks Classification](./week8) | Scatterplot tekenen |  |
 | 9 | Zelfstudie | Zelfstudie  | [Eindopdracht](./week9) |
 
+<br>
+<br>
+<br>
+
 ## Inleveropdrachten
 
-- Je levert opdrachten in via [feedbackfruits](https://eu.feedbackfruits.com)
-- Inleveren bestaat altijd uit de url van je live project, de url van je github repository, en de ingevulde evaluatie vragen.
-- De deadline is altijd zondagavond 23:00 van de week waarin de opdracht ingeleverd moet worden.
+Tijdens de cursus werk je aan opdrachten die ingaan op de stof uit de les. Je levert deze in via [feedbackfruits](https://eu.feedbackfruits.com) in week 1, 3, 4, 6 en 7. 
+
+### Eindopdracht
+
+In week 9 lever je je eindproject in. Dit is een eigen AI concept dat gebruik maakt van de stof uit de lessen. Inleveren van alle opdrachten bestaat uit:
+
+- de url van je live project 
+- de url van je github repository
+- de ingevulde evaluatie vragen.
+
+De deadline is altijd zondagavond 23:00 van de week waarin de opdracht ingeleverd moet worden. In week 1 hoef je geen code in te leveren.
 
 <br>
 <br>
