@@ -17,11 +17,9 @@ Als iemand op de file input klikt, kan je de `src` van de image veranderen in he
 const image = document.getElementById('output')
 const fileButton = document.querySelector("#file")
 
-fileButton.addEventListener("change", (event)=>loadFile(event))
-
-function loadFile(event) {
-	image.src = URL.createObjectURL(event.target.files[0])
-}
+fileButton.addEventListener("change", (event)=>{
+    image.src = URL.createObjectURL(event.target.files[0])
+})
 ```
 ⚠️ Let op! Je kan de image pas gebruiken nadat het volledig is ingeladen. Dat kan je checken met het `load` event:
 
