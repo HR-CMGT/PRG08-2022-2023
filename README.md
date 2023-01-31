@@ -53,6 +53,7 @@ In de repository [Javascript Machine Learning](https://github.com/HR-CMGT/Javasc
 Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
 
 - [Laat de browser praten met web speech](./snippets/speech.md)
+- [Image upload button](./snippets/uploadimage.md)
 - [Lees de webcam](./snippets/camera.md)
 - [Normaliseer data om beter te trainen](./snippets/normalise.md)
 - [CSV en JSON data laden en filteren](./snippets/csv.md)
