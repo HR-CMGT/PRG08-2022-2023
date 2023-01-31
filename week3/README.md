@@ -6,71 +6,55 @@
 
 <br>
 <br>
+<br>
 
-# Oefening
+## Lesoefening
 
-Bouw een photo hunting app voor mobile met de image classifier en de mobile camera.
-
-<a href="https://www.youtube.com/watch?v=tqyG6YZLI0Y)" target="_blank"><img src="./startcode/images/hamsterdetective.png" width="400"></a>
-
-## ImageClassifier
-
-Maak een ImageClassifier aan met hulp van de [documentatie](https://learn.ml5js.org/#/reference/image-classifier). Let hierbij op de volgorde van je functies! Je kan pas voorspellen als het model helemaal is ingeladen!
-
-## Image voorspellen
-
-Voorspel wat er op de afbeelding in de `<img>` tag staat. Probeer dit met meerdere afbeeldingen. Wat wordt er wel en niet herkend in het pre-trained model?
-
-## Voorspelling uitspreken
-
-Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) om te zeggen wat de afbeelding is. Kan je er ook bij zeggen hoe accuraat de voorspelling is? Of wat de tweede keus is?
-
-## Mobiele camera gebruiken 
-
-Vraag aan de gebruiker om een bepaalde afbeelding te uploaden. Gebruik daarvoor [deze code snippet](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md). Test het op mobiel, zodat de speler live een foto kan maken met zijn of haar mobiele camera! Geef via spraak feedback of de speler een goede foto heeft gemaakt. 
-
-## Game
-
-Geef steeds verschillende foto opdrachten, hou een score bij, of bedenk zelf iets om hier een game omheen te bouwen.
-
-- [📺  Eenvoudig voorbeeld op YouTube](https://www.youtube.com/watch?v=tqyG6YZLI0Y)
+- Laad de [ML5 Image classifier](https://learn.ml5js.org/#/reference/image-classifier) in een HTML pagina. 
+- Classify een afbeelding uit een `<img>` tag. Toon het resultaat in de HTML pagina.
+- Spreek het resultaat uit met [web speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md)
+- Maak een variatie waarbij je met een [button](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md) een nieuwe image kan uploaden en die kan classificeren.
+- Maak een variatie waarbij je met de [webcam](https://github.com/HR-CMGT/PRG08-2022-2023/blob/main/snippets/camera.md) een foto kan maken en die kan laten classificeren.
 
 <br>
 <br>
 <br>
 
-# Inleveropdracht week 3
+## Lesoefening
 
-## Feature extractor
-
-Als je je eigen unieke images wil kunnen herkennen, dan kan je de [ML5 feature extractor](https://learn.ml5js.org/#/reference/feature-extractor) gebruiken in plaats van de imageClassifier. Hiermee "re-train" je het model van de imageClassifier, bijvoorbeeld met afbeeldingen van je eigen gezicht of je huisdier. 
-
-Train het model met minimaal 10 tot 20 eigen afbeeldingen per klasse die je wil herkennen. **Save** het model zodat je niet telkens opnieuw hoeft te trainen. **Laad** het model in een nieuwe webpagina. 
-
-- [🔥 Code voorbeeld met webcam](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
-- [Documentatie](https://learn.ml5js.org/#/reference/feature-extractor) 
-
-
-
-
-<br>
-
-> 🤯 tip: gebruik je IP adres van je localhost om je site meteen op je mobiel te testen, bv. `http://192.168.2.4/hamsterdetective`. Dit werkt als je mobiel en desktop op dezelfde wifi zitten.
+- Start een webcam project met de [startcode](https://github.com/HR-CMGT/PRG08-2022-2023/tree/main/week3/startcode)
+- Laad de [ML5 Feature Extractor](https://learn.ml5js.org/#/reference/feature-extractor) 
+- Zorg dat de buttons onder de video een image toevoegen aan de feature extractor.
+- Als je voldoende images hebt toegevoegd ga je met de `train` button het train proces starten.
+- Als het model is getrained start je een `interval` die de webcam classificeert.
 
 <br>
 <br>
 <br>
 
-##  Links
+# Inleveropdracht 🐹
 
-- [ML5 Image Classifier](https://learn.ml5js.org/#/reference/image-classifier)
-- [Upload image button, werkt met webcam](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
-- [Simple webspeech voorbeeld](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) en [documentatie](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
-- [MDN documentatie webcam image capture](https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture) met [Demo](https://simpl.info/imagecapture/)
+<a href="https://www.youtube.com/watch?v=tqyG6YZLI0Y" target="_blank"><img src="./startcode/images/hamsterdetective.png" width="400"></a>
 
-### Feature Extractor
+- Bouw een photo hunting game voor mobile waarbij de speler op pad moet gaan om foto's van specifieke onderwerpen te maken, [zoals in dit voorbeeld](https://www.youtube.com/watch?v=tqyG6YZLI0Y).
+- Train een model met de feature extractor die je gemaakt hebt in de les. **Save** het model zodat je niet telkens opnieuw hoeft te trainen.
+- Laad dit model in je app. Hierdoor kan je specifieke dingen herkennen.
+- Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) om opdrachten aan de speler te geven en om het resultaat van een foto scan uit te spreken.
 
-- [ML5 Feature Extractor documentatie](https://learn.ml5js.org/#/reference/feature-extractor)
-- [🔥 Code voorbeeld : herken of iemand een mondmasker draagt](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
-- [ML5 Plain Javascript example](https://github.com/ml5js/ml5-library/tree/main/examples/javascript/FeatureExtractor/FeatureExtractor_Image_Classification)
-- [🔥🔥 Youtube with Daniel Shiffman tutorial](https://www.youtube.com/watch?v=eeO-rWYFuG0)
+Plaats je project live en vul de feedbackfruits evaluatie in.
+
+<br>
+<br>
+<br>
+
+### Code
+
+- [Startproject](https://github.com/HR-CMGT/PRG08-2022-2023/tree/main/week3/startcode)
+- [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md)
+- [Upload image button](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
+- [Code tutorial feature extractor](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
+- [ML5 documentatie](https://learn.ml5js.org/#/reference/feature-extractor)
+
+<br>
+
+> 🤯 tip: gebruik het IP adres van je localhost om je site meteen op je mobiel te testen, bv. `http://192.168.2.4/hamsterdetective`. Dit werkt als je mobiel en desktop op dezelfde wifi zitten. Je kan ook glitch.com of codesandbox.io gebruiken om je project te testen op je mobiel.

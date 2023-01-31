@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+}
+
+#label {
+    width: 533px;
+    height: 20px;
+    color: white;
+    background-color: black;
+}
+
+button {
+    background-color: lightblue;
+    padding: 8px 12px;
+    margin: 4px;
+    font-size: 1em;
+    border: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+/* flip the video image */
+video {
+    transform: scaleX(-1);
+}
