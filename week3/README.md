@@ -37,8 +37,9 @@
 <a href="https://www.youtube.com/watch?v=tqyG6YZLI0Y" target="_blank"><img src="./startcode/images/hamsterdetective.png" width="400"></a>
 
 - Bouw een photo hunting game voor mobile waarbij de speler op pad moet gaan om foto's van specifieke onderwerpen te maken, [zoals in dit voorbeeld](https://www.youtube.com/watch?v=tqyG6YZLI0Y).
-- Train een model met de feature extractor die je gemaakt hebt in de les. **Save** het model zodat je niet telkens opnieuw hoeft te trainen.
-- Laad dit model in je app. Hierdoor kan je specifieke dingen herkennen.
+- Train een model met de feature extractor die je gemaakt hebt in de les. 
+- [Save](https://learn.ml5js.org/#/reference/feature-extractor?id=save) het model zodat je niet telkens opnieuw hoeft te trainen.
+- [Laad](https://learn.ml5js.org/#/reference/feature-extractor?id=load) je eigen model in je app. Hierdoor kan je je eigen getrainde objecten herkennen.
 - Gebruik [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md) om opdrachten aan de speler te geven en om het resultaat van een foto scan uit te spreken.
 
 Plaats je project live en vul de feedbackfruits evaluatie in.
@@ -53,7 +54,7 @@ Plaats je project live en vul de feedbackfruits evaluatie in.
 - [Browser Speech](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/speech.md)
 - [Upload image button](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/uploadimage.md)
 - [Code tutorial feature extractor](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
-- [ML5 documentatie](https://learn.ml5js.org/#/reference/feature-extractor)
+- [ML5 documentatie](https://learn.ml5js.org/#/reference/feature-extractor) met [Save model](https://learn.ml5js.org/#/reference/feature-extractor?id=save) en [Load model](https://learn.ml5js.org/#/reference/feature-extractor?id=load)
 
 <br>
 
