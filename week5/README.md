@@ -80,7 +80,7 @@ Gebruik bovenstaande javascript uitleg, de data in de tabel om een KNN algoritme
 
 In deze oefening ga je KNN gebruiken om de input van een webcam te classificeren.
 
-[Ga naar de webcam opdracht](./praktijkles.md)
+[Ga naar de webcam opdracht](./lesopdracht.md)
 
 <br>
 <br>
