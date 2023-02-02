@@ -97,11 +97,7 @@ console.log(`${person.Name}'s gender is ${prediction}`)
 
 ## Grotere datasets
 
-We gaan dit nu uitproberen met *real world data*. Deze kan je vinden in de `data` map.
-
-- Poisonous mushrooms: voorspel of een paddestoel giftig is of niet
-- Diabetes: voorspel of iemand diabetes gaat krijgen
-- Titanic: voorspel of iemand zijn vakantie op de titanic gaat overleven
+We gaan dit nu uitproberen met *titanic data* : voorspel of iemand zijn vakantie op de titanic gaat overleven
 
 Let hierbij op de **naam van het label** in de CSV file, en of er kolommen zijn die je wil negeren. Kijk ook naar de betekenis van de labels. Bijvoorbeeld: bij de paddestoelen betekent "P" poisonous en "E" edible.
 
@@ -123,11 +119,9 @@ let decisionTree = new DecisionTree({
 <br>
 <br>
 
-# Inleveropdracht week 5
+# Inleveropdracht week 6
 
-Bij de inleveropdracht van week 5 ga je een van deze datasets gebruiken, en je gaat testen hoe accuraat je voorspellingen zijn.
-
-[Ga naar de inleveropdracht](./inleveropdracht.md)
+Bij de inleveropdracht van week 6 ga je een nieuwe dataset gebruiken, en je gaat testen hoe accuraat je voorspellingen zijn. [Ga naar de inleveropdracht](./inleveropdracht.md).
 
 <br>
 <br>
