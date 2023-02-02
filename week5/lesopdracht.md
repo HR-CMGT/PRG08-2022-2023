@@ -1,4 +1,4 @@
-# Praktijkles Week 5
+# Lesopdracht Week 5
 
 We gaan het K-Nearest-Neighbour algoritme gebruiken met de webcam. De webcam geeft je ***Training data*** in de vorm van pixeldata of landmarkdata.
 

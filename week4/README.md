@@ -1,20 +1,34 @@
 # Week 4
 
-### College
 - Introductie ML5 pre-trained models: handpose, bodypose, face, object recognition
-### Lesopdracht
+
+## Lesopdracht
+
 - Bouwen ML5 webcam app
 
+## Inleveropdracht 
+
+- Bedenk een concept voor het werken met gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning of object detectie.
+- Dit concept moet geschikt zijn voor de positionele data die je uit ML5 krijgt. Dit zijn bijvoorbeeld de posities van je polsen, de afstand tussen je voeten, vingers of ogen.
+- Lees pose-data uit met javascript en geef feedback aan de gebruiker via een gebruiksvriendelijke UI.
+
 <br>
 <br>
+<br>
 
-# Inleveropdracht Week 4
+### Voorbeeld
 
-- Bedenk een concept voor het werken met gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning, object detectie, of de **image feature** herkenning uit week 2. (Dat is de imageClassifier waar je je eigen images aan hebt toegevoegd)
-- Lees data uit met javascript en geef feedback aan de gebruiker via de UI.
-- Bouw een eenvoudige UI voor dit concept met HTML en CSS. De gebruiker hoeft dus niet in de console te kijken.
+Via FaceApi haal je data binnen over het gezicht van de gebruiker. Met `requestAnimationFrame` kijk je telkens naar de `data.leftEye()` en `data.rightEye()` data. Je kijkt wat de `x,y` posities van de ogen zijn. Als deze posities te ver uit elkaar zijn, dan zit de gebruiker te dicht met zijn snufferd over het scherm van de computer gebogen! Geef een waarschuwing via een browser notificatie. Check dit elke 5 minuten.
 
-Je kan een start maken met deze voorbeeldcode:
+![posture](../images/posture.png)
+
+Of bekijk de startcode voor [schilderen met canvas](https://glitch.com/~draw-circle), of een [canvas PONG game](https://glitch.com/edit/#!/pong-game-canvas) en kijk of je dit kan besturen met de positie van je polsen.
+
+<br>
+<br>
+<br>
+
+### Startcode
 
 - [ML5 Body Pose detection](https://learn.ml5js.org/#/reference/posenet)
 - [ML5 Hand Pose detection](https://learn.ml5js.org/#/reference/handpose)
@@ -24,27 +38,11 @@ Je kan een start maken met deze voorbeeldcode:
 - [FaceApiJS Code Voorbeeld](#face)
 - [HandPoseJS Code Voorbeeld](#hand)
 
-
-<br>
-<br>
-<br>
-
-### Voorbeelden inleveropdracht
-
-Via FaceApi haal je data binnen over het gezicht van de gebruiker. Met `requestAnimationFrame` kijk je telkens naar de `data.leftEye()` en `data.rightEye()` data. Je kijkt wat de `x,y` posities van de ogen zijn. Als deze posities te ver uit elkaar zijn, dan zit de gebruiker te dicht met zijn snufferd over het scherm van de computer gebogen! Geef een waarschuwing via een browser notificatie. Check dit elke 5 minuten.
-
-![posture](../images/posture.png)
-
-Of bekijk de startcode voor [schilderen met canvas](https://glitch.com/~draw-circle), of een [canvas PONG game](https://glitch.com/edit/#!/pong-game-canvas) en kijk of je dit kan besturen met de positie van je polsen.
-
----
-
 <br>
 <br>
 <br>
 
 ## <a name="face"></a> Face API JS
-
 
 De FACE API geeft een array van "landmark points" voor de belangrijkste features van je gezicht.
 
@@ -67,7 +65,6 @@ const rightEye = detections[0].landmarks.getRightEye()
 - [Het voorbeeldproject vind je in de face-api map](./face-api).
 - [Face-API.JS website](https://justadudewhohacks.github.io/face-api.js/docs/index.html)
 
----
 <br>
 <br>
 <br>
@@ -91,8 +88,6 @@ if (predictions.length > 0) {
 
 - [Het voorbeeldproject vind je in de handpose map](./handpose).
 - [Handpose github](https://github.com/tensorflow/tfjs-models/tree/master/handpose)
-
----
 
 <br>
 <br>
