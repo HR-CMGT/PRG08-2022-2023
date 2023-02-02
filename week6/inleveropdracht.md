@@ -197,9 +197,12 @@ Sla deze JSON op in een apart bestand (Bv. met `copy>paste` vanuit de console ðŸ
 <br>
 <br>
 
-## Model inladen
+## Model inladen in web app
 
-Maak een aparte HTML file aan waarin je de JSON inlaadt en gebruikt om een voorspelling te doen. Je kan [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) gebruiken om JSON te laden. Nu kan je je decision tree gebruiken zonder dat je het originele CSV bestand nog nodig hebt!
+- Maak een aparte HTML pagina aan met een gebruiksvriendelijke UI.
+Hierin laad je het JSON model. Op deze manier kan je de decision tree gebruiken zonder dat je het originele CSV bestand nog nodig hebt.
+- Laat de gebruiker voorspellingen doen door data in te voeren.
+- Je kan [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) gebruiken om JSON te laden. 
 
 
 <br>
