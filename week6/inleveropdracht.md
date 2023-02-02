@@ -21,6 +21,7 @@ Gebruik een van de datasets uit deze folder, of zoek zelf een [classification da
 - Voorspel of je het eten van een paddestoel gaat overleven
 met de [**Poisonous mushrooms dataset**](https://www.kaggle.com/uciml/mushroom-classification)
 - Voorspel of je huidige levensstijl diabetes gaat opleveren met de [**Diabetes dataset**](https://www.kaggle.com/uciml/pima-indians-diabetes-database)
+- Voorspel of een passagier tevreden gaat zijn met de service van  CMGT-airlines [**Customer Satisfaction**](https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction)
 
 
 
@@ -31,10 +32,13 @@ met de [**Poisonous mushrooms dataset**](https://www.kaggle.com/uciml/mushroom-c
 
 ## Bekijk je CSV data
 
-Bij het inlezen van de data moet je controleren wat het **label** is waarop we willen trainen. Ook moet je even kijken of er kolommen zijn die niet relevant zijn bij het trainen.
+Bij het inlezen van de data moet je controleren wat het **label** is waarop we willen trainen. Let op dat je bezig bent met een **classification** dataset. Dit betekent dat het label een **categorische** waarde heeft. Bijvoorbeeld `survived` of `not survived`.
+
+Ook moet je even kijken of er kolommen zijn die niet relevant zijn bij het trainen.
 
 - Bij `mushrooms.csv` is het label `class`, en de inhoud is `p` (poisonous) en `e` (edible.)
 - Bij `diabetes.csv` is het label `Label` en de inhoud is `1` (diabetes) en `0` (geen diabetes)
+- Bij `airline.csv` is het label `satisfaction` en de inhoud is `satisfied` en `neutral or dissatisfied`.
 
 <br>
 <br>
