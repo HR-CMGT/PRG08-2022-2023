@@ -1,10 +1,10 @@
 
 # Inleveropdracht week 7
 
-- Kies een CSV file uit de github map of een zelf gevonden regression dataset van kaggle
+- Kies een CSV file.
 - Gebruik de scatterplot om te kijken of je kolommen geschikt zijn om te trainen.
 - Train het neural network. Bepaal hoeveel epochs je nodig hebt. 
-- Sla het model op
+- Sla het model op.
 - Laad het model in een nieuwe html pagina, waarin je via een UI een voorspelling kan doen.
 
 <br>
@@ -41,7 +41,7 @@ function loadData() {
 
 ## Scatterplot tekenen 
 
-Op de X as zet je de feature waar je op wil trainen. Op de Y as zet je de waarde die je wil kunnen voorspellen. Bijvoorbeeld voor een auto:
+Op de X as zet je de feature waar je op wil trainen. Op de Y as zet je de waarde die je wil kunnen voorspellen. Kijk welke kolommen in de CSV file relevant zijn voor hetgene dat je wil leren. 
 
 ```javascript
 import { createChart } from "./scatterplot.js"
@@ -53,9 +53,7 @@ const chartdata = data.map(car => ({
 
 createChart(chartdata)
 ```
-### Opdracht
 
-Kijk of er nog meer kolommen in de CSV file relevant zijn voor hetgene dat je wil leren, door daar ook een scatterplot voor te tekenen. (bv. gewicht versus mpg van de auto).
 
 <br>
 <br>
@@ -63,7 +61,7 @@ Kijk of er nog meer kolommen in de CSV file relevant zijn voor hetgene dat je wi
 
 ## Training
 
-Zie de code uit het [vorige voorbeeld](./README.md) voor het trainen van een Neural Network.
+Zie de code uit de [les](./README.md) voor het trainen van een Neural Network.
 
 Een scatterplot toont een X en een Y as, maar je kan het Neural Network wel trainen op meer features! Bijvoorbeeld, de `cars.csv` bevat ***mpg, cylinders, displacement, horsepower, weight, acceleration,model year, origin, car name***
 
@@ -72,12 +70,7 @@ In het eerste object van `addData()` geef je alle features mee waarvan je wil le
 ```javascript
 nn.addData({ feature1: data.feature1, feature2:data.feature2, ... }, { label: data.label })
 ```
-> ⚠️ Bij een prediction moet je wel dezelfde features doorgeven om een voorspelling te krijgen!
-
-### Opdracht
-
-- Kan je het trainen verbeteren door meerdere kolommen toe te voegen?
-- Teken je voorspellingen in de scatterplot, door voor elke waarde op de x-as een voorspelling te doen.
+> ⚠️ Bij een prediction moet je dezelfde features doorgeven als bij het trainen om een voorspelling te krijgen!
 
 <br>
 <Br>
@@ -125,7 +118,7 @@ Maak nu een nieuwe webpagina waarin je dit getrainde model gaat inladen. Lees hi
 ## Documentatie
 
 - [Opschonen van CSV data met filter en map](https://github.com/HR-CMGT/PRG08-2020-2021/blob/main/snippets/csv.md).
-- [🔥 ML5 Neural Networks](https://learn.ml5js.org/#/reference/neural-network)
+- [ML5 Neural Networks](https://learn.ml5js.org/#/reference/neural-network)
 - [Hidden Layers toevoegen](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/snippets/layers.md)
 - [ChartJS Scatterplot code voorbeeld](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/snippets/scatterplot.md)
 - [ChartJS Scatterplot documentatie](https://www.chartjs.org/docs/latest/charts/scatter.html)
