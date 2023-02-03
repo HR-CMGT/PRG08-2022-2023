@@ -88,6 +88,45 @@ Gebruik `nn.save()` om je getrainde weermodel op te slaan. Als je het inlaadt me
 <br>
 <br>
 
+
+## Classification 
+
+Bij de K-Nearest-Neighbour en Decision Tree hebben we gewerkt met data voor classification. Dit kan je ook doen met een Neural Network. Gebruik deze ML5 voorbeeldcode om een van de eerdere datasets te trainen met een Neural Network. Let op dat de code nét iets anders is dan bij regression!
+  
+```javascript
+// voorbeeld titanic data
+  
+const nn = ml5.neuralNetwork({
+   task: 'classification',
+   debug: true
+})
+
+const inputs = { Pclass: 7, Sex: 1, Age: 22, SibSp:0 }
+const output = { Survived: "Died" }
+
+// gebruik een for-loop om alle rijen uit de CSV toe te voegen
+nn.addData(inputs, output)
+  
+// trainen
+nn.normalizeData()
+nn.train({ epochs: 32 }, () => console.log("Finished training!"))
+
+// classify
+const passenger = { Pclass: 7, Sex: 1, Age: 22, SibSp:0 }
+nn.classify(passenger, (error, result) => console.log(result))
+```
+
+<br>
+<br>
+<br>
+
+## Datasets voor classification
+  
+- [Diabetes](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/week5/oefening/data/diabetes.csv)
+- [Poisonous Mushrooms](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/week5/oefening/data/mushrooms.csv)
+- [Titanic Survivors](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/week5/oefening/data/titanic.csv)
+- [Speed Dating - who gets the most dates?](https://www.kaggle.com/datasets/annavictoria/speed-dating-experiment)
+
 ## Documentatie
 
 - [ML5 Neural Networks in Javascript](https://learn.ml5js.org/#/reference/neural-network)

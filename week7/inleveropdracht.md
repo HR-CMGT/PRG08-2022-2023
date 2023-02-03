@@ -1,16 +1,11 @@
 
 # Inleveropdracht week 7
 
-Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint!
-
-## Stappen
-
-  - CSV data inladen
-  - Verbanden in data tonen in scatterplot
-  - Neural Network trainen
-  - Model opslaan en inladen in een aparte HTML pagina.
-  - Kijken naar classification met Neural Network
-
+- Kies een CSV file uit de github map of een zelf gevonden regression dataset van kaggle
+- Gebruik de scatterplot om te kijken of je kolommen geschikt zijn om te trainen.
+- Train het neural network. Bepaal hoeveel epochs je nodig hebt. 
+- Sla het model op
+- Laad het model in een nieuwe html pagina, waarin je via een UI een voorspelling kan doen.
 
 <br>
 <br>
@@ -18,11 +13,16 @@ Maak eerst de [basisoefening](./README.md) af, voordat je hiermee begint!
 
 ## CSV data
 
-Gebruik een dataset die geschikt is voor *regression* (voorspellen van een getal). Gebruik [Papa Parse](https://www.papaparse.com) om CSV files te laden. In deze repository staan drie oefenbestanden, je kan meer voorbeelden vinden onder "links" en door [op kaggle te zoeken naar regression datasets](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets)
+Gebruik een [dataset uit deze repository](./oefening/data/) of van [kaggle.com](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets) die geschikt is voor *regression* (voorspellen van een getal). Bekijk de CSV goed om te weten welke kolom de waarde heeft die je wil gaan voorspellen.
 
-- ***cars.csv*** - voorspel brandstofverbruik met de eigenschappen van bestaande auto's.
-- ***houseprices.csv*** - voorspel huizenprijzen met de eigenschappen van bestaande huizen.
-- ***winequality.csv*** - voorspel wijnkwaliteit naar aanleiding van eigenschappen van de wijn.
+- Mobile Phone prijzen
+- Utrechtse huizenprijzen
+- Wijn kwaliteit
+- Studenten prestaties Hogeschool Rotterdam (anoniem)
+
+<br>
+
+Laad de data met [papa parse](https://www.papaparse.com/)
 
 ```javascript
 function loadData() {
@@ -110,37 +110,6 @@ Maak nu een nieuwe webpagina waarin je dit getrainde model gaat inladen. Lees hi
 <br>
 <br>
 
-## Classification 
-
-Bij de K-Nearest-Neighbour en Decision Tree hebben we gewerkt met data voor classification. Dit kan je ook doen met een Neural Network. Gebruik deze ML5 voorbeeldcode om een van de eerdere datasets te trainen met een Neural Network. Let op dat de code nét iets anders is dan bij regression!
-  
-```javascript
-// voorbeeld titanic data
-  
-const nn = ml5.neuralNetwork({
-   task: 'classification',
-   debug: true
-})
-
-const inputs = { Pclass: 7, Sex: 1, Age: 22, SibSp:0 }
-const output = { Survived: "Died" }
-
-// gebruik een for-loop om alle rijen uit de CSV toe te voegen
-nn.addData(inputs, output)
-  
-// trainen
-nn.normalizeData()
-nn.train({ epochs: 32 }, () => console.log("Finished training!"))
-
-// classify
-const passenger = { Pclass: 7, Sex: 1, Age: 22, SibSp:0 }
-nn.classify(passenger, (error, result) => console.log(result))
-```
-
-<br>
-<br>
-<br>
-
 
 
 # Links
@@ -152,12 +121,6 @@ nn.classify(passenger, (error, result) => console.log(result))
 - [Cars miles per gallon](https://www.kaggle.com/uciml/autompg-dataset)
 - [Kaggle regression dataset search](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets)
   
-## Datasets voor classification
-  
-- [Diabetes](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/week5/oefening/data/diabetes.csv)
-- [Poisonous Mushrooms](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/week5/oefening/data/mushrooms.csv)
-- [Titanic Survivors](https://github.com/HR-CMGT/PRG08-2021-2022/blob/main/week5/oefening/data/titanic.csv)
-- [Speed Dating - who gets the most dates?](https://www.kaggle.com/datasets/annavictoria/speed-dating-experiment)
 
 ## Documentatie
 

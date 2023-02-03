@@ -15,33 +15,48 @@ Een neural network is in staat om complexe patronen in data te vinden. Je kan ee
     - benzineverbruik van een auto
     - prijs van een huis
     - waarde van een tweedehands telefoon
-    - percentage studenten die een cursus gaan behalen
+    - percentage studenten die naar de les komen 😬
 
-In deze oefening werken we met **regression**. Ook gaan we kijken hoe we data kunnen tekenen in een grafiek. We gaan de voorspelling ook tekenen!
+### Classification of regression?
 
-👨🏻‍💻👩🏽‍💻 Je kan de oefening downloaden uit deze repository of [live meedoen op glitch](https://glitch.com/edit/#!/ml5-cars-tutorial)
+Het is niet altijd meteen duidelijk of een probleem een **classification** of **regression** probleem is. Denk aan een **rating** voor een restaurant van 1 tot 10. Is dit classification of regression? In deze les werken we met **regression**. Ook gaan we kijken hoe we data kunnen tekenen in een grafiek. We gaan de voorspelling ook tekenen!
 
 <br>
 <br>
 <br>
 
-# ML5 Neural Network
+# Opdracht
 
-[ML5](https://learn.ml5js.org/#/reference/neural-network) is een gebruiksvriendelijke library om snel met Machine Learning en Neural Networks aan de slag te kunnen. De onderliggende techniek is [TensorFlow](https://www.tensorflow.org/js/).
+## Lesoefening met demo data
+- Teken een scatterplot voor horsepower versus mpg met de demo data.
+- Train een ML5 neural network met de horsepower en mpg demo data. Roep predict aan om te zien of alles werkt.
 
-### 🚗  Data 
+## Lesoefening CSV data
+- Laad nu de `cars.csv` data en teken de scatterplot voor horsepower versus mpg.
+- Train een ML5 neural network met de horsepower en mpg csv data. Maak een prediction.
+- Maak een `for` loop die voor elke horsepower een mpg prediction doet. Let op `async await`.
+- Teken deze voorspellingen in de scatterplot
+- Train het neural network met meerdere kolommen uit de CSV file. Maak een prediction.
 
-In dit voorbeeld gebruiken we hardcoded data, dit zijn `cars` met een `horsepower` en `mpg` (miles per gallon) waarde. 
+## [Inleveropdracht](./inleveropdracht.md)
+
+<br>
+<br>
+<br>
+
+# Startcode
+
+Je kan `index.html`, `app.js` en `scatterplot.js` uit deze repository gebruiken als basis voor alle oefeningen in deze pagina. Om te oefenen met **data** kan je deze array van objecten gebruiken. 
 
 ```javascript
-let data = [
+const data = [
     { horsepower: 130, mpg: 18 },
     { horsepower: 165, mpg: 15 },
     { horsepower: 225, mpg: 14 },
     { horsepower: 97, mpg: 18 },
     { horsepower: 88, mpg: 27 },
     { horsepower: 193, mpg: 9 },
-    { horsepower: 80, mpg: 25 }
+    { horsepower: 80, mpg: 25 },
 ]
 ```
 
@@ -49,32 +64,58 @@ let data = [
 <br>
 <br>
 
-## 🔥 Neural Network
-
-We willen de "miles per gallon" voorspellen van een auto waarvan we alleen de horsepower weten. Omdat we een *getal* voorspellen moeten we de `task:regression` doorgeven.
-
-```javascript
-const options = { task: 'regression', debug: true }
-const nn = ml5.neuralNetwork(options)
-```
-<br>
-<br>
-<br>
-
-## Data voorbereiden
+## Data controleren
 
 - Trainingdata voor regression bestaat altijd uit getallen. Controleer dat alle waardes getallen zijn. Verwijder rijen met ongeldige waarden.
-- Let op dat je voldoende data hebt. Hoe meer data, hoe beter het algoritme zal werken. Denk aan minimaal een paar honderd rijen in een CSV bestand.
-- Let op dat je eerst de data shuffled, om te voorkomen dat er een patroon herkend wordt in de volgorde van je data. 
-- Daarna normaliseren we de data om te zorgen dat alle kolommen even belangrijk zijn.
+- Let op dat je voldoende data hebt. Hoe meer rijen én kolommen, hoe beter het algoritme zal werken. Denk aan minimaal een paar honderd rijen in een CSV bestand.
+- Als je de data shuffled kan je voorkomen dat er een patroon herkend wordt in de volgorde van je data. 
 
+<br>
+<br>
+<br>
+
+
+
+# Scatterplot
+
+Een scatterplot kan je gebruiken om te zien hoe data in elkaar zit. Zie je een verband tussen `horsepower` en `miles per gallon` ?
+
+![scatterfake](../images/scatterplotcars.png)
+
+Een `chartJS` scatterplot verwacht een array met x,y coordinaten, bijvoorbeeld: `[{x: 20, y: 30}, {x:40, y:50}]`. We gebruiken `map()` om onze demo data om te zetten naar `chartJS` data.
+
+```javascript
+// scatterplot
+import { createChart } from "./scatterplot.js"
+
+const chartdata = data.map(car => ({
+    x: car.horsepower,
+    y: car.mpg,
+}))
+
+// chartjs aanmaken
+createChart(chartdata)
+```
+
+
+<br>
+<br>
+<br>
+
+## Aanmaken Neural Network
+
+We maken een [ML5](https://learn.ml5js.org/#/reference/neural-network) neural network aan voor regression.
+
+```javascript
+const nn = ml5.neuralNetwork({ task: 'regression', debug: true })
+```
 <br>
 <br>
 <br>
 
 ## Data toevoegen aan Neural Network
 
-Met de functie `addData()` kan je data gaan toevoegen. In dit voorbeeld gebruiken we de `horsepower` van een auto om te voorspellen wat de `mpg` gaat zijn. 
+Met de functie `addData()` kan je data toevoegen. In dit voorbeeld gebruiken we de `horsepower` van een auto om te voorspellen wat de `mpg` gaat zijn. 
 
 ```javascript
 // shuffle
@@ -126,72 +167,41 @@ async function finishedTraining() {
 <br>
 <br>
 <br>
-<br>
 
-
-# Scatterplot
-
-Een scatterplot kan je gebruiken om te zien hoe je data in elkaar zit. In deze afbeelding zie je data van 400 auto's. Zie je een verband tussen `horsepower` en `miles per gallon` ?
-
-![scatterfake](../images/scatterplotcars.png)
-
-Je kan een scatterplot tekenen met de voorbeeldcode uit deze repository. 
-
-Een scatterplot verwacht een array met x,y coordinaten, bijvoorbeeld: `[{x: 20, y: 30}, {x:40, y:50}]`. Je kan deze array aanmaken aan de hand van de bestaande `data` met de `.map()` functie.
-
-```javascript
-// scatterplot
-import { createChart } from "./scatterplot.js"
-
-const chartdata = data.map(car => ({
-    x: car.horsepower,
-    y: car.mpg,
-}))
-
-// chartjs aanmaken
-createChart(chartdata)
-```
-
-
-
-<br>
-<br>
-<br>
 
 ## Prediction tekenen als lijn
 
 ![scatterfinished](../images/scatterfinished2.png)
 
-We kunnen voor elke mogelijke `horsepower` (waarden van 40 tot 250) een prediction doen, en die toevoegen aan een array. 
+We kunnen voor elke mogelijke `horsepower` (waarden van 40 tot 250) een prediction doen met een `for` loop.
+
+Maak een lege `myPredictions` array. Doe een prediction voor elke HP waarde uit je for loop, en voeg deze toe aan de predictions array. 
 
 ```javascript
-const chartresults = []
-
-for(let hp = 40; hp<250; hp+=2) {
-    const results = await nn.predict({horsepower:hp})
-    chartresults.push({ x: hp, y: results[0].value})
+async function finishedTraining() {
+    for(let hp = 40; hp<250; hp+=2) {
+        // prediction here
+    }
 }
 ```
-Deze array kunnen we tekenen in de scatterplot! Dit illustreert of het neural network de complexiteit in de data kan herkennen.
+Nadat alle predictions gedaan zijn kan je de `updateChart` functie aanroepen om de predictions te tekenen als lijn.
 
 ```javascript
 import { updateChart } from "./scatterplot.js"
-updateChart("Predictions", chartresults)
+
+updateChart("Predictions", myPredictions) 
 ```
 
 
-
 <br>
 <br>
 <br>
 
-# Praktijkopdracht week 6
+# Inleveropdracht
 
-Bij de praktijkopdracht van week 6 ga je deze oefening maken met een CSV file, en kijken of je meer data kan gebruiken om te trainen.
+Bij de praktijkopdracht van week 7 ga je een neural network trainen met een CSV dataset uit deze repository. Ook ga je het model opslaan, zodat je niet telkens opnieuw hoeft te trainen.
 
-Ook ga je het model opslaan, zodat je niet telkens opnieuw hoeft te trainen.
-
-[Ga naar de praktijkopdracht](./praktijkopdracht.md)
+[Ga naar de inleveropdracht](./inleveropdracht.md)
 
 <br>
 <br>
