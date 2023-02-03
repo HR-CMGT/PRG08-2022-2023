@@ -6,10 +6,18 @@
 
 Een neural network is in staat om complexe patronen in data te vinden. Je kan een neural network gebruiken voor:
 
-- **Classification** : het algoritme voorspelt een label, bv: "survived" of "died"
-- **Regression** : het algoritme voorspelt een getal, bv: "temperatuur", "prijs", "luchtvervuiling"
+- **Classification** : het algoritme voorspelt een **categorie**, bv:
+    - "kat", "hond" of "capibara"
+    - "giftig" of "niet giftig"
+    - "spam" of "geen spam"
+    - "fraude" of "geen fraude"
+- **Regression** : het algoritme voorspelt een **numerieke waarde**, bv: 
+    - benzineverbruik van een auto
+    - prijs van een huis
+    - waarde van een tweedehands telefoon
+    - percentage studenten die een cursus gaan behalen
 
-In deze oefening werken we met regression. Ook gaan we kijken hoe we data kunnen tekenen in een grafiek. We gaan de voorspelling ook tekenen!
+In deze oefening werken we met **regression**. Ook gaan we kijken hoe we data kunnen tekenen in een grafiek. We gaan de voorspelling ook tekenen!
 
 👨🏻‍💻👩🏽‍💻 Je kan de oefening downloaden uit deze repository of [live meedoen op glitch](https://glitch.com/edit/#!/ml5-cars-tutorial)
 
@@ -53,13 +61,20 @@ const nn = ml5.neuralNetwork(options)
 <br>
 <br>
 
+## Data voorbereiden
+
+- Trainingdata voor regression bestaat altijd uit getallen. Controleer dat alle waardes getallen zijn. Verwijder rijen met ongeldige waarden.
+- Let op dat je voldoende data hebt. Hoe meer data, hoe beter het algoritme zal werken. Denk aan minimaal een paar honderd rijen in een CSV bestand.
+- Let op dat je eerst de data shuffled, om te voorkomen dat er een patroon herkend wordt in de volgorde van je data. 
+- Daarna normaliseren we de data om te zorgen dat alle kolommen even belangrijk zijn.
+
+<br>
+<br>
+<br>
+
 ## Data toevoegen aan Neural Network
 
-Nu kan je data gaan toevoegen met de `addData` functie. 
-
-> ⚠️ Trainingdata in een neural network voor regression bestaat altijd uit getallen!
-
-Let op dat je eerst de data shuffled, om te voorkomen dat er een patroon herkend wordt in de volgorde van je data. We gebruiken de `horsepower` van de auto om te voorspellen wat de `mpg` gaat zijn. Daarna normaliseren we de data om te zorgen dat alle kolommen even belangrijk zijn.
+Met de functie `addData()` kan je data gaan toevoegen. In dit voorbeeld gebruiken we de `horsepower` van een auto om te voorspellen wat de `mpg` gaat zijn. 
 
 ```javascript
 // shuffle
