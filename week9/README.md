@@ -53,7 +53,7 @@ Je kan zelf data verzamelen of gebruik maken van data van Kaggle. Hieronder vind
 <br>
 <br>
 
-## Voorbeelden
+## Inspiratie
 
 ![example1](../images/voorbeeld1.png)<br>
 [Penalty prediction](https://cmgt.hr.nl/projecten/penalteam)<br><br>
