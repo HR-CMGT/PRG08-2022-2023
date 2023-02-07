@@ -8,7 +8,7 @@ In deze repository vind je startcode voor opdrachten van het vak PRG08. De prese
 
 | Week | Onderwerp | Lesoefening | Inleveropdracht |
 |------|---------|----------|-----------------|
-| 1 | International Week Gastcollege | Generating AI Art | Evaluatie |
+| 1 | [International Week Gastcollege met Soyun Park](https://soyunparrrk.notion.site/Imagining-the-Future-with-AI-e8d2bf7699e3444698c05ceb48c47907) | Generating AI Art | Evaluatie |
 | 2 | [Introductie vak, wat is Machine Learning](./week2) | Teachable Machine | |
 | 3 | [ML5 Image Classifier](./week3) | Mobile app bouwen | Trainen met eigen images |
 | 4 | [ML5 Models](./week4) | Pose, Face, Hand, Object recognition | Eigen toepassing bedenken |
