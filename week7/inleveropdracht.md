@@ -1,7 +1,7 @@
 
 # Inleveropdracht week 7
 
-- Kies een CSV file.
+- Kies een CSV file die geschikt is voor regression (voorspellen van een waarde).
 - Gebruik de scatterplot om te kijken of je kolommen geschikt zijn om te trainen.
 - Train het neural network. Bepaal hoeveel epochs je nodig hebt. 
 - Sla het model op.
