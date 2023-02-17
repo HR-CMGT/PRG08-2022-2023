@@ -2,10 +2,13 @@
 # Inleveropdracht week 7
 
 - Kies een CSV file die geschikt is voor regression (voorspellen van een waarde).
-- Gebruik de scatterplot om te kijken of je kolommen geschikt zijn om te trainen.
+- Gebruik de scatterplot om te kijken of je kolommen geschikt zijn om te trainen. Plaats een screenshot van je scatterplot in je werkmap.
 - Train het neural network. Bepaal hoeveel epochs je nodig hebt. 
 - Sla het model op.
 - Laad het model in een nieuwe html pagina, waarin je via een UI een voorspelling kan doen.
+- Plaats je eindresultaat live online, bv. op github pages
+- Plaats je broncode op github. Zet hier een screenshot van je scatterplot(s) bij.
+- Vervolgens vul je in feedbackfruits de evaluatie in!
 
 <br>
 <br>
