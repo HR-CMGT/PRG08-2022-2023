@@ -215,6 +215,7 @@ Hierin laad je het JSON model. Op deze manier kan je de decision tree gebruiken 
 
 ## Externe links
 
+- [CSV data laden en filteren](https://github.com/HR-CMGT/PRG08-2022-2023/blob/main/snippets/csv.md)
 - [Kaggle datasets voor classification](https://www.kaggle.com/datasets?tags=13302-Classification)
 - [Decision Tree Javascript](https://github.com/lagodiuk/decision-tree-js)
 - [Vega tree viewer](https://vega.github.io/vega/examples/tree-layout/)
