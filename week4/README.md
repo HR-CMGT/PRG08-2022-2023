@@ -1,14 +1,14 @@
 # Week 4
 
-- Introductie ML5 pre-trained models: handpose, bodypose, face, object recognition
+> Werken met ML5 pre-trained models: handpose, bodypose, face, object recognition
 
 ## Lesopdracht
 
-Bouwen ML5 webcam app
+Bouwen ML5 pose detection app
 
 - Bedenk een concept voor het werken met gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning of object detectie.
 - Dit concept moet geschikt zijn voor de positionele data die je uit ML5 krijgt. Dit zijn bijvoorbeeld de posities van je polsen, de afstand tussen je voeten, vingers of ogen.
-- Lees pose-data uit met javascript en geef feedback aan de gebruiker via een gebruiksvriendelijke UI.
+- Lees pose-data uit met javascript en geef feedback aan de gebruiker via de UI. Maak ook duidelijk wat de bedoeling van de app is via de UI, middels een duidelijke titel en instructies.
 
 <br>
 <br>

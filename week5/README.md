@@ -23,6 +23,7 @@ Als we een nieuw punt tekenen in de grafiek, kunnen we via de **afstand tot de a
 
 <br>
 <br>
+<Br>
 
 # Werken met KNN in Javascript
 
@@ -53,6 +54,7 @@ console.log(`I think this is a ${prediction}`)
 ```
 <br>
 <br>
+<Br>
 
 # Oefening 
 
@@ -75,13 +77,15 @@ Gebruik bovenstaande javascript uitleg, de data in de tabel om een KNN algoritme
 
 <br>
 <br>
+<br>
 
-# Oefening
+# Inleveropdracht
 
-In deze oefening ga je KNN gebruiken om de input van een webcam te classificeren.
+In de inleveropdracht ga je KNN gebruiken om posedata te classificeren.
 
-[Ga naar de webcam opdracht](./lesopdracht.md)
+[Ga naar de inleveropdracht](./inleveropdracht.md)
 
+<br>
 <br>
 <br>
 
