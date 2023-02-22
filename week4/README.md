@@ -4,9 +4,7 @@
 
 ## Lesopdracht
 
-- Bouwen ML5 webcam app
-
-## Inleveropdracht 
+Bouwen ML5 webcam app
 
 - Bedenk een concept voor het werken met gezichtsuitdrukking herkenning, lichaamspose herkenning, handpose herkenning of object detectie.
 - Dit concept moet geschikt zijn voor de positionele data die je uit ML5 krijgt. Dit zijn bijvoorbeeld de posities van je polsen, de afstand tussen je voeten, vingers of ogen.
