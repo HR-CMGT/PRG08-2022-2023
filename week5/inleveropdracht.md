@@ -4,7 +4,13 @@ In week 4 hebben we gewerkt met posemodels. Deze geven gedetailleerde data over 
 
 Daarom gaan we de posedata gebruiken als ***training data voor het KNN algoritme***. Hiermee kunnen we de coördinaten van iemand's pose ook echt gaan herkennen.
 
-*Loop de opdracht stapsgewijs door*:
+> ⚠️ Zorg dat je de [lesoefening met "cats and dogs"](./README.md) onder de knie hebt voordat je aan de pose opdracht begint.
+
+<br>
+<br>
+<br>
+
+*Inleveropdracht. Maak elke stap af voordat je aan de volgende begint*:
 
   1. Kies een pose model: ***(handpose, bodypose, facepose)*** en bedenk een eenvoudige toepassing.
   2. Lees de pose data uit in de console. Dit verschilt afhankelijk van het pose model! Kijk hoe je de data kan omzetten naar een array van numbers.
