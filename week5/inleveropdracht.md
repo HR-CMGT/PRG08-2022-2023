@@ -44,7 +44,7 @@ Zoals je in de oefening met cats/dogs gezien hebt verwacht het KNN algoritme een
 ```javascript
 knn.learn([4,5,3,3],"cat")
 ```
-De data die je terugkrijgt uit een pose detection is helaas niet altijd een simpele array van numbers:
+De data die je terugkrijgt uit een pose detection is helaas niet altijd een simpele array van numbers. Hier zie je de output van het ML5 bodypose model:
 
 ![bodypose](../images/bodypose.png)
 
@@ -64,7 +64,7 @@ Je kan een `for` loop schrijven om alleen de `x` en `y` data uit de bodypose dat
 ```javascript
 let pose = []
 for(let point of keypoints){
-	pose.push(point.position.x)
+    pose.push(point.position.x)
     pose.push(point.position.y)
 }
 ```
