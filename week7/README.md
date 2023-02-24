@@ -204,7 +204,7 @@ async function makePrediction() {
     console.log(`Geschat verbruik: ${results[0].mpg}`)
 }
 ```
-<img src="../images/predict-field.png" width="350">
+![car](../images/carpredict.png)
 
 Maak een inputveld en button in je HTML file waarmee de gebruiker een voorspelling kan doen voor een auto met een bepaalde `horsepower`. Let op dat je de waarde uit het invulveld moet omzetten naar een `number`. Toon vervolgens het resultaat in de `div` met de id `result`.
 

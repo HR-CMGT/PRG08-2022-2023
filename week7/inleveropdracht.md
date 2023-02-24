@@ -1,21 +1,29 @@
 
 # Inleveropdracht week 7
 
-- Kies een CSV file uit de data map:
-    - Mobile Phone prijzen
-    - Utrechtse huizenprijzen
-    - Wijn kwaliteit
-    - Studenten prestaties Hogeschool Rotterdam (anoniem)
-- Je mag ook zelf een CSV file zoeken die geschikt is voor regression (voorspellen van een waarde).
-- Gebruik de scatterplot om te kijken of je kolommen geschikt zijn om te trainen. Plaats een screenshot van je scatterplot in je werkmap.
-- Train het neural network. Bepaal hoeveel epochs je nodig hebt. 
+- Kies een CSV file uit de data map. Je mag ook zelf een CSV file zoeken die geschikt is voor regression (voorspellen van een waarde).
+- Train het neural network met meerdere kolommen. Bepaal hoeveel epochs en welke kolommen je nodig hebt. 
 - Sla het model op.
 - Laad het model in een nieuwe html pagina, waarin je via een UI een voorspelling kan doen.
-- Plaats je eindresultaat live online, bv. op github pages
-- Plaats je broncode op github. Zet hier een screenshot van je scatterplot(s) bij.
-- Vervolgens vul je in feedbackfruits de evaluatie in!
+- Plaats je eindresultaat live online, bv. op github pages. Plaats je broncode op github. Vervolgens vul je in feedbackfruits de evaluatie in.
 
+<br>
+<br>
+<br>
 
+# CSV data
+
+Laad een van de [datasets]() met [Papa Parse](https://github.com/HR-CMGT/PRG08-2022-2023/blob/main/snippets/csv.md).
+
+- Mobile Phone prijzen bepalen aan de hand van de specs van een telefoon
+- Utrechtse huizenprijs bepalen aan de hand van ligging en eigenschappen van een huis
+- Wijn kwaliteit bepalen aan de hand van de chemische samenstelling van de wijn
+- Studenten dropout voorspellen aan de hand van anonieme studentgegevens Hogeschool Rotterdam
+- Regression dataset van [kaggle.com](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets) 
+
+<br>
+<br>
+<br>
 
 # Trainen met meerdere kolommen
 
@@ -32,83 +40,17 @@ function checkData(data){
     }
 }
 ```
-VOORSPELLEN
-```javascript
-const testCar = { horsepower: testData[0].horsepower, weight: testData[0].weight, cylinders:testData[0].cylinders }
-const pred = await nn.predict(testCar)
-console.log(pred[0].mpg)
-```
-### Voorspelling tekenen als lijn
-
-Bij het tekenen van je voorspelling in een scatterplot geef je nog steeds alleen een x en een y waarde mee.
-
-<br>
-<br>
-<br>
-
-## CSV data
-
-Gebruik een [dataset uit deze repository](./oefening/data/) of van [kaggle.com](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets) die geschikt is voor *regression* (voorspellen van een getal). Bekijk de CSV goed om te weten welke kolom de waarde heeft die je wil gaan voorspellen.
-
-- Mobile Phone prijzen
-- Utrechtse huizenprijzen
-- Wijn kwaliteit
-- Studenten prestaties Hogeschool Rotterdam (anoniem)
-
-<br>
-
-Laad de data met [papa parse](https://www.papaparse.com/)
+De voorspelling kan je doen met testdata, of met data die de gebruiker heeft ingevoerd.
 
 ```javascript
-function loadData() {
-    Papa.parse("./data/cars.csv", {
-        download: true,
-        header: true, 
-        dynamicTyping: true,
-        complete: results => console.log(results.data)
-    })
+async function makePrediction() {
+    const testCar = { horsepower: testData[0].horsepower, weight: testData[0].weight, cylinders:testData[0].cylinders }
+    const pred = await nn.predict(testCar)
+    console.log(pred[0].mpg)
 }
 ```
-
 <br>
 <br>
-<br>
-
-## Scatterplot tekenen 
-
-Op de X as zet je de feature waar je op wil trainen. Op de Y as zet je de waarde die je wil kunnen voorspellen. Kijk welke kolommen in de CSV file relevant zijn voor hetgene dat je wil leren. 
-
-```javascript
-import { createChart } from "./scatterplot.js"
-
-const chartdata = data.map(car => ({
-    x: car.horsepower,
-    y: car.mpg,
-}))
-
-createChart(chartdata)
-```
-
-
-<br>
-<br>
-<br>
-
-## Training
-
-Zie de code uit de [les](./README.md) voor het trainen van een Neural Network.
-
-Een scatterplot toont een X en een Y as, maar je kan het Neural Network wel trainen op meer features! Bijvoorbeeld, de `cars.csv` bevat ***mpg, cylinders, displacement, horsepower, weight, acceleration,model year, origin, car name***
-
-In het eerste object van `addData()` geef je alle features mee waarvan je wil leren. Het tweede object bevat de data die je wil kunnen voorspellen.
-
-```javascript
-nn.addData({ feature1: data.feature1, feature2:data.feature2, ... }, { label: data.label })
-```
-> ⚠️ Bij een prediction moet je dezelfde features doorgeven als bij het trainen om een voorspelling te krijgen!
-
-<br>
-<Br>
 <br>
 
 ## Model opslaan
@@ -127,18 +69,19 @@ model.weights.bin
 
 ## Model inladen
 
-Maak nu een nieuwe webpagina waarin je dit getrainde model gaat inladen. Lees hiervoor de [documentatie: ML5 load()](https://learn.ml5js.org/#/reference/neural-network?id=load). Maak een *gebruiksvriendelijke UI* waarin je bv. de *horsepower* van je auto kan invoeren, en dan de *miles per gallon* te zien krijgt.
-
-![car](../images/carpredict.png)
-
-> ⚠️ Als je neural network is getrained op meer dan één feature, dan kan je ook meer invoervelden in de UI plaatsen.
+Maak nu een nieuwe webpagina waarin je dit getrainde model gaat inladen. Lees hiervoor de [documentatie: ML5 load()](https://learn.ml5js.org/#/reference/neural-network?id=load). Maak een *gebruiksvriendelijke UI* waarin de gebruiker gevens kan invoeren en een voorspelling kan doen. 
 
 <br>
 <br>
 <br>
+
+## Optioneel: scatterplot met testdata
+
+Bij het tekenen van je voorspelling in een scatterplot kan je nu een `for` loop maken die door alle `testData` heen loopt en dan een voorspelling doet met de kolommen waarop je getrained hebt. Let op dat je bij het tekenen in de scatterplot nog steeds alleen een x en een y waarde meegeeft.
+
 <br>
-
-
+<br>
+<br>
 
 # Links
 
