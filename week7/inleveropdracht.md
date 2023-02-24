@@ -15,6 +15,33 @@
 - Plaats je broncode op github. Zet hier een screenshot van je scatterplot(s) bij.
 - Vervolgens vul je in feedbackfruits de evaluatie in!
 
+
+
+# Trainen met meerdere kolommen
+
+Je voorspelling wordt veel nauwkeuriger als je met meerdere kolommen traint. Voordat we dit gaan doen is het handig om je data op te splitsen in train en testdata.
+
+```javascript
+function checkData(data){
+    data.sort(() => (Math.random() - 0.5)
+    let trainData = data.slice(0, Math.floor(data.length * 0.8))
+    let testData = data.slice(Math.floor(data.length * 0.8) + 1)
+
+    for(let car of trainData){
+        nn.addData({ horsepower: car.horsepower, weight: car.weight, cylinders:car.cylinders }, { mpg: car.mpg })
+    }
+}
+```
+VOORSPELLEN
+```javascript
+const testCar = { horsepower: testData[0].horsepower, weight: testData[0].weight, cylinders:testData[0].cylinders }
+const pred = await nn.predict(testCar)
+console.log(pred[0].mpg)
+```
+### Voorspelling tekenen als lijn
+
+Bij het tekenen van je voorspelling in een scatterplot geef je nog steeds alleen een x en een y waarde mee.
+
 <br>
 <br>
 <br>

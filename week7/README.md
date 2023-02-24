@@ -24,12 +24,14 @@ Een neural network is in staat om complexe patronen in data te vinden. In week 7
 
 - Maak een scatterplot met demo data en met CSV data
 - Train een Neural Network met CSV data
+- Maak een voorspelling met een tekstveld
 - Teken je voorspelling in het scatterplot
-- Trainen met meerdere kolommen
 
 ## Week 7 Inleveropdracht
 
 - Train een neural network met een van de CSV files
+- Gebruik train en testdata
+- Train met meerdere kolommen 
 - Sla je model op
 - Laad het model in en maak een voorspelling
 
@@ -139,6 +141,10 @@ We maken een [ML5](https://learn.ml5js.org/#/reference/neural-network) neural ne
 ```javascript
 const nn = ml5.neuralNetwork({ task: 'regression', debug: true })
 ```
+> *⚠️ LET OP! Je kan het neural network pas aanmaken nadat de CSV data is geladen*
+
+<br>
+
 ## Wat ga je voorspellen?
 
 Door naar je CSV te kijken weten we dat we de `mpg` van de auto willen gaan voorspellen. Je kan kiezen welke kolom je daarvoor wil gebruiken, in dit geval gebruiken we `horsepower`. We maken een `for` loop om één voor één door elke rij van het CSV bestand te loopen.
@@ -155,7 +161,7 @@ for (let car of data) {
 // normalize
 nn.normalizeData()
 ```
-## Shuffle en Normalize
+### Shuffle en Normalize
 
 Deze twee functies zorgen dat het neural network beter in staat is om van de data te leren.
 
@@ -188,15 +194,24 @@ async function finishedTraining(){
 <br>
 <br>
 
-## Prediction
+## Maak een voorspelling met een tekstveld
 
 Met de `predict` functie kunnen we nieuwe data voorspellen! Maak een nieuwe `car` met een `horsepower` van `90`, waarvan we niet de `mpg` weten:
 
 ```javascript
-async function finishedTraining() {
+async function makePrediction() {
     const results = await nn.predict({ horsepower: 90 })
     console.log(`Geschat verbruik: ${results[0].mpg}`)
 }
+```
+<img src="../images/predict-field.png" width="350">
+
+Maak een inputveld en button in je HTML file waarmee de gebruiker een voorspelling kan doen voor een auto met een bepaalde `horsepower`. Let op dat je de waarde uit het invulveld moet omzetten naar een `number`. Toon vervolgens het resultaat in de `div` met de id `result`.
+
+```html
+<input type="text" id="field" placeholder="horsepower" />
+<button id="btn">Voorspel!</button>
+<div id="result"></div>
 ```
 
 <br>
@@ -227,22 +242,6 @@ async function finishedTraining() {
 <br>
 <br>
 <br>
-
-# Trainen met meerdere kolommen
-
-Je voorspelling wordt veel nauwkeuriger als je met meerdere kolommen traint in de `addData()` functie. In je `predict()` functie moet je dezelfde kolommen gebruiken.
-
-TRAINEN
-```javascript
-nn.addData({ horsepower: car.horsepower, weight: car.weight, cylinders:car.cylinders }, { mpg: car.mpg })
-```
-VOORSPELLEN
-```javascript
-const pred = await nn.predict({ horsepower: 100, weight: 3100, cylinders:4 })
-console.log(pred[0].mpg)
-```
-
-> *⚠️ Bij het tekenen van je voorspelling in een scatterplot geef je nog steeds alleen een x en een y waarde mee.*
 
 
 <br>
