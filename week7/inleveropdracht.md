@@ -21,6 +21,28 @@ Laad een van de [datasets]() met [Papa Parse](https://github.com/HR-CMGT/PRG08-2
 - Studenten dropout voorspellen aan de hand van anonieme studentgegevens Hogeschool Rotterdam
 - Regression dataset van [kaggle.com](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets) 
 
+## Data voorbereiden
+
+Bekijk de geladen CSV data via `console.table(data)` om te zien of het inladen goed is gegaan.
+
+Verwijder rijen met ongeldige waarden zoals "null", "", "undefined", etc. Een volledig irrelevante kolom kan je ook verwijderen (bv. "id").
+
+Het is ook handiger als je *kolomnamen* geen spaties of vreemde tekens bevatten. Vervang bijvoorbeeld "RAM (GB)" door "ramGb".
+
+Controleer welke kolommen getallen bevatten. Deze kan je gebruiken om te trainen. Je kan twee kolommen in een scatterplot tekenen voor een visualisatie.
+
+Soms kan een kolom met teksten wel belangrijk zijn. Bij de telefoons kan het merk uitmaken voor de prijs. Je kan in dit geval alle merknamen via `find + replace` te vervangen door nummers, bijvoorbeeld:
+
+```html
+APPLE = 1
+SAMSUNG = 2
+XIAOMI = 3
+etc.
+```
+
+
+Je kan je CSV data het beste editen in Excel, Google Sheets of Numbers. Kies vervolgens voor `exporteren als CSV` om het bestand op te slaan.
+
 <br>
 <br>
 <br>
@@ -31,7 +53,7 @@ Je voorspelling wordt veel nauwkeuriger als je met meerdere kolommen traint. Voo
 
 ```javascript
 function checkData(data){
-    data.sort(() => (Math.random() - 0.5)
+    data.sort(() => (Math.random() - 0.5))
     let trainData = data.slice(0, Math.floor(data.length * 0.8))
     let testData = data.slice(Math.floor(data.length * 0.8) + 1)
 
@@ -40,7 +62,10 @@ function checkData(data){
     }
 }
 ```
-De voorspelling kan je doen met testdata, of met data die de gebruiker heeft ingevoerd.
+
+### Voorspelling doen met de testdata
+
+De voorspelling kan je doen met testdata, of met data die de gebruiker heeft ingevoerd. In dit geval doen we een voorspeling met `horsepower`, `weight` en `cylinders`.
 
 ```javascript
 async function makePrediction() {
@@ -49,6 +74,9 @@ async function makePrediction() {
     console.log(pred[0].mpg)
 }
 ```
+
+> *Als je voorspellingen met meerdere kolommen ook aan je scatterplot wil toevoegen, dan kan je dezelfde `x` en `y` kolommen gebruiken die je voor de CSV data hebt gebruikt, bijvoorbeeld `x = horsepower` en `y = mpg`*
+
 <br>
 <br>
 <br>
@@ -71,13 +99,6 @@ model.weights.bin
 
 Maak nu een nieuwe webpagina waarin je dit getrainde model gaat inladen. Lees hiervoor de [documentatie: ML5 load()](https://learn.ml5js.org/#/reference/neural-network?id=load). Maak een *gebruiksvriendelijke UI* waarin de gebruiker gevens kan invoeren en een voorspelling kan doen. 
 
-<br>
-<br>
-<br>
-
-## Optioneel: scatterplot met testdata
-
-Bij het tekenen van je voorspelling in een scatterplot kan je nu een `for` loop maken die door alle `testData` heen loopt en dan een voorspelling doet met de kolommen waarop je getrained hebt. Let op dat je bij het tekenen in de scatterplot nog steeds alleen een x en een y waarde meegeeft.
 
 <br>
 <br>
