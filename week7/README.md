@@ -4,8 +4,7 @@
 
 ![nn](../images/carnn.png)
 
-Een neural network is in staat om complexe patronen in data te vinden. Je kan een neural network gebruiken voor:
-
+Een neural network is in staat om complexe patronen in data te vinden. In week 7 gaan we *getallen* voorspellen. Dit heet *regression*:
 - **Classification** : het algoritme voorspelt een **categorie**, bv:
     - "kat", "hond" of "capibara"
     - "giftig" of "niet giftig"
@@ -17,36 +16,35 @@ Een neural network is in staat om complexe patronen in data te vinden. Je kan ee
     - waarde van een tweedehands telefoon
     - percentage studenten die naar de les komen 😬
 
-### Classification of regression?
-
-Het is niet altijd meteen duidelijk of een probleem een **classification** of **regression** probleem is. Denk aan een **rating** voor een restaurant van 1 tot 10. Is dit classification of regression? In deze les werken we met **regression**. Ook gaan we kijken hoe we data kunnen tekenen in een grafiek. We gaan de voorspelling ook tekenen!
-
 <br>
 <br>
 <br>
 
-# Opdracht
+## Week 7 Lesopdracht
 
-## Lesoefening met demo data
-- Teken een scatterplot voor horsepower versus mpg met de demo data.
-- Train een ML5 neural network met de horsepower en mpg demo data. Roep predict aan om te zien of alles werkt.
+- Maak een scatterplot met demo data en met CSV data
+- Train een Neural Network met CSV data
+- Teken je voorspelling in het scatterplot
+- Trainen met meerdere kolommen
 
-## Lesoefening CSV data
-- Laad nu de `cars.csv` data en teken de scatterplot voor horsepower versus mpg.
-- Train een ML5 neural network met de horsepower en mpg csv data. Maak een prediction.
-- Maak een `for` loop die voor elke horsepower een mpg prediction doet. Let op `async await`.
-- Teken deze voorspellingen in de scatterplot
-- Train het neural network met meerdere kolommen uit de CSV file. Maak een prediction.
+## Week 7 Inleveropdracht
 
-## [Inleveropdracht](./inleveropdracht.md)
+- Train een neural network met een van de CSV files
+- Sla je model op
+- Laad het model in en maak een voorspelling
 
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
 
-# Startcode
+# Lesopdracht: scatterplot basics
 
-Je kan `index.html`, `app.js` en `scatterplot.js` uit deze repository gebruiken als basis voor alle oefeningen in deze pagina. Om te oefenen met **data** kan je deze array van objecten gebruiken. 
+> *De startcode en data bestanden vind je in de map [oefening](./oefening/)*
+
+Teken een scatterplot voor ***horsepower versus mpg*** met deze demo data.
 
 ```javascript
 const data = [
@@ -59,63 +57,91 @@ const data = [
     { horsepower: 80, mpg: 25 },
 ]
 ```
-
-<br>
-<br>
-<br>
-
-## Data controleren
-
-- Trainingdata voor regression bestaat altijd uit getallen. Controleer dat alle waardes getallen zijn. Verwijder rijen met ongeldige waarden.
-- Let op dat je voldoende data hebt. Hoe meer rijen én kolommen, hoe beter het algoritme zal werken. Denk aan minimaal een paar honderd rijen in een CSV bestand.
-- Als je de data shuffled kan je voorkomen dat er een patroon herkend wordt in de volgorde van je data. 
-
-<br>
-<br>
-<br>
-
-
-
-# Scatterplot
-
-Een scatterplot kan je gebruiken om te zien hoe data in elkaar zit. Zie je een verband tussen `horsepower` en `miles per gallon` ?
-
-![scatterfake](../images/scatterplotcars.png)
-
-Een `chartJS` scatterplot verwacht een array met x,y coordinaten, bijvoorbeeld: `[{x: 20, y: 30}, {x:40, y:50}]`. We gebruiken `map()` om onze demo data om te zetten naar `chartJS` data.
+Als je een scatterplot tekent, dan kan je alleen `x` en `y` waarden doorgeven. Hier zie je een code voorbeeld waarbij we de `map()` functie gebruiken om de `horsepower` en `mpg` om te zetten naar `x` en `y` waarden.
 
 ```javascript
-// scatterplot
-import { createChart } from "./scatterplot.js"
+import { createChart, updateChart } from "./scatterplot.js"
 
 const chartdata = data.map(car => ({
     x: car.horsepower,
     y: car.mpg,
 }))
 
+// kijk hoe de data eruit ziet
+console.log(chartdata)
+
 // chartjs aanmaken
 createChart(chartdata)
 ```
-
-
 <br>
 <br>
 <br>
 
-## Aanmaken Neural Network
+# Lesopdracht: scatterplot CSV data
+
+Nu gaan we data uit een CSV file tekenen in de scatterplot. [Het inladen van CSV data doe je met Papa Parse](https://github.com/HR-CMGT/PRG08-2022-2023/blob/main/snippets/csv.md). Kijk of je CSV file een header heeft *(bv. "horsepower", "mpg", etc.)*. Als er een header is kan je dit aangeven bij het inladen van de CSV data.
+
+```javascript
+function loadData(){
+    Papa.parse("./data/cars.csv", {
+        download:true,
+        header:true, 
+        dynamicTyping:true,
+        complete: results => checkData(results.data)
+    })
+}
+
+function checkData(data) {
+    console.table(data)
+}
+```
+
+### Data is ingeladen
+
+Met de `console.table()` functie kunnen we checken of het inladen van de CSV goed is gegaan. Je ziet dat deze data meerdere kolommen bevat: 
+
+```
+mpg,cylinders,displacement,horsepower,weight,acceleration,model year,origin,car name
+```
+### Scatterplot tekenen
+
+Dit werkt hetzelfde als met de demo data. Echter, omdat er meerdere kolommen zijn, kan je zelf kiezen welke waarde je op de `x` en op de `y` as wil tekenen. Probeer om in plaats van `horsepower` een andere kolom in de `x-as` te tekenen *(bv. `weight`)*.
+```javascript
+const chartdata = data.map(car => ({
+    x: car.horsepower,
+    y: car.mpg,
+}))
+```
+> *⚠️ Let op dat je de scatterplot niet kan tekenen voordat de data is ingeladen.*
+
+### Data controleren
+
+Nu je de CSV data in een scatterplot hebt getekend, kan je kijken of de data goed is:
+
+- Trainingdata voor regression bestaat altijd uit getallen. Controleer dat alle waardes getallen zijn. Verwijder rijen met ongeldige waarden zoals "null", "", "undefined", etc. 
+- Kijk of er vreemde data is, zoals een auto met een verbruik van 0 mpg of een horsepower van 20.000. 
+
+![scatterfake](../images/scatterplotcars.png)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Lesopdracht: Neural Network
+
+We gaan een Neural Network trainen met de `cars.csv` data. Het doel is dat we van een nieuwe auto kunnen voorspellen hoeveel `miles per gallon` de auto gaat gebruiken.
 
 We maken een [ML5](https://learn.ml5js.org/#/reference/neural-network) neural network aan voor regression.
 
 ```javascript
 const nn = ml5.neuralNetwork({ task: 'regression', debug: true })
 ```
-<br>
-<br>
-<br>
+## Wat ga je voorspellen?
 
-## Data toevoegen aan Neural Network
-
-Met de functie `addData()` kan je data toevoegen. In dit voorbeeld gebruiken we de `horsepower` van een auto om te voorspellen wat de `mpg` gaat zijn. 
+Door naar je CSV te kijken weten we dat we de `mpg` van de auto willen gaan voorspellen. Je kan kiezen welke kolom je daarvoor wil gebruiken, in dit geval gebruiken we `horsepower`. We maken een `for` loop om één voor één door elke rij van het CSV bestand te loopen.
 
 ```javascript
 // shuffle
@@ -129,21 +155,35 @@ for (let car of data) {
 // normalize
 nn.normalizeData()
 ```
+## Shuffle en Normalize
+
+Deze twee functies zorgen dat het neural network beter in staat is om van de data te leren.
+
+- shuffle: voorkomt dat het neural network de volgorde van de data leert. 
+- normalize: voorkomt dat sommige kolommen belangrijker zijn dan andere.
+
+>*Let op dat we de CSV data hier niet naar `x` en `y` vertalen, dat was alleen nodig voor het scatterplot.*
+
 <br>
 <br>
 <br>
 
 ## Trainen
 
-Bij het trainen moet je aangeven hoeveel `epochs` dit moet duren. Hier kan je zelf mee experimenteren.
+Bij het trainen moet je aangeven hoeveel `epochs` dit moet duren. Hier kan je zelf mee experimenteren. De blauwe lijn moet zo dicht mogelijk bij de waarde 0 komen. Als hier geen verbetering meer in zit, heb je genoeg epochs.
 
 ```javascript
-nn.train({ epochs: 10 }, () => finishedTraining()) 
+function startTraining() {
+    nn.train({ epochs: 10 }, () => finishedTraining()) 
+}
 
-function finishedTraining(){
+async function finishedTraining(){
     console.log("Finished training!")
 }
 ```
+
+<img src="../images/epochs.png" width="350">
+
 <br>
 <br>
 <br>
@@ -154,13 +194,8 @@ Met de `predict` functie kunnen we nieuwe data voorspellen! Maak een nieuwe `car
 
 ```javascript
 async function finishedTraining() {
-    const testCar = { horsepower: 90 }
-
-    const results = await nn.predict(testCar)
-    console.log(results)
-
-    const prediction = results[0].value
-    console.log(`Geschat verbruik: ${prediction}`)
+    const results = await nn.predict({ horsepower: 90 })
+    console.log(`Geschat verbruik: ${results[0].mpg}`)
 }
 ```
 
@@ -173,25 +208,77 @@ async function finishedTraining() {
 
 ![scatterfinished](../images/scatterfinished2.png)
 
-We kunnen voor elke mogelijke `horsepower` (waarden van 40 tot 250) een prediction doen met een `for` loop.
+We maken een `for` loop voor elke mogelijke `horsepower` *(waarden van `40` tot `250`)*. Voor elke waarde doen we een voorspelling. Dit slaan we meteen op als `x` en `y` waarden, zodat we het in de scatterplot kunnen tekenen! 
 
-Maak een lege `myPredictions` array. Doe een prediction voor elke HP waarde uit je for loop, en voeg deze toe aan de predictions array. 
+Je kan de data toevoegen aan de bestaande scatterplot middels de `updateChart` functie.
 
 ```javascript
 async function finishedTraining() {
-    for(let hp = 40; hp<250; hp+=2) {
-        // prediction here
+    let predictions = []
+    for (let hp = 40; hp < 250; hp += 2) {
+        const pred = await nn.predict({horsepower: hp})
+        predictions.push({x: hp, y: pred[0].mpg})
     }
+    updateChart("Predictions", predictions)
 }
 ```
-Nadat alle predictions gedaan zijn kan je de `updateChart` functie aanroepen om de predictions te tekenen als lijn.
 
+
+<br>
+<br>
+<br>
+
+# Trainen met meerdere kolommen
+
+Je voorspelling wordt veel nauwkeuriger als je met meerdere kolommen traint in de `addData()` functie. In je `predict()` functie moet je dezelfde kolommen gebruiken.
+
+TRAINEN
 ```javascript
-import { updateChart } from "./scatterplot.js"
-
-updateChart("Predictions", myPredictions) 
+nn.addData({ horsepower: car.horsepower, weight: car.weight, cylinders:car.cylinders }, { mpg: car.mpg })
+```
+VOORSPELLEN
+```javascript
+const pred = await nn.predict({ horsepower: 100, weight: 3100, cylinders:4 })
+console.log(pred[0].mpg)
 ```
 
+> *⚠️ Bij het tekenen van je voorspelling in een scatterplot geef je nog steeds alleen een x en een y waarde mee.*
+
+
+<br>
+<br>
+<br>
+
+# Volgorde in je code
+
+De voorbeeldcode uit dit document moet je in de goede volgorde uitvoeren. Onderstaande drie acties kosten tijd *(de acties zijn asynchroon)*, wat betekent dat je moet wachten tot het klaar is, voordat je verder kan.
+
+- laden van een CSV
+- trainen van een neural network
+- doen van een voorspelling
+
+We gebruiken `callback` functies en `async await` om te wachten totdat een voorgaande functie klaar is. We maken `nn` een globale variabele, zodat we deze in alle functies kunnen gebruiken.
+
+```javascript
+let nn
+
+function loadData(){
+    Papa.parse("...", {
+        ...
+        complete: results => checkData(...)
+    })
+}
+
+function checkData(...) {
+    ...
+    nn.train({ epochs: 10 }, () => finishedTraining()) 
+}
+
+async function finishedTraining(){
+    let result = await nn.predict(...)
+    console.log(result)
+}
+```
 
 <br>
 <br>
@@ -199,30 +286,13 @@ updateChart("Predictions", myPredictions)
 
 # Inleveropdracht
 
-Bij de praktijkopdracht van week 7 ga je een neural network trainen met een CSV dataset uit deze repository. Ook ga je het model opslaan, zodat je niet telkens opnieuw hoeft te trainen.
+Bij de praktijkopdracht van week 7 ga je een neural network trainen met een CSV dataset uit deze repository. Ook ga je het model **opslaan**, zodat je niet telkens opnieuw hoeft te trainen.
 
 [Ga naar de inleveropdracht](./inleveropdracht.md)
 
 <br>
 <br>
 <br>
-
-### ⚠️ Async await
-
-> Let op het gebruik van `async await`. Zodra je ergens `await` nodig hebt, moet je zorgen dat dit binnen een `async` functie staat!
-
-```javascript
-async function doSomething() {
-    let result = await doComplicatedThing()
-    console.log("ready!")
-}
-```
-
-<br>
-<br>
-<br>
-<br>
-
 
 ## Documentatie
 

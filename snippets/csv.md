@@ -37,7 +37,7 @@ function loadData(){
 }
 
 function checkData(data) {
-    console.log(data)
+    console.table(data)
 }
 ```
 [Papa Parse Documentatie](https://www.papaparse.com)
