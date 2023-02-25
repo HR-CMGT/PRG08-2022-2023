@@ -43,7 +43,7 @@ Je krijgt dan een array die er zo uit ziet `[{x:10,y:20}, {x:15, y:33},...]`.
 Dit kan je doorgeven aan de scatterplot met de functie `createChart()`
 
 ```javascript
-import { createChart } from "scatterplot.js"
+import { createChart, updateChart } from "scatterplot.js"
 
 function cleanData(data) {
     console.table(data)
@@ -61,8 +61,6 @@ function cleanData(data) {
 Je kan achteraf nog punten toevoegen aan een bestaande grafiek.
 
 ```javascript
-import { updateChart } from "scatterplot.js"
-
 updateChart("New data", [{ x: 5, y: 45 }, { x: 8, y: 48 }])
 ```
 
