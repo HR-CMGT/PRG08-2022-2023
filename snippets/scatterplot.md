@@ -45,10 +45,10 @@ import { createChart } from "scatterplot.js"
 
 function cleanData(data) {
     const columns = data.map(car => ({
-        x: car.mpg,
-        y: car.horsepower,
+        x: car.horsepower,
+        y: car.mpg,
     }))
-    createChart(columns)
+    createChart(columns, "Horsepower", "MPG")
 }
 ```
 
@@ -65,38 +65,3 @@ updateChart("New data", [{ x: 5, y: 45 }, { x: 8, y: 48 }])
 <br>
 <br>
 <br>
-<br>
-
-## Scatterplot.js
-
-In het bestand `scatterplot.js` worden de functies van `chart.js` aangeroepen om de plot te tekenen. Hier kan je de labels en kleuren  aanpassen.
-
-```javascript
-const canvas = document.getElementById('myChart')
-
-export function createChart(columns) {
-    const config = {
-        type: 'scatter',
-        data: {
-            datasets: [{
-                label: 'Cars Miles per gallon versus Horsepower',
-                data: columns,
-                backgroundColor: 'rgb(99, 99, 255)'
-            }]
-        },
-        options: {
-            scales: {
-                x: {
-                    title: { display: true, text: 'Miles per Gallon' }
-                },
-                y: {
-                    title: { display: true, text: 'Horsepower' }
-                }
-            },
-            layout: { padding: 30 }
-        }
-    }
-
-    const myChart = new Chart(canvas, config)
-}
-```
