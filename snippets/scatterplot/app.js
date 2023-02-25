@@ -11,10 +11,11 @@ function loadData() {
 
 function cleanData(data) {
     const columns = data.map(car => ({
-        x: car.mpg,
-        y: car.horsepower,
+        x: car.horsepower,
+        y: car.mpg,
     }))
-    createChart(columns)
+    createChart(columns, "Horsepower", "MPG")
+    
 }
 
 loadData()

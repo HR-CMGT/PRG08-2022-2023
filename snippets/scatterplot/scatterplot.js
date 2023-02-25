@@ -1,23 +1,26 @@
 const canvas = document.getElementById('myChart')
 let myChart
 
-export function createChart(columns) {
+// documentatie 
+// https://www.chartjs.org/docs/latest/charts/scatter.html
+
+export function createChart(columns, labelx, labely){
     const config = {
         type: 'scatter',
         data: {
             datasets: [{
-                label: 'Cars Miles per gallon versus Horsepower',
+                label: `${labelx} vs ${labely}`,
                 data: columns,
-                backgroundColor: 'rgb(99, 99, 255)'
+                backgroundColor: 'rgb(185, 185, 255)'
             }]
         },
         options: {
             scales: {
                 x: {
-                    title: { display: true, text: 'Miles per Gallon' }
+                    title: {display: true, text: labelx}
                 },
                 y: {
-                    title: { display: true, text: 'Horsepower' }
+                    title: {display: true, text: labely}
                 }
             },
             layout: {
@@ -31,11 +34,11 @@ export function createChart(columns) {
 
 // update an existing chart
 // https://www.chartjs.org/docs/latest/developers/updates.html
-export function updateChart(label, data) {
+export function updateChart(label, data){
     myChart.data.datasets.push({
         label,
         data,
-        backgroundColor: 'rgb(255, 99, 55)'
+        backgroundColor: 'rgb(255, 44, 44)'
     })
     myChart.update()
 }

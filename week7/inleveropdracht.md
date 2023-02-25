@@ -18,20 +18,21 @@ Laad een van de [datasets]() met [Papa Parse](https://github.com/HR-CMGT/PRG08-2
 - Mobile Phone prijzen bepalen aan de hand van de specs van een telefoon
 - Utrechtse huizenprijs bepalen aan de hand van ligging en eigenschappen van een huis
 - Wijn kwaliteit bepalen aan de hand van de chemische samenstelling van de wijn
-- Studenten dropout voorspellen aan de hand van anonieme studentgegevens Hogeschool Rotterdam
 - Regression dataset van [kaggle.com](https://www.kaggle.com/search?q=tag%3A%22regression%22+in%3Adatasets) 
 
 ## Data voorbereiden
 
 Bekijk de geladen CSV data via `console.table(data)` om te zien of het inladen goed is gegaan.
 
-Verwijder rijen met ongeldige waarden zoals "null", "", "undefined", etc. Een volledig irrelevante kolom kan je ook verwijderen (bv. "id").
+Verwijder rijen met ongeldige waarden zoals "null", "", "undefined", etc. 
 
-Het is ook handiger als je *kolomnamen* geen spaties of vreemde tekens bevatten. Vervang bijvoorbeeld "RAM (GB)" door "ramGb".
+Het is handig als je *kolomnamen* geen spaties of vreemde tekens bevatten. Vervang bijvoorbeeld "RAM (GB)" door "ramGb".
 
 Controleer welke kolommen getallen bevatten. Deze kan je gebruiken om te trainen. Je kan twee kolommen in een scatterplot tekenen voor een visualisatie.
 
-Soms kan een kolom met teksten wel belangrijk zijn. Bij de telefoons kan het merk uitmaken voor de prijs. Je kan in dit geval alle merknamen via `find + replace` te vervangen door nummers, bijvoorbeeld:
+Niet alle kolommen zijn belangrijk, bijvoorbeeld een "ID" zegt niets over de waarde van een telefoon.
+
+Een kolom met tekst kan wel belangrijk zijn, bv. het merk van een telefoon. Je kan teksten via `find + replace` vervangen door nummers, bijvoorbeeld:
 
 ```html
 APPLE = 1
@@ -53,10 +54,15 @@ Je voorspelling wordt veel nauwkeuriger als je met meerdere kolommen traint. Voo
 
 ```javascript
 function checkData(data){
+    // data voorbereiden
     data.sort(() => (Math.random() - 0.5))
     let trainData = data.slice(0, Math.floor(data.length * 0.8))
     let testData = data.slice(Math.floor(data.length * 0.8) + 1)
 
+    // neural network aanmaken
+    nn = ml5.neuralNetwork({ task: 'regression', debug: true })
+
+    // data toevoegen aan neural network
     for(let car of trainData){
         nn.addData({ horsepower: car.horsepower, weight: car.weight, cylinders:car.cylinders }, { mpg: car.mpg })
     }

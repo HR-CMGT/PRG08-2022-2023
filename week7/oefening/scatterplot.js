@@ -4,12 +4,12 @@ let myChart
 // documentatie 
 // https://www.chartjs.org/docs/latest/charts/scatter.html
 
-export function createChart(columns){
+export function createChart(columns, labelx, labely){
     const config = {
         type: 'scatter',
         data: {
             datasets: [{
-                label: 'Cars Miles per gallon versus Horsepower',
+                label: `${labelx} vs ${labely}`,
                 data: columns,
                 backgroundColor: 'rgb(185, 185, 255)'
             }]
@@ -17,10 +17,10 @@ export function createChart(columns){
         options: {
             scales: {
                 x: {
-                    title: {display: true, text: 'Horsepower'}
+                    title: {display: true, text: labelx}
                 },
                 y: {
-                    title: {display: true, text: 'Miles per Gallon'}
+                    title: {display: true, text: labely}
                 }
             },
             layout: {

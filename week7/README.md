@@ -73,7 +73,7 @@ const chartdata = data.map(car => ({
 console.log(chartdata)
 
 // chartjs aanmaken
-createChart(chartdata)
+createChart(chartdata, "Horsepower", "MPG")
 ```
 <br>
 <br>
