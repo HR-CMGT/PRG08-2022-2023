@@ -34,7 +34,9 @@ function loadData() {
 
 ### Data opschonen
 
-Hier gebruiken we de `array.map()` functie om alleen de benodigde data uit de CSV te halen. We gebruiken de `mpg` (miles per gallon) en de `horsepower` kolom als X en Y as.
+Na het inladen van de CSV kijk je met `console.table()` of de data goed is binnengekomen.
+
+Omdat een scatterplot data tekent op een `x` en `y` as, moeten we hiervoor twee kolommen kiezen uit de CSV file. We gebruiken `array.map()` om de `mpg` (miles per gallon) en de `horsepower` kolommen om te zetten naar `x` en `y`.
 
 Je krijgt dan een array die er zo uit ziet `[{x:10,y:20}, {x:15, y:33},...]`. 
 
@@ -44,6 +46,8 @@ Dit kan je doorgeven aan de scatterplot met de functie `createChart()`
 import { createChart } from "scatterplot.js"
 
 function cleanData(data) {
+    console.table(data)
+
     const columns = data.map(car => ({
         x: car.horsepower,
         y: car.mpg,
