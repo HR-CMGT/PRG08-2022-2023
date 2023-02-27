@@ -82,7 +82,7 @@ function trainNeuralNetwork(trainData) {
 
 ## Classification
 
-Als het trainen klaar is kan je een voorspelling doen voor het weer van morgen. Je kan dit doen met zelf ingevoerde data uit een input field, of met de `testData`. 
+Als het trainen klaar is kan je een voorspelling doen voor het weer van morgen. Je kan dit doen met zelf ingevoerde data of met de `testData`. 
 
 ```javascript
 async function finishedTraining() {

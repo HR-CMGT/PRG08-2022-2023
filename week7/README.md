@@ -243,19 +243,6 @@ async function finishedTraining() {
 <br>
 <br>
 
-# Trainen met arrays of objecten
-
-In al deze voorbeelden trainen we met objecten. Hierdoor kan je aan de code makkelijk zien welke kolommen je gebruikt. Je kan een ML5 Neural Network ook trainen met arrays. Let op dat als je dit doet, dat je `predict()` ook met een array moet doen.
-
-```javascript
-nn.addData([car.horsepower], [car.mpg])
-nn.predict([90])
-```
-
-<br>
-<br>
-<br>
-
 # Volgorde in je code
 
 De voorbeeldcode uit dit document moet je in de goede volgorde uitvoeren. Onderstaande drie acties kosten tijd *(de acties zijn asynchroon)*, wat betekent dat je moet wachten tot het klaar is, voordat je verder kan.
@@ -272,19 +259,32 @@ let nn
 function loadData(){
     Papa.parse("...", {
         ...
-        complete: results => checkData(...)
+        complete: results => checkData(...)             // callback
     })
 }
 
 function checkData(...) {
     ...
-    nn.train({ epochs: 10 }, () => finishedTraining()) 
+    nn.train({ epochs: 10 }, () => finishedTraining())  // callback
 }
 
 async function finishedTraining(){
-    let result = await nn.predict(...)
+    let result = await nn.predict(...)                  // async await
     console.log(result)
 }
+```
+
+<br>
+<br>
+<br>
+
+# Trainen met arrays
+
+In al deze voorbeelden trainen we met objecten. Je kan een ML5 Neural Network ook trainen met arrays. Let op dat als je dit doet, dat je `predict()` ook met een array moet doen.
+
+```javascript
+nn.addData([car.horsepower, car.battery, car.weight], [car.mpg])
+nn.predict([90, 1000, 2000])
 ```
 
 <br>
