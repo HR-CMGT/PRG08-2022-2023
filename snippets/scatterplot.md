@@ -34,21 +34,25 @@ function loadData() {
 
 ### Data opschonen
 
-Hier gebruiken we de `array.map()` functie om alleen de benodigde data uit de CSV te halen. We gebruiken de `mpg` (miles per gallon) en de `horsepower` kolom als X en Y as.
+Na het inladen van de CSV kijk je met `console.table()` of de data goed is binnengekomen.
+
+Omdat een scatterplot data tekent op een `x` en `y` as, moeten we hiervoor twee kolommen kiezen uit de CSV file. We gebruiken `array.map()` om de `mpg` (miles per gallon) en de `horsepower` kolommen om te zetten naar `x` en `y`.
 
 Je krijgt dan een array die er zo uit ziet `[{x:10,y:20}, {x:15, y:33},...]`. 
 
 Dit kan je doorgeven aan de scatterplot met de functie `createChart()`
 
 ```javascript
-import { createChart } from "scatterplot.js"
+import { createChart, updateChart } from "scatterplot.js"
 
 function cleanData(data) {
+    console.table(data)
+
     const columns = data.map(car => ({
-        x: car.mpg,
-        y: car.horsepower,
+        x: car.horsepower,
+        y: car.mpg,
     }))
-    createChart(columns)
+    createChart(columns, "Horsepower", "MPG")
 }
 ```
 
@@ -57,46 +61,9 @@ function cleanData(data) {
 Je kan achteraf nog punten toevoegen aan een bestaande grafiek.
 
 ```javascript
-import { updateChart } from "scatterplot.js"
-
 updateChart("New data", [{ x: 5, y: 45 }, { x: 8, y: 48 }])
 ```
 
 <br>
 <br>
 <br>
-<br>
-
-## Scatterplot.js
-
-In het bestand `scatterplot.js` worden de functies van `chart.js` aangeroepen om de plot te tekenen. Hier kan je de labels en kleuren  aanpassen.
-
-```javascript
-const canvas = document.getElementById('myChart')
-
-export function createChart(columns) {
-    const config = {
-        type: 'scatter',
-        data: {
-            datasets: [{
-                label: 'Cars Miles per gallon versus Horsepower',
-                data: columns,
-                backgroundColor: 'rgb(99, 99, 255)'
-            }]
-        },
-        options: {
-            scales: {
-                x: {
-                    title: { display: true, text: 'Miles per Gallon' }
-                },
-                y: {
-                    title: { display: true, text: 'Horsepower' }
-                }
-            },
-            layout: { padding: 30 }
-        }
-    }
-
-    const myChart = new Chart(canvas, config)
-}
-```
