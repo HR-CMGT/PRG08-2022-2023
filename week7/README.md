@@ -243,6 +243,14 @@ async function finishedTraining() {
 <br>
 <br>
 
+# Trainen met arrays of objecten
+
+In al deze voorbeelden trainen we met objecten. Hierdoor kan je aan de code makkelijk zien welke kolommen je gebruikt. Je kan een ML5 Neural Network ook trainen met arrays. Let op dat als je dit doet, dat je `predict()` ook met een array moet doen.
+
+```javascript
+nn.addData([car.horsepower], [car.mpg])
+nn.predict([90])
+```
 
 <br>
 <br>

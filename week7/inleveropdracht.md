@@ -1,6 +1,8 @@
 
 # Inleveropdracht week 7
 
+Zorg dat je de [lesopdracht](./README.md) hebt afgerond. Hierin train je een neural network met de "cars" dataset, en je leert een scatterplot te tekenen.
+
 - Kies een CSV file uit de data map. Je mag ook zelf een CSV file zoeken die geschikt is voor regression (voorspellen van een waarde).
 - Train het neural network met meerdere kolommen. Bepaal hoeveel epochs en welke kolommen je nodig hebt. 
 - Sla het model op.
@@ -50,7 +52,11 @@ Je kan je CSV data het beste editen in Excel, Google Sheets of Numbers. Kies ver
 
 # Trainen met meerdere kolommen
 
-Je voorspelling wordt veel nauwkeuriger als je met meerdere kolommen traint. Voordat we dit gaan doen is het handig om je data op te splitsen in train en testdata.
+Je voorspelling wordt veel nauwkeuriger als je met meerdere kolommen traint. 
+
+> *Je kan een scatterplot gebruiken om te zien welke kolommen nuttige informatie bevatten!*
+
+Voordat we gaan trainen is het handig om je data op te splitsen in train en testdata.
 
 ```javascript
 function checkData(data){
