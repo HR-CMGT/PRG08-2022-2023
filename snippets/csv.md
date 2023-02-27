@@ -81,17 +81,29 @@ Met [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/G
 
 ```javascript   
 // check of waarden niet leeg zijn
-let cleanedData = data.filter(car => (car.mpg != null && car.horsepower != null))
+const cleanData = data.filter(car => (
+    car.mpg != null && 
+    car.horsepower != null
+))
 
-// check of waarden wel een nummer zijn
-let cleanedData = data.filter(car => (!isNaN(car.mpg) && !isNaN(car.horsepower)))
+// check of waarden een nummer zijn
+const cleanData = data.filter(car => (
+    !isNaN(car.mpg) && 
+    !isNaN(car.horsepower)
+))
 ```
-Je kan deze functies aan elkaar vast plakken, dat ziet er zo uit:
+Je kan `map()` en `filter()` aan elkaar plakken, dat ziet er bv. zo uit:
 
 ```javascript
-let cleanedData = data.map(...)
-                      .filter(...)
-                      .filter(...)
+const cleanData = data
+    .map(day => ({
+        MinTemp: day.MinTemp,
+        MaxTemp: day.MaxTemp
+    }))
+    .filter(day => 
+        typeof day.MinTemp === "number" &&
+        typeof day.MaxTemp === "number"
+    )
 ```
 
 <br>
