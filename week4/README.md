@@ -69,18 +69,18 @@ const rightEye = detections[0].landmarks.getRightEye()
 
 ## <a name="hand"></a> Handpose API
 
-De HANDPOSE API geeft een array van "landmark points" voor de vingers van je hand in 3D.
+De HANDPOSE API geeft een array van "landmark points" voor je vingers in 3D. Je kan via `annotations` de posities uitlezen van: `indexFinger,middleFinger,palmBase,pinky,ringFinger,thumb`
 
 ![handpose](../images/handpose.png)
 
 ```javascript
 const predictions = await model.estimateHands(video)
 if (predictions.length > 0) {
-    const result = predictions[0].landmarks
-    // x, y, z van de top van de wijsvinger:
-    let y = predictions[0].landmarks[8][0]
-    let x = predictions[0].landmarks[8][1]
-    let z = predictions[0].landmarks[8][2]
+    // indexFinger,middleFinger,palmBase,pinky,ringFinger,thumb
+    let pinky = predictions[0].annotations.pinky
+    // pak de x,y,z, van het eerste botje van de pink
+    let [y,x,z] = pinky[0]
+    console.log(x,y,z)
 }
 ```
 
