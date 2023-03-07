@@ -2,8 +2,6 @@ const log = document.querySelector("#array")
 const video = document.querySelector("#video")
 const startBtn = document.querySelector("button")
 
-let initialized = false
-
 //
 // start de app - aangeroepen onderin dit document
 //
@@ -11,24 +9,25 @@ function initApplication() {
     Notification.requestPermission()
     new Notification("Starting the app")
 
-    startWebcam()
+    setupCamera()
     video.addEventListener("play", () => generateLandmarks())
 }
 
-//
-// function to read the webcam
-//
-function startWebcam() {
-    if (!initialized) {
-        navigator.getUserMedia(
-            { video: {} },
-            stream => {
-                initialized = true;
-                video.srcObject = stream
-            },
-            err => console.error(err)
-        )
+async function setupCamera() {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        throw new Error("Webcam not available")
     }
+
+    const stream = await navigator.mediaDevices.getUserMedia({
+        audio: false,
+        video: { 
+            facingMode: "user",
+            width: 720,
+            height: 405
+        } 
+    })
+    video.srcObject = stream
+    console.log(video.height)
 }
 
 //

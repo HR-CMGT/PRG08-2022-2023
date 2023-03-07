@@ -14,11 +14,11 @@ body {
 }
 
 div {
-    background-color:rgb(36, 32, 65);
-    color:white;
+    background-color: rgb(36, 32, 65);
+    color: white;
     font-family: monospace;
-    min-height:20px;
-    width:720px;
+    min-height: 20px;
+    width: 720px;
 }
 
 .video-wrapper {
