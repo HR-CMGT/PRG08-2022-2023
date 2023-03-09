@@ -5,19 +5,6 @@ const log = document.querySelector("#array")
 const VIDEO_WIDTH = 720
 const VIDEO_HEIGHT = 405
 
-// video fallback
-navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia
-
-// array posities van de vingerkootjes
-let fingerLookupIndices = {
-    thumb: [0, 1, 2, 3, 4],
-    indexFinger: [0, 5, 6, 7, 8],
-    middleFinger: [0, 9, 10, 11, 12],
-    ringFinger: [0, 13, 14, 15, 16],
-    pinky: [0, 17, 18, 19, 20]
-}
-
-
 //
 // start de applicatie
 //
@@ -90,58 +77,36 @@ async function startLandmarkDetection(video) {
 async function predictLandmarks() {
     ctx.drawImage(video, 0, 0, videoWidth, videoHeight, 0, 0, canvas.width, canvas.height)
     // prediction!
-    const predictions = await model.estimateHands(video)
+    const predictions = await model.estimateHands(video) // ,true voor flip
     if (predictions.length > 0) {
-        const result = predictions[0].landmarks
-        drawKeypoints(ctx, result, predictions[0].annotations)
-        logData(predictions)
+        drawHand(ctx, predictions[0].landmarks, predictions[0].annotations)
     }
-
     // 60 keer per seconde is veel, gebruik setTimeout om minder vaak te predicten
     requestAnimationFrame(predictLandmarks)
-
     // setTimeout(()=>predictLandmarks(), 1000)
 }
 
-//
-// toon de eerste 20 waarden in een log - elk punt heeft een X, Y, Z waarde
-//
-function logData(predictions) {
-    // via annotiations kan je rechtstreeks elke vinger uitlezen:
-    // indexFinger,middleFinger,palmBase,pinky,ringFinger,thumb
-    // console.log(predictions[0].annotations.pinky)
-
-
-    // voorbeeld: bekijk x, y, z van het eerste botje van je pink:
-    let [y, x, z] = predictions[0].annotations.pinky[0]
-    console.log(x, y, z)
-
-
-    // met deze code genereren we een reeks getallen voor alle botjes van de hele hand
-    let str = ""
-    for (let i = 0; i < 20; i++) {
-        str += predictions[0].landmarks[i][0] + ", " + predictions[0].landmarks[i][1] + ", " + predictions[0].landmarks[i][2] + ", "
-    }
-    log.innerText = str
-}
 
 //
-// teken hand en vingers
+// teken hand en vingers met de x,y coordinaten. de z waarde tekenen we niet.
 //
-function drawKeypoints(ctx, keypoints) {
-    const keypointsArray = keypoints;
+function drawHand(ctx, keypoints, annotations) {
+    // toon alle x,y,z punten van de hele hand in het log venster
+    log.innerText = keypoints.flat()
 
-    for (let i = 0; i < keypointsArray.length; i++) {
-        const y = keypointsArray[i][0]
-        const x = keypointsArray[i][1]
+    // punten op alle kootjes kan je rechtstreeks uit keypoints halen 
+    for (let i = 0; i < keypoints.length; i++) {
+        const y = keypoints[i][0]
+        const x = keypoints[i][1]
         drawPoint(ctx, x - 2, y - 2, 3)
     }
 
-    const fingers = Object.keys(fingerLookupIndices)
-    for (let i = 0; i < fingers.length; i++) {
-        const finger = fingers[i]
-        const points = fingerLookupIndices[finger].map(idx => keypoints[idx])
-        drawPath(ctx, points, false)
+    // palmbase als laatste punt toevoegen aan elke vinger
+    let palmBase = annotations.palmBase[0]
+    for (let key in annotations) {
+        const finger = annotations[key]
+        finger.unshift(palmBase)
+        drawPath(ctx, finger, false)
     }
 }
 

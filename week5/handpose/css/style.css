@@ -18,13 +18,14 @@ body {
     color: white;
     font-family: monospace;
     min-height: 20px;
-    width:720px;
+    width: 720px;
+    word-wrap: break-word;
 }
 
 video {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    display:none;
+    display: none;
     width: auto;
     height: auto;
 }
