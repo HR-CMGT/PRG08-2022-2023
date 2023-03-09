@@ -6,7 +6,7 @@ const VIDEO_WIDTH = 720
 const VIDEO_HEIGHT = 405
 
 // video fallback
-navigator.getUserMedia = navigator.getUserMedia ||navigator.webkitGetUserMedia || navigator.mozGetUserMedia
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia
 
 // array posities van de vingerkootjes
 let fingerLookupIndices = {
@@ -88,7 +88,7 @@ async function startLandmarkDetection(video) {
 // predict de locatie van de vingers met het model
 //
 async function predictLandmarks() {
-    ctx.drawImage(video,0,0,videoWidth,videoHeight,0,0,canvas.width,canvas.height)
+    ctx.drawImage(video, 0, 0, videoWidth, videoHeight, 0, 0, canvas.width, canvas.height)
     // prediction!
     const predictions = await model.estimateHands(video)
     if (predictions.length > 0) {
@@ -107,8 +107,18 @@ async function predictLandmarks() {
 // toon de eerste 20 waarden in een log - elk punt heeft een X, Y, Z waarde
 //
 function logData(predictions) {
+    // via annotiations kan je rechtstreeks elke vinger uitlezen:
+    // indexFinger,middleFinger,palmBase,pinky,ringFinger,thumb
+    // console.log(predictions[0].annotations.pinky)
+
+
+    // voorbeeld: bekijk x, y, z van het eerste botje van je pink:
+    let [y, x, z] = predictions[0].annotations.pinky[0]
+    console.log(x, y, z)
+
+
+    // met deze code genereren we een reeks getallen voor alle botjes van de hele hand
     let str = ""
-    // console.log(predictions[0].landmarks)
     for (let i = 0; i < 20; i++) {
         str += predictions[0].landmarks[i][0] + ", " + predictions[0].landmarks[i][1] + ", " + predictions[0].landmarks[i][2] + ", "
     }
