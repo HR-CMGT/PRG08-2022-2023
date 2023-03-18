@@ -93,7 +93,7 @@ if (predictions.length > 0) {
 ```
 
 - [Het voorbeeldproject vind je in de handpose map](./handpose).
-- [Handpose github](https://github.com/tensorflow/tfjs-models/tree/master/handpose)
+- [De homepage van Tensorflow Handpose vind je hier](https://github.com/tensorflow/tfjs-models/tree/master/handpose). Let op dat je `npm install` nodig hebt als je je voorbeeldcode rechtstreeks van de tensorflow website haalt.
 
 <br>
 <br>
