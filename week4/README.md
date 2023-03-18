@@ -92,7 +92,7 @@ if (predictions.length > 0) {
 }
 ```
 
-- [Het voorbeeldproject vind je in de handpose map](./handpose).
+- [Het bovenstaande voorbeeldproject vind je in de handpose map](./handpose). Hier kan je mee verder voor week 4 en week 5.
 - [De homepage van Tensorflow Handpose vind je hier](https://github.com/tensorflow/tfjs-models/tree/master/handpose). Let op dat je `npm install` nodig hebt als je je voorbeeldcode rechtstreeks van de tensorflow website haalt.
 
 <br>
