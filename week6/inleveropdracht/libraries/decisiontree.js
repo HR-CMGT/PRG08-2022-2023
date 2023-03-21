@@ -3,19 +3,47 @@
  * builder - contains training set and some configuration parameters
  */
 export class DecisionTree {
+
+    restorePredicates(obj) {
+        for (const property in obj) {
+
+            if (obj.hasOwnProperty("predicateName")) {
+                obj.predicate = this.predicates[obj.predicateName];
+            }
+
+            if (obj.hasOwnProperty(property)) {
+                if (typeof obj[property] == "object") {
+                    this.restorePredicates(obj[property]);
+                }
+            }
+        }
+    }
+
     constructor(config) {
         this.predicates = {
             '==': function (a, b) { return a == b },
             '>=': function (a, b) { return a >= b }
         }
-        this.root = this.buildDecisionTree({
-            trainingSet: config.trainingSet,
-            ignoredAttributes: this.arrayToHashSet(config.ignoredAttributes),
-            categoryAttr: config.categoryAttr || 'category',
-            minItemsCount: config.minItemsCount || 1,
-            entropyThrehold: config.entropyThrehold || 0.01,
-            maxTreeDepth: config.maxTreeDepth || 70
-        })
+        // load existing tree from root
+        if (config.hasOwnProperty("root")) {
+            console.log("lead dt")
+            this.root = config.root;
+            // functions cannot be stored with stringify, so restore the predicates using the predicate names
+            this.restorePredicates(this.root);
+
+            console.log(this.root)
+        // or create new from config object
+        } else {
+            console.log("create new")
+            this.root = this.buildDecisionTree({
+                trainingSet: config.trainingSet,
+                ignoredAttributes: this.arrayToHashSet(config.ignoredAttributes),
+                categoryAttr: config.categoryAttr || 'category',
+                minItemsCount: config.minItemsCount || 1,
+                entropyThrehold: config.entropyThrehold || 0.01,
+                maxTreeDepth: config.maxTreeDepth || 70
+            })
+        }
     }
 
     // public predict
@@ -24,7 +52,7 @@ export class DecisionTree {
     }
 
     /**
-     * Transforming array to object with such attributes 
+     * Transforming array to object with such attributes
      * as elements of array (afterwards it can be used as HashSet)
      */
     arrayToHashSet(array) {
@@ -258,7 +286,7 @@ export class DecisionTree {
 
     /**
      * Splitting array of objects by value of specific attribute, using specific predicate and pivot.
-     * Items which matched by predicate will be copied to the new array called 'match', and the rest of the items 
+     * Items which matched by predicate will be copied to the new array called 'match', and the rest of the items
      * will be copied to array with name 'notMatch'
      * items - array of objects
      * attr  - variable with name of attribute,which embedded in each object
@@ -293,7 +321,7 @@ export class DecisionTree {
     toJSON() {
         return this.treeToJson(this.root)
     }
-    
+
     // Recursive (DFS) function for displaying inner structure of decision tree
     treeToJson(tree) {
         // end leaf = prediction
@@ -314,6 +342,12 @@ export class DecisionTree {
                 }
             ]
         }
+    }
+
+    // create a string representation to save the tree
+    toString() {
+        console.log({ root: this.root });
+        return JSON.stringify({ root: this.root });
     }
 }
 
@@ -365,8 +399,8 @@ export class RandomForest {
      * Each of decision tree classifying item
      * ('voting' that item corresponds to some class).
      *
-     * This function returns hash, which contains 
-     * all classifying results, and number of votes 
+     * This function returns hash, which contains
+     * all classifying results, and number of votes
      * which were given for each of classifying results
      */
     predictRandomForest(forest, item) {
