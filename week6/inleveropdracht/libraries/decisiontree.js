@@ -345,7 +345,7 @@ export class DecisionTree {
     }
 
     // create a string representation to save the tree
-    toString() {
+    stringify() {
         console.log({ root: this.root });
         return JSON.stringify({ root: this.root });
     }
