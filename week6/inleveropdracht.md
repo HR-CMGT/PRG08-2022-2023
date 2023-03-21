@@ -183,19 +183,20 @@ Kan je jouw confusion matrix in de HTML file tonen?
 <br>
 
 ## Model opslaan als JSON
+  
+**Let op! Zorg dat je de laatste versie van decisiontree.js gebruikt voor onderstaande functionaliteit!**
 
-Als je het model hebt gemaakt (de Decision Tree), dan heb je de originele data niet meer nodig. Je kan de decision tree als JSON opvragen:
+Als je het model hebt gemaakt (de Decision Tree), dan heb je de originele data niet meer nodig. Je kunt de decision tree als JSON-string opvragen, en daarna opslaan in een bestand:
 
 ```javascript
 let decisionTree = new DecisionTree({...})
 
-// de tree kan je opvragen als JSON
-let json = decisionTree.toJSON()
-let jsonString = JSON.stringify(json)
+// de tree kan je opvragen als JSON-string
+let jsonString = decisionTree.stringify()
 console.log(jsonString)
 ```
 
-Sla deze JSON op in een apart bestand (Bv. met `copy>paste` vanuit de console 😬)
+Sla deze JSON-string op in een apart bestand (Bv. met `copy>paste` vanuit de console 😬)
 
 <br>
 <br>
@@ -207,7 +208,11 @@ Sla deze JSON op in een apart bestand (Bv. met `copy>paste` vanuit de console �
 Hierin laad je het JSON model. Op deze manier kan je de decision tree gebruiken zonder dat je het originele CSV bestand nog nodig hebt.
 - Laat de gebruiker voorspellingen doen door data in te voeren.
 - Je kan [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) gebruiken om JSON te laden. 
-
+```javascript
+fetch("decisiontree.json")
+        .then((response) => response.json())
+        .then((data) => showTree(new DecisionTree(data)));
+```
 
 <br>
 <br>
