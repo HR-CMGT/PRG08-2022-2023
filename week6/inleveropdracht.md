@@ -186,17 +186,12 @@ Kan je jouw confusion matrix in de HTML file tonen?
   
 **Let op! Zorg dat je de laatste versie van decisiontree.js gebruikt voor onderstaande functionaliteit!**
 
-Als je het model hebt gemaakt (de Decision Tree), dan heb je de originele data niet meer nodig. Je kunt de decision tree als JSON-string opvragen, en daarna opslaan in een bestand:
+Sla het model op door de JSON uit de console te kopiëren en in een `model.json` bestand op te slaan. Het doel hiervan is dat je de originele data niet meer nodig hebt om voorspellingen te kunnen doen.
 
 ```javascript
-let decisionTree = new DecisionTree({...})
-
-// de tree kan je opvragen als JSON-string
-let jsonString = decisionTree.stringify()
-console.log(jsonString)
+let json = decisionTree.stringify()
+console.log(json)
 ```
-
-Sla deze JSON-string op in een apart bestand (Bv. met `copy>paste` vanuit de console 😬)
 
 <br>
 <br>
@@ -205,13 +200,24 @@ Sla deze JSON-string op in een apart bestand (Bv. met `copy>paste` vanuit de con
 ## Model inladen in web app
 
 - Maak een aparte HTML pagina aan met een gebruiksvriendelijke UI.
-Hierin laad je het JSON model. Op deze manier kan je de decision tree gebruiken zonder dat je het originele CSV bestand nog nodig hebt.
+Hierin laad je het JSON model middels `fetch`. Op deze manier kan je de decision tree gebruiken zonder dat je het originele CSV bestand nog nodig hebt.
 - Laat de gebruiker voorspellingen doen door data in te voeren.
-- Je kan [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) gebruiken om JSON te laden. 
 ```javascript
-fetch("decisiontree.json")
+
+function loadSavedModel() {
+    fetch("./model.json")
         .then((response) => response.json())
-        .then((data) => showTree(new DecisionTree(data)));
+        .then((model) => modelLoaded(model))
+}
+
+function modelLoaded(model) {
+    let decisionTree = new DecisionTree(model)
+
+    // test om te zien of het werkt
+    let passenger = { Sex: "male", Age: 22, SibSp: 2, Parch: 2 }
+    let prediction = decisionTree.predict(passenger)
+    console.log("predicted " + prediction)
+}
 ```
 
 <br>
