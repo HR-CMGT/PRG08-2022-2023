@@ -1,0 +1,16 @@
+body {
+    background-color: lightblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    font-size:1.1em;
+    padding:4px;
+    margin:4px;
+    width:120px;
+}
+
+button {
+    font-size:1.1em;
+    padding:4px;
+}

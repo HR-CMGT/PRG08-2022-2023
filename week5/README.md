@@ -92,5 +92,6 @@ In de inleveropdracht ga je KNN gebruiken om posedata te classificeren.
 ## Links
 
 - [Codepen Demo](https://codepen.io/Qbrid/pen/OwpjLX)
+- [Voorbeeld recommender system met KNN](./recommender/)
 - [KNear Github](https://github.com/NathanEpstein/KNear)
 - [Uitleg K-Nearest-Neighbour met Javascript](https://burakkanber.com/blog/machine-learning-in-js-k-nearest-neighbor-part-1/)
