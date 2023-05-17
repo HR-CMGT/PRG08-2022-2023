@@ -198,20 +198,61 @@ Je kan de waarden uit een `state` halen die bij een invulveld hoort, zie hiervoo
 
 # Neural Networks
 
-Omdat ML5 niet werkt in React Native, kan je een andere library gebruiken: 
+Omdat ML5 niet werkt in React Native, kan je tensorflowJS gebruiken. Je kan de `tf-vis` visualisatie niet gebruiken.
 
-- [BrainJS](https://brain.js.org/#/)
-- [TensorFlow voor React Native](https://blog.tensorflow.org/2020/02/tensorflowjs-for-react-native-is-here.html)
-- [Codesandbox TensorFlow examples](https://codesandbox.io/examples/package/@tensorflow/tfjs-react-native)
+
+```bash
+npm install @tensorflow/tfjs
+```
+```js
+import * as tf from '@tensorflow/tfjs'
+```
+Je kan nu je neural network bouwen op dezelfde manier als in vanilla javascript
+
+```js
+// voorbeeld met auto's, weight en horsepower versus mpg
+const inputs = [[2000,20],[1800,12]]
+const outputs = [10,20]
+
+const inputTensor = tf.tensor2d(inputs)
+const labelTensor = tf.tensor1d(outputs)
+// normalize
+const [inputMax, inputMin, labelMax, labelMin] = [inputTensor.max(), inputTensor.min(), labelTensor.max(), labelTensor.min()]
+const normalizedInputs = inputTensor.sub(inputMin).div(inputMax.sub(inputMin))
+const normalizedLabels = labelTensor.sub(labelMin).div(labelMax.sub(labelMin))
+
+// het aantal features waarop je wil trainen. in het voorbeeld van autos is het horsepower, weight
+const numFeatures = inputs[0].length
+const model = tf.sequential()
+
+// bouw de layers
+model.add(tf.layers.dense({ units: 8, inputShape: [numFeatures] }))
+model.add(tf.layers.dense({ units: 1 }))
+model.compile({ loss: 'meanSquaredError', optimizer: 'sgd' })
+
+// train het model
+await model.fit(normalizedInputs, normalizedLabels, {
+    epochs: 60
+})
+```
+
 
 <br><br><br>
 
 # Image Prediction
 
-Dit kan je doen met Tensorflow, hieronder vind je een aantal voorbeelden:
+Dit kan je doen met de Tensorflow voor React library.
+
+```bash
+npm install @tensorflow/tfjs-react-native
+```
+
+
+Hieronder vind je een aantal voorbeelden:
 
 - [Een foto voorspellen](https://blog.tensorflow.org/2020/02/tensorflowjs-for-react-native-is-here.html)
 - [Een bodypose voorspellen](https://www.tensorflow.org/js/tutorials/applications/react_native)
+- [Codesandbox TensorFlow examples](https://codesandbox.io/examples/package/@tensorflow/tfjs-react-native)
 
 <br><br><br>
 
