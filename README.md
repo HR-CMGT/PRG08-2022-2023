@@ -60,3 +60,4 @@ Hieronder vind je handige code snippets die je in je projecten kan gebruiken.
 - [Neural Networks hidden layers in ML5](./snippets/layers.md)
 - [Scatterplot tekenen met een CSV bestand](./snippets/scatterplot.md)
 - [Image recognition trainen op je eigen afbeeldingen](https://github.com/HR-CMGT/Machine-Learning-Readinglist/tree/master/extractfeatures)
+- [Machine Learning in React Native](./snippets/reactnative/)
