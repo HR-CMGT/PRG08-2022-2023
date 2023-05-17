@@ -13,12 +13,14 @@ In deze readme vind je de werkwijze voor het toepassen van een aantal algoritmes
 
 - Het laden van data en trainen van een model wil je maar 1 keer doen. Dit doe je in de `useEffect()` functie. Deze functie wordt 1 keer uitgevoerd bij het laden van de app.
 - Ditzelfde geldt voor het laden van een getrained model.
-- Het model zelf moet bewaard blijven in het component, zodat je later de voorspellingen kan uitvoeren.
-- Dit kan je doen in een `state`, maar het nadeel hiervan is dat de state continu gemonitord wordt door React op wijzigingen. Dit is niet nodig, want het model verandert niet.
-- Daarom slaan we het model op met `useRef`.
-- Javascript algoritmes die gebruik maken van `window`, HTML elementen, CSS, of `<script>` tags, kan je niet gebruiken in React Native. 
-- Andere libraries werken vaak wel, maar je moet altijd controleren of een library een variant heeft voor React Native.
->*⚠️ Je hoeft het trainen van een model niet persé in React Native te doen. Meestal zal je een getrained model inladen. In onderstaande voorbeelden trainen we het model wel, zodat je de werkwijze kan zien.*
+- Het model zelf moet bewaard blijven in het component, zodat je later de voorspellingen kan uitvoeren. 
+- Dit kan je doen in een `state`, maar omdat state continu gemonitord wordt door React, onthouden we het model met `useRef`.
+- Javascript code die gebruik maakt van `window`, HTML elementen, CSS, `<script>` tags, of andere browser eigenschappen kan je niet gebruiken in React Native. 
+- Sommige libraries hebben een React Native variant.
+
+## Trainen van een model
+
+Je hoeft het trainen van een model niet persé in React Native te doen. Meestal zal je een getrained model inladen. In onderstaande voorbeelden trainen we het model wel, zodat je de werkwijze kan zien.
 
 <br>
 
@@ -156,7 +158,7 @@ React.useEffect(() => {
 
 # Decision Tree
 
-We gebruiken de Decision Tree JS code uit de PRG8 les, dit bestand kan je uit de les kopiëren naar je React Native project. We gaan voorspellen of Titanic passagiers de vakantie overleefd hebben, gebaseerd op hun geslacht, leeftijd en het aantal broers/zussen.
+We gebruiken de Decision Tree JS code uit de PRG8 les, dit bestand kan je uit de les kopiëren naar je React Native project. We gaan voorspellen of Titanic passagiers de vakantie overleefd hebben, gebaseerd op hun geslacht, leeftijd en het aantal broers/zussen. We tekenen de tree niet, omdat de visualisatie library uit PRG8 niet werkt in React Native. 
 
 ```js
 import { DecisionTree } from './decisiontree'
