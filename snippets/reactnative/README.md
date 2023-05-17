@@ -6,6 +6,9 @@ In deze readme vind je de werkwijze voor het toepassen van een aantal algoritmes
 - KNN
 - CSV laden
 - Decision Tree
+- Neural Networks
+- Image Prediction
+- ChatGPT Assistent
 
 <br><br><br>
 
@@ -190,3 +193,61 @@ const makePrediction = () => {
 Je kan de waarden uit een `state` halen die bij een invulveld hoort, zie hiervoor het bovenstaande KNN voorbeeld, en het uitgewerkte voorbeeld op Snacks.
 
 - [Uitgewerkt Online Voorbeeld](https://snack.expo.dev/@eerk/decisiontree)
+
+<br><br><br>
+
+# Neural Networks
+
+Omdat ML5 niet werkt in React Native, kan je een andere library gebruiken: 
+
+- [BrainJS](https://brain.js.org/#/)
+- [TensorFlow voor React Native](https://blog.tensorflow.org/2020/02/tensorflowjs-for-react-native-is-here.html)
+- [Codesandbox TensorFlow examples](https://codesandbox.io/examples/package/@tensorflow/tfjs-react-native)
+
+<br><br><br>
+
+# Image Prediction
+
+Dit kan je doen met Tensorflow, hieronder vind je een aantal voorbeelden:
+
+- [Een foto voorspellen](https://blog.tensorflow.org/2020/02/tensorflowjs-for-react-native-is-here.html)
+- [Een bodypose voorspellen](https://www.tensorflow.org/js/tutorials/applications/react_native)
+
+<br><br><br>
+
+# ChatGPT Assistent
+
+Het aanroepen van ChatGPT werkt hetzelfde als in de browser, omdat je `fetch` kan gebruiken:
+
+```js
+const callChatGPT = () => {
+    const sentence = "how can technology help to achieve sustainability goals?"
+    
+    const bearer = 'Bearer ' + 'JOUW_API_KEY_HIER'
+    const url = 'https://api.openai.com/v1/chat/completions'
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': bearer
+        },
+        body: JSON.stringify({
+            model: 'gpt-3.5-turbo',
+            messages: [
+                {
+                    role: 'user',
+                    content: sentence
+                }
+            ],
+            temperature: 0.7
+        })
+    })
+        .then(response => response.json())
+        .then(output => {
+            const explanation = output.choices[0].message.content
+            console.log(explanation)
+        })
+        .catch(error => console.log(error))
+}
+```
