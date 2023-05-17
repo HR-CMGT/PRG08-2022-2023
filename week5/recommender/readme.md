@@ -62,3 +62,10 @@ const chartdata = data.map(person => ({
 const chartlabels = data.map(person => person.name)
 createChart(chartdata, chartlabels, "Cooking", "Painting")
 ```
+
+<br><br><br>
+
+## Links
+
+- [Tutorial on Dev.to](https://dev.to/eerk/creating-a-recommender-system-in-10-lines-of-javascript-2409)
+- [Math explanation](https://becominghuman.ai/introduction-to-recommendation-system-in-javascript-74209c7ff2f7)
