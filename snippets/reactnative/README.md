@@ -143,6 +143,7 @@ React.useEffect(() => {
         readRemoteFile(titanicData, {
         download: true,
         header:true,
+        dynamictyping: true,
         complete: (results) => {
                 csvLoaded(results.data)
             }
@@ -198,43 +199,41 @@ Je kan de waarden uit een `state` halen die bij een invulveld hoort, zie hiervoo
 
 # Neural Networks
 
-Omdat ML5 niet werkt in React Native, kan je tensorflowJS gebruiken. Je kan de `tf-vis` visualisatie niet gebruiken.
-
+Omdat ML5 en BRAIN.JS niet werken in React Native, kan je [TensorFlowJS](https://www.tensorflow.org/js) gebruiken. 
 
 ```bash
 npm install @tensorflow/tfjs
-```
-```js
 import * as tf from '@tensorflow/tfjs'
 ```
-Je kan nu je neural network bouwen op dezelfde manier als in vanilla javascript
 
+PSEUDOCODE TENSORFLOW
 ```js
-// voorbeeld met auto's, weight en horsepower versus mpg
-const inputs = [[2000,20],[1800,12]]
-const outputs = [10,20]
+// twee autos met horsepower, weight versus mpg
+const inputTensor = tf.tensor2d([[30,3000],[12,1800]])
+const labelTensor = tf.tensor1d([10,22])
 
-const inputTensor = tf.tensor2d(inputs)
-const labelTensor = tf.tensor1d(outputs)
 // normalize
-const [inputMax, inputMin, labelMax, labelMin] = [inputTensor.max(), inputTensor.min(), labelTensor.max(), labelTensor.min()]
-const normalizedInputs = inputTensor.sub(inputMin).div(inputMax.sub(inputMin))
-const normalizedLabels = labelTensor.sub(labelMin).div(labelMax.sub(labelMin))
+const normalizedInputs = ...
+const normalizedLabels = ...
 
-// het aantal features waarop je wil trainen. in het voorbeeld van autos is het horsepower, weight
-const numFeatures = inputs[0].length
+// bouw het neural network
 const model = tf.sequential()
+model.add(...)         // add layer one 
+model.add(...)         // add layer two 
+model.compile(...)     // bouw het model
 
-// bouw de layers
-model.add(tf.layers.dense({ units: 8, inputShape: [numFeatures] }))
-model.add(tf.layers.dense({ units: 1 }))
-model.compile({ loss: 'meanSquaredError', optimizer: 'sgd' })
-
-// train het model
-await model.fit(normalizedInputs, normalizedLabels, {
-    epochs: 60
-})
+// train het neural network
+await model.fit(normalizedInputs, normalizedLabels, { epochs: 60} )
 ```
+PSEUDOCODE PREDICTION
+```js
+const userInput = tf.tensor2d([[20,2000]]) // auto met 20 horsepower, 2000 kg
+const normalizedUserInput = ...            // normalize de input
+const normalizedPrediction = model.predict(normalizedUserInput) 
+const actualPrediction = ...               // denormalize de prediction
+```
+- [Bekijk hier het volledige code voorbeeld](./tensorflowjs.md)
+- [Bekijk hier een werkend voorbeeld in Expo Snacks](https://snack.expo.dev/@eerk/tensorflow-neural-network)
 
 
 <br><br><br>
