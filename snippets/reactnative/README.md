@@ -23,7 +23,7 @@ In deze readme vind je de werkwijze voor het toepassen van een aantal algoritmes
 
 ## Trainen van een model
 
-Je hoeft het trainen van een model niet persé in React Native te doen. Meestal zal je een getrained model inladen. In onderstaande voorbeelden trainen we het model wel, zodat je de werkwijze kan zien.
+Je hoeft het trainen van een model niet persé in React Native te doen. Meestal zal je een getrained model inladen. De code blijft hetzelfde, je kan zelf bepalen op welk moment je de training wil doen. 
 
 <br>
 
@@ -99,7 +99,7 @@ export default function KNNExample() {
 
 ## Invulveld en resultaat tonen
 
-Je hebt de waarde uit een invulveld nodig om te weten wat de gebruiker wil voorspellen. Ook wil je het resultaat van de voorspelling tonen aan de gebruiker. Hiervoor kan je `state` gaan bijhouden. *(Een state voor elke waarde die nodig is voor de voorspelling, en een state voor het resultaat van de voorspelling).*
+Je hebt de waarde uit een invulveld nodig om te weten wat de gebruiker wil voorspellen. Ook wil je het resultaat van de voorspelling tonen aan de gebruiker. Hiervoor kan je `state` gaan bijhouden.
 
 ```js
 const [prediction, setPrediction] = React.useState('');
@@ -111,7 +111,11 @@ const makePrediction = () => {
 }
 return (
     <View>
-        <TextInput onChangeText={onChangeWeight} value={weight}/>
+        <TextInput
+          keyboardType='numeric'
+          onChangeText={text => onChangeWeight(parseInt(text))}
+          value={weight}
+        />
         <Button onPress={makePrediction} title="Predict!" />
         <Text>I think it's a {prediction} !</Text>
     </View>
