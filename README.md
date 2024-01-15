@@ -1,5 +1,9 @@
 ### Smart Technologies | PRG8 | 2022-2023 
 
+# ⚠️ LET OP : OUDE LESSTOF 2022 - 2023
+
+Deze repository is beschikbaar voor herkansers uit het studiejaar 2022 - 2023
+
 # Machine Learning with Javascript
 
 In deze repository vind je startcode voor opdrachten van het vak PRG08. De presentaties en cursushandleiding vind je onder FILES in TEAMS. 
